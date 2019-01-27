@@ -138,6 +138,12 @@ static int layoutOverride = -1;
 static bool hasExtendedFont = false; // Wether the font supports characters > 256
 static timeMs_t layoutOverrideUntil = 0;
 
+//START CAM
+
+uint16_t myDrawn[MAX_PLANES];
+
+//END CAM
+
 typedef struct statistic_s {
     uint16_t max_speed;
     uint16_t min_voltage; // /100
@@ -173,6 +179,12 @@ static uint8_t armState;
 static displayPort_t *osdDisplayPort;
 
 #define AH_MAX_PITCH_DEFAULT 20 // Specify default maximum AHI pitch value displayed (degrees)
+
+//START CAM
+#define AH_MAX_PITCH_FV 450 // Specify maximum AHI pitch value displayed. Default 200 = 20.0 degrees
+
+//END CAM
+
 #define AH_HEIGHT 9
 #define AH_WIDTH 11
 #define AH_PREV_SIZE (AH_WIDTH > AH_HEIGHT ? AH_WIDTH : AH_HEIGHT)
@@ -182,6 +194,13 @@ static displayPort_t *osdDisplayPort;
 #define AH_SIDEBAR_HEIGHT_POS 3
 
 PG_REGISTER_WITH_RESET_FN(osdConfig_t, osdConfig, PG_OSD_CONFIG, 5);
+
+int map(int x, int in_min, int in_max, int out_min, int out_max)
+{
+  return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}
+
+
 
 static int digitCount(int32_t value)
 {
@@ -1132,7 +1151,7 @@ static void osdDrawAdditionnalRadar(wp_planes_t nearPlane,int16_t poiDirection){
 
 	 //DRAW SPEED PLANE NEAREST PLANE
      memset(buf, 0, sizeof(buf));
-     osdFormatVelocityStr(buf,  nearPlane.planeWP.p1);
+     osdFormatVelocityStr(buf,  nearPlane.planeWP.p1,true);
 	 displayWrite(osdDisplayPort, minX + 1, maxY-2, buf);
 
      memset(buf, 0, sizeof(buf));
@@ -1413,6 +1432,64 @@ static void osdDrawHomeMap(int referenceHeading, uint8_t referenceSym, uint16_t 
 {
     osdDrawMap(referenceHeading, referenceSym, SYM_HOME, GPS_distanceToHome, GPS_directionToHome, SYM_ARROW_UP, drawn, usedScale);
 }
+
+
+
+//START CAM
+
+
+//GET nearest plane by testing distances
+static int getNearestPlaneId()
+{
+
+	//CALCULATE NEAREST PLANE
+    int16_t min = planesInfos[0].GPS_distanceToMe;
+	int plane_id_near=0;
+  
+
+	 for (int c = 0; c < MAX_PLANES; c++)
+	 {
+		 if ((planesInfos[c].planeWP.p3==1)){
+				 if ((planesInfos[c].GPS_distanceToMe) < min) {
+				 plane_id_near = c;
+				 min = planesInfos[c].GPS_distanceToMe;
+				 }
+		 }
+	 }
+	return plane_id_near;
+}
+
+static void osdSimpleRadar(uint16_t *drawn, uint32_t *usedScale,bool frontview)
+{
+    int16_t reference = DECIDEGREES_TO_DEGREES(osdGetHeading());
+    wp_planes_t currentPlane;
+    int plane_id=0;
+    //get Id of nearest plane of me
+    int nearPlaneId=getNearestPlaneId();
+
+	//DISPLAY POINT OFF EACH PLANES
+    for (plane_id=0;plane_id<MAX_PLANES;plane_id++)
+    {
+        currentPlane=planesInfos[plane_id];
+
+		//TEST IF PLANE IS FLYING (Armed) else dont display
+        if (currentPlane.planeWP.p3==1){
+
+			// GET CURRENT PLANE INFOS TO DISPLAY PLANES
+            int16_t directionToPlane=planesInfos[plane_id].planePoiDirection/100;
+            int16_t distanceToMe=planesInfos[plane_id].GPS_distanceToMe/100;
+            int16_t poiDirection = osdGetHeadingAngle(directionToPlane + 180);
+
+			//DRAW NAV RADAR MAP
+			osdSimpleMap(reference, 0, SYM_ARROW_UP, distanceToMe,  directionToPlane, SYM_PLANE_HIGH, drawn, usedScale,plane_id,frontview,nearPlaneId);
+
+			// DRAW OSD ADDITIONNAL NAV RADAR PLANE INFO
+			osdDrawAdditionnalRadar(planesInfos[nearPlaneId],poiDirection);
+
+        }
+    }
+}
+
 
 /* Draws a map with the aircraft in the center and the home moving around.
  * See osdDrawMap() for reference.

@@ -468,7 +468,7 @@
 #define REVO 1
 #define __FORKNAME__ "inav"
 #define __TARGET__ "REVO"
-#define __REVISION__ ""
+#define __REVISION__ "7212749"
 # 1 "./src/main/fc/cli.c"
 # 18 "./src/main/fc/cli.c"
 # 1 "/usr/lib/gcc/arm-none-eabi/7.3.1/include/stdbool.h" 1 3 4

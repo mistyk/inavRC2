@@ -468,7 +468,7 @@
 #define REVO 1
 #define __FORKNAME__ "inav"
 #define __TARGET__ "REVO"
-#define __REVISION__ ""
+#define __REVISION__ "7212749"
 # 1 "./src/main/cms/cms_menu_navigation.c"
 # 27 "./src/main/cms/cms_menu_navigation.c"
 # 1 "./src/main/platform.h" 1

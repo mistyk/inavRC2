@@ -70,7 +70,13 @@
 gpsLocation_t GPS_home;
 uint16_t      GPS_distanceToHome;        // distance to home point in meters
 int16_t       GPS_directionToHome;       // direction to home point in degrees
+//START CAMILLE
+wp_planes_t  planesInfos[MAX_PLANES];
 
+#define START_RADAR_WAYPOINT 20
+#define END_RADAR_WAYPOINT 50
+
+//END CAM
 #if defined(USE_NAV)
 #if defined(NAV_NON_VOLATILE_WAYPOINT_STORAGE)
 PG_DECLARE_ARRAY(navWaypoint_t, NAV_MAX_WAYPOINTS, nonVolatileWaypointList);
@@ -2205,7 +2211,12 @@ static void navRadarUpdatePlane(void){
             planeLocation.lat=planesInfos[y].planeWP.lat;
             planeLocation.lon=planesInfos[y].planeWP.lon;
             planeLocation.alt=planesInfos[y].planeWP.alt;
-            geoConvertGeodeticToLocal(&posControl.gpsOrigin, &planeLocation, &posPlane, GEO_ALT_RELATIVE);
+            
+            
+            geoConvertGeodeticToLocal( &posPlane, &posControl.gpsOrigin, &planeLocation, GEO_ALT_RELATIVE);
+
+
+
             planesInfos[y].GPS_distanceToMe= calculateDistanceToDestination(&posPlane);
             planesInfos[y].planePoiDirection=calculateBearingToDestination(&posPlane);
             planesInfos[y].GPS_altitudeToMe=calculateAltitudeToMe(&posPlane);
@@ -3133,6 +3144,10 @@ void updateWaypointsAndNavigationMode(void)
 
     // Map navMode back to enabled flight modes
     switchNavigationFlightModes();
+
+//start cam
+    // Update InavRadar
+    navRadarUpdatePlane();
 
 #if defined(NAV_BLACKBOX)
     navCurrentState = (int16_t)posControl.navPersistentId;
