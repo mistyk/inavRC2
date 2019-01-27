@@ -139,7 +139,7 @@ static bool hasExtendedFont = false; // Wether the font supports characters > 25
 static timeMs_t layoutOverrideUntil = 0;
 
 //START CAM
-
+#define GRID_SIZE 6
 uint16_t myDrawn[MAX_PLANES];
 
 //END CAM
@@ -1201,6 +1201,43 @@ static int8_t  getPointFromHa(int8_t  haPoiX){
         return dy;
 }
 
+static void squareRadarDraw(){
+    uint8_t midX = osdDisplayPort->cols / 2;
+    uint8_t midY = osdDisplayPort->rows / 2;
+
+    uint8_t gridSize= GRID_SIZE;
+    uint8_t gridY=GRID_SIZE/2+1;
+    //TOP LINE
+     for (int c = midX-GRID_SIZE+1; c <= midX+GRID_SIZE-1; c++)
+	 {
+        displayWriteChar(osdDisplayPort, c, midY+gridY, SYM_RAD_H);
+     }
+    
+    //BOTTOM LINE
+     for (int c = midX-GRID_SIZE+1; c <= midX+GRID_SIZE-1; c++)
+	 {
+        displayWriteChar(osdDisplayPort, c, midY-gridY, SYM_RAD_H);
+     }
+
+    //RIGHT LINE
+     for (int c = midY-gridY+1; c <= midY+gridY-1; c++)
+	 {
+        displayWriteChar(osdDisplayPort,  midX+GRID_SIZE,c, SYM_RAD_V);
+     }
+
+    //LEFT LINE
+     for (int c = midY-gridY+1; c <= midY+gridY-1; c++)
+	 {
+        displayWriteChar(osdDisplayPort,  midX-GRID_SIZE,c, SYM_RAD_V);
+     }
+
+     //CORNERS
+    displayWriteChar(osdDisplayPort,  midX-GRID_SIZE,midY-gridY, SYM_RAD_BLC);
+    displayWriteChar(osdDisplayPort,  midX-GRID_SIZE,midY+gridY, SYM_RAD_TLC);
+    displayWriteChar(osdDisplayPort,  midX+GRID_SIZE,midY-gridY, SYM_RAD_BRC);
+    displayWriteChar(osdDisplayPort,  midX+GRID_SIZE,midY+gridY, SYM_RAD_TRC);
+
+}
 
 static void osdSimpleMap(int referenceHeading, uint8_t referenceSym, uint8_t centerSym,
                        uint32_t poiDistance, int16_t poiDirection, uint8_t poiSymbol,
@@ -1225,7 +1262,7 @@ static void osdSimpleMap(int referenceHeading, uint8_t referenceSym, uint8_t cen
     uint8_t midY = osdDisplayPort->rows / 2;
 int32_t myAlt = 0;
     // Fixed marks
-
+    
    /* if (referenceSym) {
         displayWriteChar(osdDisplayPort, maxX, minY, SYM_DIRECTION);
         displayWriteChar(osdDisplayPort, maxX, minY + 1, referenceSym);
@@ -1345,10 +1382,6 @@ int32_t myAlt = 0;
 if (frontview){
 
 
-
-
-
-
 	float pitchAngle = constrain(attitude.values.pitch,  -AH_MAX_PITCH_FV, AH_MAX_PITCH_FV); //-45° to +45° FOV Lens 
 	pitchAngle=pitchAngle/10; //centidegree to degree
 						
@@ -1395,8 +1428,7 @@ if (frontview){
      memset(buf, 0, sizeof(buf));
      tfp_sprintf(buf, "%f", getPointFromHa(poiY));
      displayWrite(osdDisplayPort, minX+10, maxY-3, buf); 
-	 
-
+	
 
      memset(buf, 0, sizeof(buf));
      tfp_sprintf(buf, "%f", relativAlt);
@@ -1882,7 +1914,9 @@ static bool osdDrawSingleElement(uint8_t item)
             static uint16_t drawnPlanes = 0;
             bool frontview=false;
             osdSimpleRadar(&drawn, &scale,frontview);
-            osdDrawRadar(&drawn, &scale);
+
+            squareRadarDraw(GRID_SIZE);
+            //osdDrawRadar(&drawn, &scale);
 
 
             return true;

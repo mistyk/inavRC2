@@ -468,7 +468,7 @@
 #define MATEKF405SE 1
 #define __FORKNAME__ "inav"
 #define __TARGET__ "MATEKF405SE"
-#define __REVISION__ "7212749"
+#define __REVISION__ "4a9a34e"
 # 1 "./src/main/drivers/max7456.c"
 # 18 "./src/main/drivers/max7456.c"
 # 1 "/usr/lib/gcc/arm-none-eabi/7.3.1/include/stdbool.h" 1 3 4
@@ -22590,6 +22590,13 @@ uint8_t* max7456GetScreenBuffer(void);
 #define SYM_PLANE_LOW 0xA4
 #define SYM_PLUS 0x2B
 #define SYM_LESS 0x2D
+#define SYM_RAD_V 0x8B
+#define SYM_RAD_H 0x7F
+#define SYM_RAD_BLC 0x8C
+#define SYM_RAD_BRC 0x8D
+#define SYM_RAD_TRC 0x8F
+#define SYM_RAD_TLC 0x8E
+
 
 
 

@@ -109,6 +109,13 @@
 #define SYM_PLANE_LOW             0xA4
 #define SYM_PLUS                  0x2B
 #define SYM_LESS                  0x2D
+#define SYM_RAD_V                     0x8B
+#define SYM_RAD_H                     0x7F
+#define SYM_RAD_BLC                   0x8C
+#define SYM_RAD_BRC                   0x8D
+#define SYM_RAD_TRC                   0x8F
+#define SYM_RAD_TLC                   0x8E
+
 //                                0x7A // 122 -
 
 //                                0x7B // 123 to 125 ASCII
