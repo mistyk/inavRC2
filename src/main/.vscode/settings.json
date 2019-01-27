@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "controlrate_profile.h": "c"
+        "controlrate_profile.h": "c",
+        "temperature.h": "c"
     }
 }

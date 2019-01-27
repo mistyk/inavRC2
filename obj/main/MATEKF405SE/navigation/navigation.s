@@ -11,10 +11,10 @@
 	.eabi_attribute 34, 1
 	.eabi_attribute 18, 4
 	.file	"navigation.c"
-	.section	.gnu.lto_.profile.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_.profile.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234cc```\003bF\206\347F\027\305\001\006\217\002\017"
 	.text
-	.section	.gnu.lto_.icf.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_.icf.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234=\224wP\"w\024\307}\354\002\273\354\002\231\344"
 	.ascii	"\322.\355Rg\322.\345\322/\275\367\236\311\244\347\322"
 	.ascii	"f\322{2\351\012X\321\323\263\341\212b\241Y@P\024\021"
@@ -79,7 +79,7 @@
 	.ascii	"J\356\237%z\200\376\036\\\020\033\033\333\337\313\014"
 	.ascii	"*\341?+\356\216\037"
 	.text
-	.section	.gnu.lto_.jmpfuncs.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_.jmpfuncs.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\255Z\011p\024\307\025\355\337;{h\027i%d$\001\022"
 	.ascii	"G\204IL\342(\344\276\355*\347\276\343\244*\225\313\271"
 	.ascii	"S\225\304\271S\225\"q\330\345\024\2478\214\000!\031"
@@ -231,7 +231,7 @@
 	.ascii	"\370\233\026;\366\202\253y\037R3\357n\301s+\322~\244"
 	.ascii	"6\327$\374?f\217\020\240"
 	.text
-	.section	.gnu.lto_.inline.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_.inline.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\245\031mpTW\365\234\367\261\373v\367\355G6$lC"
 	.ascii	">\026H\371H\013\244\245\305\226/w\252E\2526\250\325"
 	.ascii	"a\332\212b\221N\313\227\250\365\243\026\361ASHi\253"
@@ -382,7 +382,7 @@
 	.ascii	"\374\270u \204\313\301\020\\7\005\275\012,\275@\222"
 	.ascii	"4\360\1776\315t\037"
 	.text
-	.section	.gnu.lto_.pureconst.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_.pureconst.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\005\301\373/\026`\034\306\341\347\326\367\025"
 	.ascii	"m6#\371<O\322\017d\253\350H\211\310\226Dg\262\265\350"
 	.ascii	"0\212\015\365\026\331\314\251\023\262FE\331\312q\232"
@@ -402,7 +402,7 @@
 	.ascii	"o\361G\374\025kb]\366O\374\227\333\220m\312\266\304"
 	.ascii	"6i\362H\006"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_WAYPOINT_REACHED.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_WAYPOINT_REACHED.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215R]K\024a\024>\317\2743\273\3436\353\245W{!"
 	.ascii	"\010\211\022\256\342E\335\367\023\372\005\213H\354E"
 	.ascii	"\032j\336:\272\226Z^\310\322\272\"C.-}\202\230\346G"
@@ -440,7 +440,7 @@
 	.ascii	"H\264*\\\025\251\217\236\216\324E\253\377\015K*(x\266"
 	.ascii	"\246\262>Z}\256\366T]\244\256\3627\247\212<\262"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_WAYPOINT_NEXT.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_WAYPOINT_NEXT.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215SIhSQ\024}\347\275?d,\356\304\032\244 \265"
 	.ascii	"Z\321\264T\020\\\272v\347\302\215\233 E\262\260\025"
 	.ascii	"\023\005\335\364\233h\006u\241\322\244%D-\224\340\200"
@@ -488,7 +488,7 @@
 	.ascii	"\370\033w\0076\007}\301\3722\177`\223/\020\334\342\333"
 	.ascii	"\273\263\321\337\020\374\011\246\273\213_"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_EMERGENCY_LANDING_IN_PROGRESS.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_EMERGENCY_LANDING_IN_PROGRESS.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234cc``\270\012\304\306@,\015\304\214\314\014\214"
 	.ascii	"L\023\316104r012\202\030\015\034\214\014\365L\214\365"
 	.ascii	"\214=\314S\230\031\247v\356\276\316\253\271\274\241"
@@ -505,7 +505,7 @@
 	.ascii	"%\226e\246'\226d\346#3\365\222\031x\013\212R\3132\363"
 	.ascii	"K\213\203K\022KR\001\227\237[!"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_EMERGENCY_LANDING_FINISHED.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_EMERGENCY_LANDING_FINISHED.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234cc``\270\012\304\306@,\015\304\214\314\014\214"
 	.ascii	"L\023\316104r012\202\030\015\034\214\014\365L\214\365"
 	.ascii	"\214=\314S\230\031\247v\356\276\316\253\271\274\241"
@@ -522,7 +522,7 @@
 	.ascii	"&f\346\351\347%\226e\246'\226d\346#3\365\222\031x\013"
 	.ascii	"\212R\3132\363K\213\203K\022KR\001\315u[\210"
 	.text
-	.section	.gnu.lto_navSetNewFSMState.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navSetNewFSMState.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215\222AO\023A\024\307\347\315l\267[\244\305\233"
 	.ascii	"\034z3H\210\011\013\321\240\007\023\375\016~\202\206"
 	.ascii	"4\246\007\213\201\212\307\016\255\332m1\2466\264\232"
@@ -558,7 +558,7 @@
 	.ascii	"\031O\300\327\327\270\355\354%\232\337{\341t\300\023"
 	.ascii	"\360:\317\365{\007}}\347\007\344\351/\305\276!\341"
 	.text
-	.section	.gnu.lto_navFSM.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navFSM.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\245\231\331S\324\331\025\307\177\013\335\360c"
 	.ascii	"\235q\366\031F\3152I\0362\2435\311T\361\220\355=/\251"
 	.ascii	"\312?\020k\036R>\314$\225\244\362:-\213\354\202\262"
@@ -718,7 +718,7 @@
 	.ascii	"\374\373\201\377\034\374\207\365\257_|\255\374\017\373"
 	.ascii	"\233\013A"
 	.text
-	.section	.gnu.lto_navigationActualStateHomeValidity.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navigationActualStateHomeValidity.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215\222\317k\023Q\020\307g\336\274\335\304\037"
 	.ascii	"\361\340A<\004\024J[Z\241[\360\350\305\253\007\377\210"
 	.ascii	"P\260\004\264\202\025\257y&\266\315\252\007\321\244"
@@ -753,7 +753,7 @@
 	.ascii	"=\323\345\234\212\305{\234\236\330\271xw\354l\374t\343"
 	.ascii	"\266\243\013\254\023'c\335\275\277\001(_\016\326"
 	.text
-	.section	.gnu.lto_canActivatePosHoldMode.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_canActivatePosHoldMode.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215\222Ak\023Q\020\307\347\377f\367m(\211^<\311"
 	.ascii	"\012B\221\322\012\335B\301\017\342\335C\350Ar\260\202"
 	.ascii	"\212\327\254\211\265\033\355A\244\251Eb\015\"\210\007"
@@ -784,7 +784,7 @@
 	.ascii	"h0\232=\235;\232=\225;\376\267:8B\277\001\375\251\371"
 	.ascii	"I"
 	.text
-	.section	.gnu.lto_canActivateNavigationModes.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_canActivateNavigationModes.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215RMk\023Q\024\275\347\335y\311T\215u\341\252"
 	.ascii	"\214 \024\027\255\320\011\024\374\003\376\001\377\200"
 	.ascii	"\213\320\205da\005\025\267y&\326v\254\013\021\247J\031"
@@ -814,7 +814,7 @@
 	.ascii	"\260e\362o\366\017\371\247N\216\370\3073\331Q\1774s"
 	.ascii	"&{,s:{\242\333\035\032\241\277\0367\320\340"
 	.text
-	.section	.gnu.lto_updateNavigationFlightStatistics.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_updateNavigationFlightStatistics.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215T\317O\023A\024\236\267\263m\267\205\266\306"
 	.ascii	"x\204HB0\001\243\253F\317z\360f\270\371\0174\204\230"
 	.ascii	"&\202\011T\257\035Z\204\026\214!J\177\004\252\331D\022"
@@ -861,7 +861,7 @@
 	.ascii	"\376\254\307U\333l\257;\337\324T\337\3509\215[\265\315"
 	.ascii	"\377\000v#\237\252"
 	.text
-	.section	.gnu.lto_navProcessFSMEvents.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navProcessFSMEvents.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\225YkpTE\026\356\323w\336\223I2y\220\367;!\004"
 	.ascii	"\321\300\352\026EY\224\353ZlamY\265U[\245\262\373\213"
 	.ascii	"b)+\273\210[\200\356\277e @2\200\200(\021\342\000\263"
@@ -1034,7 +1034,7 @@
 	.ascii	"f\317\374\227\\\204\012\304\373?\314\232\376\332\\\363"
 	.ascii	"\\z\374\037u\322\256\263"
 	.text
-	.section	.gnu.lto_resetPositionController.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_resetPositionController.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234mP\277KBQ\024>\337\275\357\251TFCc\2334\344\240"
 	.ascii	"\315\015\375\011\375\017\342\020\016\031T\264z\353U"
 	.ascii	"\2465D\230Eh\274\255Q\"\255^-\017k\214\002is+\212\012"
@@ -1057,7 +1057,7 @@
 	.ascii	"\177\230\036\212Dgg\342\321\251X\"\031M\306\346\023"
 	.ascii	"\223\261\271\304t7\214\304\351\027\215\030\231\326"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_LAUNCH_IN_PROGRESS.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_LAUNCH_IN_PROGRESS.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234M\220\275K\202Q\024\306\317s\317\353\007\222{\303"
 	.ascii	"\273\005\231\213\006\326\334\037\321\037\020\022\021"
 	.ascii	"\016i\244\265z\313\276s\010\261\014\021\012\"\242)\242"
@@ -1081,7 +1081,7 @@
 	.ascii	"c\321X<\034\217N\305F\243\251X\242]\206\206\311?>12"
 	.ascii	"\025KL&\007S\321\324\310\017\024\342\210\027"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_LAUNCH_INITIALIZE.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_LAUNCH_INITIALIZE.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234U\221OK\033Q\024\305\357\231\353\304A\030\374\000"
 	.ascii	"\315B\020+n\214\240\353\202_\301\352\007\010!\224Y\030"
 	.ascii	"%\211n\363\214Ecu\241\242Qd\300\200T)-\210\264\032c"
@@ -1106,7 +1106,7 @@
 	.ascii	"\226\3551r\007\223\361ao`(\365>\035M\307\335\330P2\031"
 	.ascii	"O\244{\275\376x_\352/\264:\243Z"
 	.text
-	.section	.gnu.lto_resetAltitudeController.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_resetAltitudeController.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234mRMk\023Q\024\275\347\275\231\311T\255\012\272"
 	.ascii	"\314.`i\027\235\202 \270q\351\316\235\177 \224R\"5\201"
 	.ascii	"\324\217\235yf\254\375PD$\211a\032\353\210\250\270\220"
@@ -1137,7 +1137,7 @@
 	.ascii	"\231\254\223M\037\310\014\246\367er\355io?m\332?<\260"
 	.ascii	"{ \237g\314\316\334\320P\356`&;\370\027+\321\342\330"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_EMERGENCY_LANDING_INITIALIZE.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_EMERGENCY_LANDING_INITIALIZE.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234MP=KBa\024>\317=\246b8\325\226MA\342\242\202c?"
 	.ascii	"\243_p\021\211;\244\242\346z\337\354C\315\206\212\264"
 	.ascii	"\206\013\015\021\321\024QfR\303\245!h)p\250!2\211\240"
@@ -1156,7 +1156,7 @@
 	.ascii	">\227\214\315\233V:\2266\213\326\234Y\2602\377a4I\301"
 	.ascii	"l.U\2642\013\371\331\202YH\375\002\335\037n\351"
 	.text
-	.section	.gnu.lto_mapWaypointToLocalPosition.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_mapWaypointToLocalPosition.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\225SKLSA\024\235\363\346\365_\212.\334(1$\212"
 	.ascii	"\004\027\324%\033\023\227.X\270q\343\256aaj\220\022"
 	.ascii	"!\022W\235\026M\313GEBQ\233\027R4~\202\242\362\325\002"
@@ -1196,7 +1196,7 @@
 	.ascii	"?\260u\232_\304\354\305\201\"_\361\251@\231\275\302"
 	.ascii	"w\2514\340/)\267T\224\026\026\236\374\007\012\337n9"
 	.text
-	.section	.gnu.lto_setupAltitudeController.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_setupAltitudeController.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234mP\277/CQ\024>\337\275\357\265\215_1\030m\215\201"
 	.ascii	"\2415\031\375\007\376\210\246\203tP\011b\355\325\207"
 	.ascii	"\266\030D\252\204\222\267Y$\"T=\226\027\214B\322t\322"
@@ -1219,7 +1219,7 @@
 	.ascii	"\340H(\022\015FC\223\221\341\320Dd\264\031\006\302\364"
 	.ascii	"\015Kh\232k"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_RTH_FINISHING.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_RTH_FINISHING.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234mR]KTQ\024\335\353\356\3731\015N\177\240\373\026"
 	.ascii	"(Bx-\373'\375\202A$\346!\015\235|\235\323h9S\003\312"
 	.ascii	"03\206\\\362B\204\005Vh\232\215_]\264\036,0\0212B\352"
@@ -1247,7 +1247,7 @@
 	.ascii	"\251~\257?9\234\272\232L\247\006\376\017\273z)q}\260"
 	.ascii	"o85pc\350J:\231\356\373\007*\232\276{"
 	.text
-	.section	.gnu.lto_navTerrainFollowingRequested.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navTerrainFollowingRequested.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234UP\317KTQ\024>\337=\357\336yYc.]\274 \220\026\032"
 	.ascii	"8\212\340\037\320\1772\270\210YdP\321vn3\246N\005\245"
 	.ascii	"\350$\303Kf\327F\020\321~L\323\342U\333\241D\004%[E"
@@ -1273,7 +1273,7 @@
 	.ascii	"s7o\214\345\256\345\013\343\271\361\374\355\302\325"
 	.ascii	"\374\255\302\365\223\345\340\030\375\0072\357\243j"
 	.text
-	.section	.gnu.lto_resetHeadingController.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_resetHeadingController.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234mPK/\003Q\024>\337\2753m\343\025\013K\273\306\202"
 	.ascii	"Ekg\347\037\370\021M\027\322\205J\020\333\271\014\332"
 	.ascii	"b!\302\020Jfg)h1l&e)$Mc\323\330HHHS\204\005\211\327"
@@ -1295,7 +1295,7 @@
 	.ascii	"L\017G\242\243#\361\350P,\221\214&c\343\211\301\330"
 	.ascii	"Xb\270\021F\342\364\015\352\242\232\343"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_IDLE.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_IDLE.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234mP=KBQ\030~\237{\364*\201[S\271\005\211\213\012"
 	.ascii	"BK?\243_ \"q\2074\324\\\357I+5\033\012\322\032\356 "
 	.ascii	"D\224S\204\231\232\313\255\255\245\260\241\210 $\202"
@@ -1317,7 +1317,7 @@
 	.ascii	"\020%\317z2\2261\022\033\251\225t$\035\373\005\014\307"
 	.ascii	"\211X"
 	.text
-	.section	.gnu.lto_calculateDistanceFromDelta.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_calculateDistanceFromDelta.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234mPMK[Q\020\235\363\346\3455\221j\267B#\010\025"
 	.ascii	"\203\213\232\205\013W\375\037\272\014Z$\240\0264t\233"
 	.ascii	"k\224hk\027\0015\342\343-\334\224,k1\261\215\"<A\003"
@@ -1342,7 +1342,7 @@
 	.ascii	"Dr4>\232x\237\034J\244\222\357\036\247\335\003\344\014"
 	.ascii	"\276\035N%\372\202\253\377?)\232\235="
 	.text
-	.section	.gnu.lto_calculateBearingFromDelta.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_calculateBearingFromDelta.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234m\221\333K\024q\024\307\317w\316\354\314jxy\327"
 	.ascii	"E\303h\361!\227\360\241\247\376\217z\\4bA\015Lz\335"
 	.ascii	"_\356\272\336R\004m\205m\036\026D\226\236*\274\324\232"
@@ -1370,7 +1370,7 @@
 	.ascii	"\236\304\275\213nK\033Y\355w:z\342\267\374\353\366\037"
 	.ascii	"\220\200\300y"
 	.text
-	.section	.gnu.lto_updateHomePositionCompatibility.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_updateHomePositionCompatibility.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215\223]k\023A\024\206\347\235\311nV\333Dk\353"
 	.ascii	"\225^\010\342Eo\272\376\002\375\021\376\202\320\013"
 	.ascii	"\311\205\025T\274\335\265K\233\264*\2106\021\353R\026"
@@ -1405,7 +1405,7 @@
 	.ascii	"\250C\273{\314\243Gz\315C\211d\237\331\2278\236<\230"
 	.ascii	"8\226<\\\277\354\351e\177\000\221\227\\\235"
 	.text
-	.section	.gnu.lto_adjustAltitudeFromRCInput.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_adjustAltitudeFromRCInput.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234eP\271J\003Q\024\275\347\335\231$.\021?\300.(h"
 	.ascii	"a\004\301\322?\360#\202\205\244PA\3056O\307-j!\022c"
 	.ascii	"\320(\351\304*\210k\024dP+\021\005\033\213t\202\202"
@@ -1429,7 +1429,7 @@
 	.ascii	"\034\350\016\367F\242}\341\276\310p\264'2\024\355\257"
 	.ascii	"\244\255\335\364\015B\325\241\212"
 	.text
-	.section	.gnu.lto_adjustHeadingFromRCInput.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_adjustHeadingFromRCInput.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234ePM+Da\030}\316\373\334;3>F~\200\335d\212\205Q"
 	.ascii	"\026v\376\201\0371Yh\026(d;/\327\327`!1\304\320\354"
 	.ascii	"\224\315$\237c67f%Q\022\013e\241(\032_\033\021\206\347"
@@ -1453,7 +1453,7 @@
 	.ascii	"V\212a9!\214J\254\241\206HOw[\244#\032\353\214tF\373"
 	.ascii	"b\355\321\336X\327o\332\320F_\254\245\241\275"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_CRUISE_2D_ADJUSTING.part.0.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_CRUISE_2D_ADJUSTING.part.0.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215\222KkSA\024\307\347?\347\346&\326\306\245"
 	.ascii	"\253\354\244\326\026\354-v\351\302\017\341'\010\245"
 	.ascii	"H\026\266\322\306n3&\366\251\240\324&j\271h\240\210"
@@ -1486,7 +1486,7 @@
 	.ascii	"u\252\360\261\336\256\376X\317\361\276\303\361h\274"
 	.ascii	"\353\027\225X\017\277"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_CRUISE_2D_ADJUSTING.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_CRUISE_2D_ADJUSTING.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234mS\335KSq\030~\237\363\333\371\330r\352E\027\""
 	.ascii	"\203.\202D/\234&^\367G\004\335\017\221\030\221\206\232"
 	.ascii	"\267;\272L\227B\037\270Y\343P\203\350\213,\215\374\310"
@@ -1525,7 +1525,7 @@
 	.ascii	"\337\024h\017\236\014\264\005\233\363\303\352\006\362"
 	.ascii	"\236iil\0176\237m=\336\026hk\374\013\223\356*\006"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_LAUNCH_WAIT.part.1.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_LAUNCH_WAIT.part.1.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234m\221mK\223a\024\307\317\377>\367\275-u\372\005"
 	.ascii	"\366.L\224P\251\2407Q\321'\010\252\0170d\324 5\266["
 	.ascii	"\337\356J\315\207\036\300hn1FT\022\005\005\246\251K"
@@ -1560,7 +1560,7 @@
 	.ascii	"\267D\217\271A7\344oh\211DBM\356\361pc\350D\264\334"
 	.ascii	"=\025iv\335\323!\035k\211\376\001\275\232\372\375"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_LAUNCH_WAIT.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_LAUNCH_WAIT.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234]S\335K\024Q\024?g\356|l\353\256Z\366 4\017A\230"
 	.ascii	"\330\203k\037\276F\364\027\004\325SO\213,\265\220\032"
 	.ascii	"\273\253\257{\363#\265\014Lt6\226\301,\011\213\212\224"
@@ -1605,7 +1605,7 @@
 	.ascii	"\274!\237\273\242&\020\360U\205\316\371+}\347\203\271"
 	.ascii	"\241K\201\352P\350\262O\354\325\004\377\001\376<\\\277"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_WAYPOINT_INITIALIZE.part.2.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_WAYPOINT_INITIALIZE.part.2.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234mR\337K\024Q\024>\337\234\331\331ii\373\013\346"
 	.ascii	"-6S\310\221\366O\351\251\307ED\366!\025\335|\335\333"
 	.ascii	"\256\251[>\204\271[\310`\003\022\325CE\246\256\233\226"
@@ -1635,7 +1635,7 @@
 	.ascii	"\007R\243\351\376T&=\330\336v\367R|h\270o4=xq\344\\"
 	.ascii	"&\225\351\333\007\217\244\3271"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_WAYPOINT_INITIALIZE.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_WAYPOINT_INITIALIZE.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215\222\337j\023Q\020\306\347;\263\273I\243Q\037"
 	.ascii	"`/\204\202\245\021\232j\336\300W\360\011B)\222\213\266"
 	.ascii	"\322\306\336\346\230Z\233\250\027R\232m\014\213\006"
@@ -1666,7 +1666,7 @@
 	.ascii	"\372\223\375\351\341\314\251t63\360{\330\325C\361\323"
 	.ascii	"\203\275\303\231\2013C'\263\351l\357/\327~\341\247"
 	.text
-	.section	.gnu.lto_checkForPositionSensorTimeout.part.3.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_checkForPositionSensorTimeout.part.3.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234u\222\333KTq\020\307\347{\346\\v\327K/\275\004"
 	.ascii	"\373 \310\022\372\340\026=F\320S\377\207\370\020\373"
 	.ascii	"\220AE\257\373\303UWQ\310\304\335\226\355\024\013\021"
@@ -1704,7 +1704,7 @@
 	.ascii	"\361cm\321#\255\261\366h{\353\311\330\341\326\023\261"
 	.ascii	"\243\225\237-m\364\007_p\030\266"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_CRUISE_2D_INITIALIZE.part.4.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_CRUISE_2D_INITIALIZE.part.4.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215\224kK\024Q\030\307\317\177\316\354\305\313"
 	.ascii	"V\037`\337\305&\0129R\275\213\242W}\201>\301\"\"\013"
 	.ascii	"\245\241\346\313<\255yMH\314\325\220\311\026$*\350j"
@@ -1743,7 +1743,7 @@
 	.ascii	"\234.)(\017\024\237)=Q\346/+H\343\325\361\223\376\302"
 	.ascii	"\322\337\350\302ea"
 	.text
-	.section	.gnu.lto_RTHAltitude.part.7.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_RTHAltitude.part.7.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\225S[HTQ\024=\373\356\373\362Y\037= \254\204\232"
 	.ascii	"\242\237\206^\364S\321_\237}\366\031\022=\204J(\351"
 	.ascii	"\327\253\216:\221\221X\2160\\l@\320~zX\366Pk\322\032"
@@ -1794,7 +1794,7 @@
 	.ascii	"\375'r\017\037\311\337\264\305\330\177\364\340\241\374"
 	.ascii	"M\233\247\201m.\260\365\017\021\022\371\210"
 	.text
-	.section	.gnu.lto_getWaypoint.part.19.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_getWaypoint.part.19.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215R\335KTA\024\237\337\235{\357\356\352\272="
 	.ascii	"U/\013\011f\242\240\233\005\275\030\324C\017\201\322"
 	.ascii	"\377\260I\204\017\232\230\345\243\343\256\265j\022\025"
@@ -1836,7 +1836,7 @@
 	.ascii	"\\u\336__ua\267YR\311\234\015\265g.U\237=Wg6\324\236"
 	.ascii	"\362\327\373\215\206\332\212\212\323\277\001&\3340\271"
 	.text
-	.section	.gnu.lto_isApproachingLastWaypoint.part.22.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_isApproachingLastWaypoint.part.22.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215\223\321KTA\024\306\347\233\271w\356\272{\255"
 	.ascii	"\240\207 6\010d\037T\362&Bo\375#\275\211\017!\221AE"
 	.ascii	"\364\346\244\225n\371\020\342\232\310-\026\244\262b"
@@ -1875,7 +1875,7 @@
 	.ascii	"\251\306\303\365'\033\217m\234\3264\260\337\341\236"
 	.ascii	"43"
 	.text
-	.section	.gnu.lto_getActiveWaypointSpeed.part.23.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_getActiveWaypointSpeed.part.23.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\225U\333S\225U\024\337\353\333\337\355\\8\007"
 	.ascii	"\302\012\025g\234iH\355\201\0239S\323[\017\2754=\366"
 	.ascii	"\0270D\015\017\251\223\224\323\023[.\002\341\324\211"
@@ -1950,7 +1950,7 @@
 	.ascii	"\254\267\2622\360\314|3nO\372\007\273vf\355\310\226"
 	.ascii	"\234\261;;=;\363o\353'\360%"
 	.text
-	.section	.gnu.lto_navigationGetHeadingControlState.part.24.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navigationGetHeadingControlState.part.24.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234mQ\317KTQ\024>\337=\367\315<\314\254\245\213\267"
 	.ascii	"\223Y\010\341\023\302V\321\3772\270\210Y\250P\322v\256"
 	.ascii	"N\223S\272\020i\014\344\245\003.\324H&I\255Q\323\251"
@@ -1976,7 +1976,7 @@
 	.ascii	"\351\005m\"\325m\035\341\345K\335aO:\323\033\366\246"
 	.ascii	"\257d.\246\3733}\377\272\035\335\364\027\375Y\246~"
 	.text
-	.section	.gnu.lto_getStateOfForcedRTH.part.25.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_getStateOfForcedRTH.part.25.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234MS\317OSA\020\336\331y?jK\0137M\354\201H \002\206"
 	.ascii	"B\214\007O\372wxk\2101\034\304D\210W\226\026\245\010"
 	.ascii	"\232\212\266 yh\215!\"\306\024\"EZ\020\012\310\017\025"
@@ -2018,7 +2018,7 @@
 	.ascii	"\225eg\322\217E\245L\255\250tW\236\374\013\266\2319"
 	.ascii	"!"
 	.text
-	.section	.gnu.lto_navGetCurrentStateFlags.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navGetCurrentStateFlags.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234MRMk\023Q\024\275g\336d2\032m\273\024\034\241 "
 	.ascii	"\025\212\320\261\010\256\375\011\376\0007\241\210da"
 	.ascii	"\025\033\334\3465Q\033\253\205\261\232\0102\325\021"
@@ -2050,7 +2050,7 @@
 	.ascii	"\006\335\301\344\231\324\361d:u\262=\354\033\240\330"
 	.ascii	"P:\231>\366\0171q\324\231"
 	.text
-	.section	.gnu.lto_navPidApply3.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navPidApply3.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\235WmLTg\026\276\347\2763\367\316'\014\025k\255"
 	.ascii	"\260!E\035\305,\263F\242\256\311\206\2156\233\364G\223"
 	.ascii	"n6\273\311&\373\207\352\304\220(\230\201\272\373g\343"
@@ -2175,7 +2175,7 @@
 	.ascii	"\337C\266s6\321\323\227\362\012\335\033=9\205\371\236"
 	.ascii	"\377\001I\202\336\013"
 	.text
-	.section	.gnu.lto_navPidApply2.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navPidApply2.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234m\222Mh\023Q\020\307\337\354l6k\243AO\"\246RP\014"
 	.ascii	")\330\010\275\210\027\301\203\340A\360\350uiCY0Ii\266"
 	.ascii	"\342-\257Q\222\026=\024\265\261l\326\223\332\036D\352"
@@ -2211,7 +2211,7 @@
 	.ascii	"%:h\034\321#\316\246\235TIy\350\270\326\027\373\007"
 	.ascii	"\371\352\004\254"
 	.text
-	.section	.gnu.lto_navPidReset.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navPidReset.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\235\224\317O\324@\024\307\347\333\351v\253(\027"
 	.ascii	"\217BB\242\021\327\003\375\233VL\314\036D\243\306+\303"
 	.ascii	"\252Y\214\0364\272hp1\215H<\260DA\020Q\304\272((\354"
@@ -2244,7 +2244,7 @@
 	.ascii	"\235c\311T\207\323\221<\223:\232<\235:\376w\330\326"
 	.ascii	".\344\211\324\221_\247\356\243P"
 	.text
-	.section	.gnu.lto_navPidInit.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navPidInit.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\235TYHTQ\030>\3779\367\336\271\231c\333K\017I"
 	.ascii	"B\331`\201\003=\004-\017=\364\322C\020\324{XA\014\321"
 	.ascii	"BE\217y\032'\227\012iqk\034j\300\"\242\264\325\312\262"
@@ -2296,7 +2296,7 @@
 	.ascii	"\366xv\3748M\334\304\304N\317f\261a\353Z|V\343\263\212"
 	.ascii	"\257\337\314\327{\276\001\214,>\232"
 	.text
-	.section	.gnu.lto_navPInit.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navPInit.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234]PM+Da\024>\317=w\256\211\330\330a\241\310\220"
 	.ascii	"\232\373\003\374\011\377@\223\205&\371\010\331\316k"
 	.ascii	"\320\020\013_CM7n!\033\362\315`\3506i6\276%Y\310\002"
@@ -2321,7 +2321,7 @@
 	.ascii	"\352\0147\204:\302-\177\323`=\241\225\353\032k\177\000"
 	.ascii	"W\354\226\367"
 	.text
-	.section	.gnu.lto_isThrustFacingDownwards.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_isThrustFacingDownwards.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234M\217\261K\303@\030\305\277w_\032\343Pp\267EA\034"
 	.ascii	"\272$\202\243\177M\350 \035\254\240\342\232\263\031"
 	.ascii	"\332\242\203\240\255\240\031\334\034\265\325\212\301"
@@ -2338,7 +2338,7 @@
 	.ascii	"4~\007L\273\"Zp\275\315\215\262\267\346W\252^\325\337"
 	.ascii	"\256\254\372[\225\365\377\326-\323/\243\343b|"
 	.text
-	.section	.gnu.lto_checkForPositionSensorTimeout.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_checkForPositionSensorTimeout.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234m\222Kk\023Q\024\307\317\377\236\2713c\354\343"
 	.ascii	"\013\314\256\270h\027\031\305\265\033\277I\350B\262"
 	.ascii	"\260\212\212\333\334&\026\015\026,\332\304RR\231\235"
@@ -2368,7 +2368,7 @@
 	.ascii	"\317\237\033\014O\347\362C\341P\356b\376T\356B\376L"
 	.ascii	"\247\233\035\244\277>0\334\""
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_CRUISE_2D_INITIALIZE.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_CRUISE_2D_INITIALIZE.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234]\224mO\024W\024\307\357\177\356\314\354\354\302"
 	.ascii	"\302\262Z\253d\32341\324\310\013W\252o\032\223\306\244"
 	.ascii	"I\277@?\0011\306\020[m\204\372\226\221U\036*i\027\013"
@@ -2429,7 +2429,7 @@
 	.ascii	"\203U\373\337\253~\253\246\262f\267\237\2557\337\256"
 	.ascii	"\334SmT\263\375\037u.\370/"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_WAYPOINT_FINISHED.part.5.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_WAYPOINT_FINISHED.part.5.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234MPKK[A\024>\337\234{\257!\230u]d'>\027F\024W\372"
 	.ascii	"/\374\005!\004\311B-\032\335f\032_Iu!>\242\204\273P"
 	.ascii	"D\332\205X\252\365\221\350\"\350J\244)\270\250\013A"
@@ -2454,7 +2454,7 @@
 	.ascii	"\352\013\017\307z\302\361X\177\345\330\022\241\300\307"
 	.ascii	"\201\350p\254\177h\260;\036\216G\237\000\350T\243\307"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_WAYPOINT_FINISHED.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_WAYPOINT_FINISHED.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215\222KkSA\024\307\317\177\346\336\2334$\342"
 	.ascii	"V\310\256`i\026\271\305\0267\356\374\012~\202P\212d"
 	.ascii	"a+m\3546cc\332F]Hi\322\022\203\004DtQ\361\225\246\246"
@@ -2486,7 +2486,7 @@
 	.ascii	"Aw06\032?\036K\304\207\332\305h?\205N\016\017\214\306"
 	.ascii	"\207N\215\034K\304\022\003?\001Hi\364/"
 	.text
-	.section	.gnu.lto_updateActualHorizontalPositionAndVelocity.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_updateActualHorizontalPositionAndVelocity.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\235\230mPTe\024\307\237\363\334\273w_\301\204"
 	.ascii	"\224\312Mij\"k\306\315l\252\017M_\372\322G?\231~d\314"
 	.ascii	"i\2301\235I\253or\005\344EW1\201\325h\321\315\227\220"
@@ -2578,7 +2578,7 @@
 	.ascii	"\361\234\005\013\265cy\321\202\357\346\3220\317\212"
 	.ascii	"\003\316\316\015\377\235\367\037\252\366tS"
 	.text
-	.section	.gnu.lto_updateActualHeading.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_updateActualHeading.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\235Vkl\024U\024\276\347\336\331\235\331'HI\371"
 	.ascii	"SB\223\202\015D\250\221\304\177*\177L\374abb\214\211"
 	.ascii	"\277\314\006Zl\300\222\010\221?j\207n\331\266\012H\200"
@@ -2661,7 +2661,7 @@
 	.ascii	"\357Y\371\236g\355[\005\005\253\363\327\374\007c?\002"
 	.ascii	"v"
 	.text
-	.section	.gnu.lto_navGetCurrentActualPositionAndVelocity.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navGetCurrentActualPositionAndVelocity.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234}Q\317KTQ\024>\337=wf^13\177@\270\020\304\205."
 	.ascii	"|\020A+\377\230\301E\214\224AI\333w\235\3212m!\345\230"
 	.ascii	"\331#fe\253\250lRg\372\3652\310\225IC0\013\213@i\221"
@@ -2688,7 +2688,7 @@
 	.ascii	"\2135\250#a\352\031\360/^\030\362\317\345\362#\376H"
 	.ascii	"\356R\376Ln4\177\376\317p`\210~\003\343\341\317\243"
 	.text
-	.section	.gnu.lto_navCalculatePathToDestination.part.6.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navCalculatePathToDestination.part.6.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\225SML\\U\024\276\337;\357g`\006\350\217n\314"
 	.ascii	",H\224\222.\350\230\270\253.L\334\271\352\022\227\244"
 	.ascii	"%\206\004\301th\223\256\270\345G~F#Q\031u|\232\361/"
@@ -2738,7 +2738,7 @@
 	.ascii	">\352\356\253\256m\250z#3U\272o\327G\017V\327\376\003"
 	.ascii	"\375R\353d"
 	.text
-	.section	.gnu.lto_calculateAltitudeToMe.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_calculateAltitudeToMe.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234m\221Mk\023a\020\307\237\377>\311nj\233\364\003"
 	.ascii	"\330C@k\351\245{\362\242 ~\204\236\275\205\266H@S0\301"
 	.ascii	"k\236&\032\333\246\330\240M\324\270H\240h\361 *m\265"
@@ -2770,7 +2770,7 @@
 	.ascii	"\351@0d\206\002g\203'\003\221\340x\24794\"|\243c\341"
 	.ascii	"H0\344\270\303\343a}t\354T$p\3427N=\362\376"
 	.text
-	.section	.gnu.lto_calculateDistanceToDestination.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_calculateDistanceToDestination.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\225\222\313O\023Q\024\306\357\2313\235i-\217?"
 	.ascii	"@\026$\212\204\015]\2711\306\230\270r\347R\227\015\020"
 	.ascii	"\323\004\301XB\342\252\227\247@]\020\220\252\265\220"
@@ -2813,7 +2813,7 @@
 	.ascii	"V^\345\276`\275\316k\227+\275\325e\345\377\000\345?"
 	.ascii	"\214\370"
 	.text
-	.section	.gnu.lto_calculateBearingToDestination.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_calculateBearingToDestination.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\225\222\313O\023Q\024\306\357\2313\235\207\345"
 	.ascii	"\361\007\310\202D\221\260\241+7\306\030\023W\356\\\352"
 	.ascii	"\262\001b\232 \030KH\\u\240\200@]\020\036Uk5UC\032\026"
@@ -2855,7 +2855,7 @@
 	.ascii	"x\252\254\351\231j\257R^QY\343>g\277\316*\027\253\275"
 	.ascii	"\265\025\225\377\000\365\206\214R"
 	.text
-	.section	.gnu.lto_setDesiredPosition.part.11.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_setDesiredPosition.part.11.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234UR\335K\223Q\030?\277\367y\367nsi]t\025^\010e\242"
 	.ascii	"\320\026FW\375\015\375\011]\014\211\220H\243\365A7\355"
 	.ascii	"\270M\235\025d5\247\214a/\245\345Mi\344G3\255\2654\205"
@@ -2894,7 +2894,7 @@
 	.ascii	"m\015\320e\377%\347\205\300\311\343\376\300\351\377"
 	.ascii	"\243\326 x"
 	.text
-	.section	.gnu.lto_navCalculatePathToDestination.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navCalculatePathToDestination.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215\223MHTQ\024\307\357y\347}\3711\316^\006\022"
 	.ascii	"\314D!\247h\325\307\"j\327\312e-\007\035b\3004\234\311"
 	.ascii	"\355\\\277\250\311\"\251\306dz\325T\304\320\2424\032"
@@ -2935,7 +2935,7 @@
 	.ascii	"\177\242$\220Q\354\365\007|\245\326na\231_-\366\226"
 	.ascii	"\004<GV\247\303\352\3612\177\205\267\344\017\236[T\241"
 	.text
-	.section	.gnu.lto_isWaypointMissed.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_isWaypointMissed.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234}S]KTQ\024=\353\356q\356\3148\332\017h\210\201"
 	.ascii	"2\361\305Iz\212>\210\242\337\021\243\204\314Cc\214\222"
 	.ascii	"\3644G\307\234D!+\235j\270\305\210T/\231\206\226\371"
@@ -2972,7 +2972,7 @@
 	.ascii	"W)O}\370\334\231\232H\264\316_y*\034\213D\253O\304b"
 	.ascii	"51\367\311pemE\305_\004p\035."
 	.text
-	.section	.gnu.lto_isWaypointReached.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_isWaypointReached.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215T\357o\223U\024\276\347\275\357\357\376\330"
 	.ascii	"\3506?\225d\011`3L\250\304oj\324\017~\340?\360s\263"
 	.ascii	"\020\323\0306\342\026\211\237v\367C\326fMX\220N\254"
@@ -3031,7 +3031,7 @@
 	.ascii	"\361\236\267\334\323\276o\257}`\377\273\361\216\316"
 	.ascii	"X[\353\336\377\001@\375\011\022"
 	.text
-	.section	.gnu.lto_RTHAltitude.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_RTHAltitude.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215V\353OTG\024\237s\347\276\366\015j\333\244"
 	.ascii	"\201\324\244\261\306/nl\223~l\377\024CLki\252M,\351"
 	.ascii	"\247&\\\344!D\215\004\005\232\355F\266!\001\301P%R\312"
@@ -3101,7 +3101,7 @@
 	.ascii	"d\177\276ux\364\0043\217\237\311>\371I\316\261\367\214"
 	.ascii	"\343\237}\364q\316\261w\377\007\247fV\327"
 	.text
-	.section	.gnu.lto_updateDesiredRTHAltitude.part.8.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_updateDesiredRTHAltitude.part.8.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234U\221\277KcA\020\307\367\273\363\222<\177\236p"
 	.ascii	"m\012ARX\350\273\312\326\277%XH\012#\250\\\233\325 "
 	.ascii	"I\324B\302%\202\274\223\007)L#\247\370\353b<\215\202"
@@ -3127,7 +3127,7 @@
 	.ascii	"\316P4\026w\342\321\317\261\301\350Xl\370}\330;\240"
 	.ascii	"\336\000\213'\247o"
 	.text
-	.section	.gnu.lto_updateDesiredRTHAltitude.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_updateDesiredRTHAltitude.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215T\337K\024Q\024\276\337\334\231\331uw\325\312"
 	.ascii	"\202\036|\010\242B\002\267\350\251'\373\003\372'$\""
 	.ascii	"|\250\240\244\247\300\353\256\345\232\021\246\271\205"
@@ -3176,7 +3176,7 @@
 	.ascii	"(\333UZ^\2667{[\274CX\373\313K\313w\376\004M\277\267"
 	.ascii	"{"
 	.text
-	.section	.gnu.lto_updateActualAltitudeAndClimbRate.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_updateActualAltitudeAndClimbRate.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\225WkpTE\026\356\323=\357W\024Y\0148\030V\304"
 	.ascii	"\224Z:\260\313\237\375a\255V\371\323\177V\361k\253\254"
 	.ascii	"T\2148\265\021\253\310\240\265\373Cn\036$\031yl$d\300"
@@ -3288,7 +3288,7 @@
 	.ascii	"\361\313\241\274\320\262\"\307+K\203\213_\017-\230o"
 	.ascii	"{\245\260\340\265\320_\376\017\036l\031\371"
 	.text
-	.section	.gnu.lto_initializeRTHSanityChecker.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_initializeRTHSanityChecker.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215RIOSQ\024\276\337;\235\020\333:,eA\242Hp\301"
 	.ascii	"\333\230\270\304?\340\316?@\0101]\000\006\320\245\275"
 	.ascii	"\264 \2231(R\023\362\242/*j\"\202FD+(\265(81h\010.\324"
@@ -3326,7 +3326,7 @@
 	.ascii	"\223\015M\336\232S\215\215\265\365\315\307\003u\265"
 	.ascii	"\307\232\376\000%\036c\226"
 	.text
-	.section	.gnu.lto_validateRTHSanityChecker.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_validateRTHSanityChecker.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215\224\317O\\U\024\307\317yw\336{\303\0143 \026"
 	.ascii	"\335\260h\254h\3324\035\177,\\\031\\\270p\343\306\324"
 	.ascii	"?\200\214\023%\025H\370\341\226\007\303\257)h\251\300"
@@ -3392,7 +3392,7 @@
 	.ascii	"oQq\340\315\362\\\333z\275\250\274\242\260\304\037\330"
 	.ascii	"[\372Fiq\340o\006\023\234O"
 	.text
-	.section	.gnu.lto_setHomePosition.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_setHomePosition.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\225W\353o\024U\024\277\347\336\331\231\335\331"
 	.ascii	"G\251\024\232\220\3064jl(\264Kb\342W\277\231\030\343"
 	.ascii	"7\377\201\206\020$\012\030\353#~\261\323\007}m\251,"
@@ -3481,7 +3481,7 @@
 	.ascii	"&n\213\0273\361\376\312R\361i\311'\332G\245K\336*)}"
 	.ascii	"\327\365\316\312\345K^\177\257di\351\377KT\006\015"
 	.text
-	.section	.gnu.lto_updateHomePosition.part.9.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_updateHomePosition.part.9.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215V[lTE\030\236\377\314\271\355\025\260PQV\255"
 	.ascii	"bK\032\023Vcb\342\213/&\206\007_M|\335\000\301&\\\214"
 	.ascii	"\255\274\366\330\226^\250&H\333-\251\033\263\201\202"
@@ -3558,7 +3558,7 @@
 	.ascii	"\005\033p\311\2733\2605o\023\275\211\345\377\000\336"
 	.ascii	")m}"
 	.text
-	.section	.gnu.lto_updateHomePosition.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_updateHomePosition.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215U[O\\U\024\336\337\331\347\2349\0033\014\342"
 	.ascii	"\225\212\011I\003\006\037\030\215}\324G\215O\376\007"
 	.ascii	"R\233\206\244\227D\232>\364\205\003\303U4!t\230i\351"
@@ -3624,7 +3624,7 @@
 	.ascii	"o\355\337\273+\347`\331\236\362wx\367\346\236\262\335"
 	.ascii	"\025\377\003$\364mC"
 	.text
-	.section	.gnu.lto_getTotalTravelDistance.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_getTotalTravelDistance.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234UO=K\303P\024\275'/I\263\330?`\207\2028tI\376\207"
 	.ascii	"\376\212\320A:X\361\003\327\304\266j\375\030\212\244"
 	.ascii	"\255\226X\272\210\223T\261~\244*\004\005\267*\272\272"
@@ -3644,7 +3644,7 @@
 	.ascii	":\323n.\357\344\335\305\334\224\273\220\233\371[\332"
 	.ascii	"Y\372\006\350Nv\344"
 	.text
-	.section	.gnu.lto_calculateInitialHoldPosition.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_calculateInitialHoldPosition.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234mRMkSA\024\275g\356\274$\250-.\\v!D,\351\"\371"
 	.ascii	"\007\376\001\177E\350B\262\260\025+n3&\321\266\350B"
 	.ascii	"\245\246%<\365-\374@\\D\261Q_\325\366Q\305U\375*\005"
@@ -3672,7 +3672,7 @@
 	.ascii	"\023'G\013\307\213\245\261\302X\361t\351X\361Ti\374"
 	.ascii	"\3374?*zb|\342/\355\211\270\357"
 	.text
-	.section	.gnu.lto_calculateFarAwayTarget.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_calculateFarAwayTarget.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\235\224\313OSQ\020\207\317\334s\373\240\264\245"
 	.ascii	"\001Y\250\020I4\02264,X\270p\341\332\215\377B\203\217"
 	.ascii	"\020#$@$l\344\360~T\0141\245$\265!M\014A1\276\202\250"
@@ -3721,7 +3721,7 @@
 	.ascii	"\216\242\003\245\216\262C\205\305\274\314Qj<\234_\\"
 	.ascii	"\342(\310;\362\033\022\236\034\217"
 	.text
-	.section	.gnu.lto_calculateNewCruiseTarget.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_calculateNewCruiseTarget.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\245S[O\023Q\020>\263\263\335\335\266PH\324\007"
 	.ascii	"#D\022\215\204\007\331\370\350\177\360O4hH\037,\011"
 	.ascii	"\020\215O=\024h\213\212\321XJ\254\015ib\260&\306\240"
@@ -3762,7 +3762,7 @@
 	.ascii	"@k \210\007\374\373\215\335\201\216N\177\260e\3177\216"
 	.ascii	"\327\202\353"
 	.text
-	.section	.gnu.lto_resetLandingDetector.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_resetLandingDetector.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234mPKK\002Q\024>\337\2753*\225\321\242e;ia\013\205"
 	.ascii	"~@\277\240?!-\302E\005\025m\347\246\225E-\"\314L,\006"
 	.ascii	"Z\264\254H\253\251\315`m\202\260\210v\356B\203Bz\354"
@@ -3784,7 +3784,7 @@
 	.ascii	"\323\003\241\360\314\364Xx\"\022\235\014OF\346\242\343"
 	.ascii	"\221\331\350\324o\030\032\243\037\002\213\232\030"
 	.text
-	.section	.gnu.lto_isLandingDetected.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_isLandingDetected.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234m\222\301k\023Q\020\306\347{\263\233M\253QO\236"
 	.ascii	"z\020B\003\355\241\221\212\007\005=\371\217\2044\224"
 	.ascii	"\200F\320\3405\317\254\266\006=\210\244\261J\224\005"
@@ -3813,7 +3813,7 @@
 	.ascii	"\352\\v8\225\317\236\336Y\016\244i\357\311Tn(\233\033"
 	.ascii	">\221\311g\322\371\314\320\037\225i\313/"
 	.text
-	.section	.gnu.lto_updateClimbRateToAltitudeController.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_updateClimbRateToAltitudeController.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215V[L\224G\024\2363\263\367\033(\332VY\012\255"
 	.ascii	"\267j\203\224`\342K\2334i\237\232\364\245\321\244OM"
 	.ascii	"\250l\032\022/\211b_\375\005]E\254Z+\253\340\252[\033"
@@ -3916,7 +3916,7 @@
 	.ascii	"s=\263\363\246\345\316\362L\237g\315\303\277/=3\363"
 	.ascii	"\262\377\0070\034~\310"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_RTH_FINISHED.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_RTH_FINISHED.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234UR\317K\033a\020\235\267\223l\322\324\344\0370"
 	.ascii	"\322B\241\"\024W\310\237\322S\217ADrP\213\246^\3635"
 	.ascii	"\301$\266\202A\262\251\265KY\220\322\223\024i\324\306"
@@ -3945,7 +3945,7 @@
 	.ascii	"\031\271\031\366\366S\374\361\350\300xf\344\311\330"
 	.ascii	"\303l:;\360\027;\002\275q"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_RTH_LANDING.part.10.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_RTH_LANDING.part.10.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\225W{P\224U\024\277\347\336\375\366\275\200 \210"
 	.ascii	"\272$\331\030=f\242\351=5M\375\325\364G\323L\343T\177"
 	.ascii	"5\016\243d\314\0306J\375\327\360\311\302\302\206\026"
@@ -4050,7 +4050,7 @@
 	.ascii	"\266O\251\355\223Q\362\013\027g,\313\312^\372\037\264"
 	.ascii	"\265\247\331"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_RTH_LANDING.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_RTH_LANDING.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234eS]H\024Q\024>\337\334\231\331mu\245\036\204\240"
 	.ascii	"}\010\302\374A\\\351\347=\202\336z\211\240\367E\227"
 	.ascii	"XH\015\335|\335\311\365o\315\207\020]cYrK\242\202@#"
@@ -4089,7 +4089,7 @@
 	.ascii	"Z\177}\240\346R\335\331\240/\350\337W\351\257\253\360"
 	.ascii	"W\007\317\371/\234\016T\005\202\376\312\277\0260&&"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_WAYPOINT_RTH_LAND.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_WAYPOINT_RTH_LAND.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234eQ\337KSa\030~\237\357=;\233\243u\333\315\271\020"
 	.ascii	"D\315\233M\250n\202\240\033\377\202\376\202\203\015"
 	.ascii	"\031\330\014\235\273\335\347\324t\352\205\212\277\030"
@@ -4116,7 +4116,7 @@
 	.ascii	"\246\023\035n*\321U{F\333)\362\264;\236Nt\365\366<J"
 	.ascii	"\271\251x]\247\233|\334\226\216'S\377\000J\020\265\236"
 	.text
-	.section	.gnu.lto_setDesiredPosition.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_setDesiredPosition.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\225V\373O\034U\024\276g\356\274\366\005h\021X"
 	.ascii	"\\\022\022LI\371\201\365\031\377\010c\374\033Hc\014"
 	.ascii	"1\266F|\304\304\204\341U\240\020S\033\330%\270i7j-$"
@@ -4186,7 +4186,7 @@
 	.ascii	"\277Q\366n\371n\353m\351N\306\337\336]\301?,\373@{\257"
 	.ascii	"\342\365W\313*\336\374\033\272i\036\260"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_CRUISE_2D_IN_PROGRESS.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_CRUISE_2D_IN_PROGRESS.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\225XyPU\327\031?\337\271o_\331w\224\250\210\222"
 	.ascii	"6\204Fg2\261[f\372G;\235\316t\246\231\351\337\214\276"
 	.ascii	"dh\022\323A\222?\222\231\362\002\204EI\321T_\\^\364"
@@ -4345,7 +4345,7 @@
 	.ascii	"=\345H\367\233\322\027_\364!\323|\337\177\001)\214a"
 	.ascii	"\362"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_WAYPOINT_IN_PROGRESS.part.12.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_WAYPOINT_IN_PROGRESS.part.12.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234}Q\337K\223Q\030>\317\367~\3736\347\326_\360\335"
 	.ascii	"\205\211BN*\274\210\350\252\213\256\253\177`\210\310"
 	.ascii	"w\321\026ny\273\223ksj\027VnE|\305@\244\210\354\207"
@@ -4379,7 +4379,7 @@
 	.ascii	"\307\303\361\036\277\023;\022u\"\275\307N\034\375\015"
 	.ascii	"\235\271\352{"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_WAYPOINT_IN_PROGRESS.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_WAYPOINT_IN_PROGRESS.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215\225\337O\024W\024\307\357\231;\277w\006\260"
 	.ascii	"V\224f\037L\032\252\370\340\252\245>4\246O}\360\271"
 	.ascii	"\366\037 \306\230}(4BM}\332\221\005\201b\023c\334\321"
@@ -4438,7 +4438,7 @@
 	.ascii	"\311\235\256\335\312\354\317wl\333\031\255\371\242v"
 	.ascii	"K]U\33563Z\373qM\264z\373'\237n~\015\007;:\033"
 	.text
-	.section	.gnu.lto_calculateAndSetActiveWaypointToLocalPosition.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_calculateAndSetActiveWaypointToLocalPosition.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215R\315k\023A\024\237\337\274\315f\253m\364\342"
 	.ascii	"A\315A\020-\361\320\365\237\361\342-\364 9\330\212\025"
 	.ascii	"\217f\232\2646F\017*M\012a\321\025,\212_QZ\243\321\252"
@@ -4469,7 +4469,7 @@
 	.ascii	"\334\355\036\214'z\334\236\370\321\304\201\370\221D"
 	.ascii	"\357\312\260\253[\321\241\336\276?\006\200\026\261"
 	.text
-	.section	.gnu.lto_calculateAndSetActiveWaypoint.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_calculateAndSetActiveWaypoint.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234m\220\317KTQ\024\307\317\367\235\2317\257\324Z"
 	.ascii	"\005\201.\2040\221\300q\227\313\376\2046n\334=f!\003"
 	.ascii	"6\023)E\253w\035\215\031\315E\212\2164\334\305H\210"
@@ -4498,7 +4498,7 @@
 	.ascii	"\277\315\366\004y\227\374\313\347\323\311T\277\327\233"
 	.ascii	"N\370\275g\323}\177\000\0235\277r"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_WAYPOINT_PRE_ACTION.part.13.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_WAYPOINT_PRE_ACTION.part.13.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234mR]k\023A\024\2353\263\331\3044\351/\310\203 \265"
 	.ascii	"4H\267X\360\217\370\013B)\222\007[ic^3MZ\033\211\017"
 	.ascii	"!6\251\226EVJ\325\007\213Z\333\304h[c\374\302\007\025"
@@ -4531,7 +4531,7 @@
 	.ascii	"F\022\351\344\261D*9\272w\331?\304\242'\306\206\323"
 	.ascii	"\311\321\223\343GS\211\324\360of\361\373\301"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_WAYPOINT_PRE_ACTION.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_WAYPOINT_PRE_ACTION.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215\223\337KSa\030\307\337\357y\317\331\346\334"
 	.ascii	"\312\253\256v!\010\211\003\235&t\327_\321_0Db\027i\250"
 	.ascii	"y\273\2433\247e \303m\"\207<\020\221]\230i\376hjz\\"
@@ -4571,7 +4571,7 @@
 	.ascii	"\023\376kM\365\255\221\306\353\315\227[\302-\365\177"
 	.ascii	"\001\367\244L\363"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_RTH_HEAD_HOME.part.14.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_RTH_HEAD_HOME.part.14.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234]R\335KSa\030\177\177\3479\373\310\266u\321\355"
 	.ascii	".\202X\342*\217\344?\022\364\027\014\221\330E\032\272"
 	.ascii	"\274\335\253\233\333\324.d\271\031r\210\201\331\007"
@@ -4606,7 +4606,7 @@
 	.ascii	"\011\367\267\272\235=\302{~\240w(\334\177a\360L$\024"
 	.ascii	"\351\375\007\036=\361h"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_RTH_HEAD_HOME.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_RTH_HEAD_HOME.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215V\355STU\030?\3179{_\366\336\273\204\026)\272"
 	.ascii	"\230M3\221|p\235\314i\246\177\303\277\200q\234\206\017"
 	.ascii	"i\243\304\327\275\201\313\213\322\3508\354\322\320V"
@@ -4672,7 +4672,7 @@
 	.ascii	"V\224\275]Z^\2667s\273u\027\363\274\273owE\331\336\367"
 	.ascii	"\366\357,/-\337\375\037\372[\333I"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_RTH_CLIMB_TO_SAFE_ALT.part.15.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_RTH_CLIMB_TO_SAFE_ALT.part.15.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\225WkPTW\022\276}\316\334;\017f\006\206\001\237"
 	.ascii	"\203\222\215\217M*\011n\222\255u\267\366G\366\327\376"
 	.ascii	"\331\255\374\330\252\255\332_\226\225\270\206\252\254"
@@ -4807,7 +4807,7 @@
 	.ascii	"\321\037>\316\312\314\372\364\303y\177\236\273h~\346"
 	.ascii	"\202\377\001t\251\224\002"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_RTH_CLIMB_TO_SAFE_ALT.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_RTH_CLIMB_TO_SAFE_ALT.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215S[KTQ\024\336k\357s\366\031O3^\202\240h\336"
 	.ascii	"\002E\037\034\311\374%\375\201\006\221\230\2074\324"
 	.ascii	"|\235\223\223yIPlf\214\341\020\023\321\2050\272yi\264"
@@ -4848,7 +4848,7 @@
 	.ascii	"\250\332\275,.g\236\363\325\025u\201\252\0135\247k\375"
 	.ascii	"\265\025\177\001\340\217`b"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_RTH_INITIALIZE.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_RTH_INITIALIZE.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215\227\333W\324\327\025\307\317>g\356w\230\221"
 	.ascii	"K\203\221z\215\304\2126Y\253\351KW\237\272\372\320\207"
 	.ascii	"f\365/`\245.\227\253i\354\022\352K\037\370\311\035E"
@@ -4969,7 +4969,7 @@
 	.ascii	":+\365~\363v\336\372|gA\336\246\365\353\012~\273\361"
 	.ascii	"\355?\376~c\2761\237f\377\007\247\350\306\032"
 	.text
-	.section	.gnu.lto_processBrakingMode.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_processBrakingMode.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\235WkTT\327\025>\373\334y\3170<\206\327\214cD"
 	.ascii	"\001\011\220\210\361\271V~\351\217\254\325\177\375\335"
 	.ascii	"\2376i\262\260\011\256\245\246\217\325\256\345\010\006"
@@ -5101,7 +5101,7 @@
 	.ascii	"|?_\271\354\227\370\373R\331\352\225\277]\372\372\353"
 	.ascii	"+~\375\213W\376\013@,\364?"
 	.text
-	.section	.gnu.lto_adjustPositionFromRCInput.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_adjustPositionFromRCInput.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215\224\355o\323U\024\307\317\371\335\337S\237"
 	.ascii	"\013\263\262\340^,Y\346\302H(\304?\000\214\377\200\372"
 	.ascii	"\302\227&K\235Z3F2\212o\367\243eO\272\027\323le4\325"
@@ -5160,7 +5160,7 @@
 	.ascii	"\036\333\321\021y5\032\213\274\273\265\363\037\300\277"
 	.ascii	"\036\265"
 	.text
-	.section	.gnu.lto_processNavigationRCAdjustments.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_processNavigationRCAdjustments.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\235VmO\034U\024\276g\356\354\314\354\316\276\371"
 	.ascii	"\022_`\215$\006\233~\351\266\261\211\351\267~\362\017"
 	.ascii	"\370\003\014iLC\2425\021\342'\023\246,\010\224\306`"
@@ -5227,7 +5227,7 @@
 	.ascii	"\266=,\200\273\027\253+\252_~\341\225\212\275U\236*"
 	.ascii	"Z\376\011PK\"\275"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_RTH_HOVER_ABOVE_HOME.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_RTH_HOVER_ABOVE_HOME.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215VkPUU\024\336\353\354s\316\275\367\334\007"
 	.ascii	"\017yh\035\2132Dk\306k\223\376\352OM\375\350G\277\252"
 	.ascii	"\231~3tG\231Ii\024\375\321\037\216\"\227\2138\223\303"
@@ -5314,7 +5314,7 @@
 	.ascii	"\234n\017>X\231\276zE\340\303\3145\201\014:\340\177"
 	.ascii	"A\207\232t"
 	.text
-	.section	.gnu.lto_resetGCSFlags.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_resetGCSFlags.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\205\220=KBa\024\307\317\377y\256z\227Z\032k\213"
 	.ascii	"\006\027\357G\350\263\210CHhP\321\330}RD\303\206\010"
 	.ascii	"\265\345R\027\027\247\010\311\254\333\033\027\207\332"
@@ -5335,7 +5335,7 @@
 	.ascii	"\304\264\3746\036\232LX\013\363)+\223Lg\255lr)=\223"
 	.ascii	"\\L\317\015\246\211\024\375\002x\316\236m"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_POSHOLD_3D_IN_PROGRESS.part.16.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_POSHOLD_3D_IN_PROGRESS.part.16.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215SYOSA\024\236\357\236\333\026k+\356\276\364"
 	.ascii	"\301\304\240\321\030K\324\007bb\242o>\232\370\013\032"
 	.ascii	"E\323D\305@\345\265c\253P\203\017\210\264.\271\301\032"
@@ -5381,7 +5381,7 @@
 	.ascii	"\342\320\272\222\255\233\326\227\224}\003\215\026\220"
 	.ascii	"\347"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_POSHOLD_3D_IN_PROGRESS.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_POSHOLD_3D_IN_PROGRESS.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234mPMkSQ\020\235s\347\345%\224F\374\001\0177\202"
 	.ascii	"\245]\364U\273\363o\370\013B)\222\205mic\267\271&\326"
 	.ascii	"&\326\205J\223J\011\022\020\321\215_\330\017\223\232"
@@ -5409,7 +5409,7 @@
 	.ascii	"\235v\367Qrh\270\1774=xz\344D&\225\351\337\003\334\301"
 	.ascii	"\273\265"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_POSHOLD_3D_INITIALIZE.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_POSHOLD_3D_INITIALIZE.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215ViLTW\024\276\347\3357\373\274\031\324\266"
 	.ascii	"\210\035\220\326\"\361\217h4\3216\355_\323\037\375\321"
 	.ascii	"\246M\377\223J\011\011J\003\324&\375Q\036\014\002.5"
@@ -5498,7 +5498,7 @@
 	.ascii	"\322Z\225\232\230\234\241e&\246''e~\234\226\272\372"
 	.ascii	"\323\264\014S\006Y\375\007\255ad\033"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_ALTHOLD_IN_PROGRESS.part.17.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_ALTHOLD_IN_PROGRESS.part.17.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234m\222KkSA\024\307\317\377\316\315\315\303\244\352"
 	.ascii	">\013Aji\221\336b\027.\374\030~\202P\252da+m\3546cb"
 	.ascii	"\333H\272\010\265\211V\256z\245H\355B\264\332&&\246"
@@ -5532,7 +5532,7 @@
 	.ascii	"Hl\"~<\226\210\217v.\373\207(rrlx\">zj\374h\"\226\030"
 	.ascii	"\376\003\276\002\364;"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_ALTHOLD_IN_PROGRESS.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_ALTHOLD_IN_PROGRESS.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234mPKkSQ\020\236\357\314\315M(F\374\001\267+\301"
 	.ascii	"\322.z\253]\370C\374\005\241\224\222E\037\264\261\333"
 	.ascii	"\034\023k\023\353B%I\245\004\011H\321\215/lS\323\370"
@@ -5560,7 +5560,7 @@
 	.ascii	"J\217\204#\251\311\364P*\223\036\375;\355\035\240\344"
 	.ascii	"\330\370\340dz\364\344\304\211L*3\270\007,A\273w"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_CRUISE_3D_ADJUSTING.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_CRUISE_3D_ADJUSTING.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234e\216\277J\303P\024\306\317\271\307\304 \344\011"
 	.ascii	"\314 \012\306.M\241o\242O\020J\221\014\266\322\306\256"
 	.ascii	"\271V\261\2558\210\264UJ\020A\304QDk-.A\212\340\322"
@@ -5580,7 +5580,7 @@
 	.ascii	"\353{\371\2772\231\001s\275\220-y\371\215\342\212\357"
 	.ascii	"\372\331\037\030\204qo"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_CRUISE_3D_IN_PROGRESS.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_CRUISE_3D_IN_PROGRESS.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234e\216?KBQ\030\306\337\347\274y\223\300O\220C\024"
 	.ascii	"d.*\370M\352\023\\D\342\016i\250\271\336\223EZ4H\244"
 	.ascii	"\205\334!\210hh\21003i\271\204\004-\016\0225\004\015"
@@ -5599,7 +5599,7 @@
 	.ascii	"\344\377\312D\206\"\353\205l\331\311o\024WJv)\373\003"
 	.ascii	"\010.q8"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_ALTHOLD_INITIALIZE.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_ALTHOLD_INITIALIZE.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215U[LTW\024=\373\236\373\230'P\004\021;\265$"
 	.ascii	"\015\022\177\034\215\204\244I\277\375\352O\323\246?"
 	.ascii	"\375\"\226\022\022\036\015P\233\370Q.\014\362\020k\006"
@@ -5670,7 +5670,7 @@
 	.ascii	"\026\274\237\223\237\375FAvvn\326\333vB\355\317\315"
 	.ascii	"\314.\322\212\010\367\017}[r\334"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_CRUISE_3D_INITIALIZE.part.18.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_CRUISE_3D_INITIALIZE.part.18.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234eN\277KBa\024\275\347\273\317\037\004\376\007n"
 	.ascii	"A\342\220\012\356\3717D\177\301C$\336\220\206\232\353"
 	.ascii	"\373\212H_44d\205\010\005\021\215\022e&-6\266\0045\024"
@@ -5690,7 +5690,7 @@
 	.ascii	"\256:\245\2774\225\247\330r\271PsJ+\225\205\252]-\374"
 	.ascii	"\000\037\356v\""
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_CRUISE_3D_INITIALIZE.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_CRUISE_3D_INITIALIZE.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234UQMK\033Q\024\275\347\335\231I\252\215\270\226"
 	.ascii	"@\027\245U7F\360\007\370#\374\005AD\262\250\026M\335"
 	.ascii	"\346i\374\212\272P\321\370\301(\241\245\270p!\245ZM"
@@ -5718,7 +5718,7 @@
 	.ascii	"\333\232:b\255\037\332\033\342\321x\323\035\345U\244"
 	.ascii	"\304"
 	.text
-	.section	.gnu.lto_getWaypoint.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_getWaypoint.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\245V[PUU\030^\377^{\357\263\317\225J\241\033\017"
 	.ascii	"\314\2241\276xj\232i\234\351\241\036z\350\301\351\271"
 	.ascii	"Wr\262\341Ab\314\342\255\263\341\020w\225\0308\011\235"
@@ -5793,7 +5793,7 @@
 	.ascii	"\276\361\3466\275 \377\225\234\3559ZA\376\246M\257\376"
 	.ascii	"\013X\035\275\225"
 	.text
-	.section	.gnu.lto_navRadarUpdatePlane.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navRadarUpdatePlane.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\225WkSSG\030\336\367l\316\311\011\344b\255\265"
 	.ascii	"\265\2456L\213U\353\230:\323\017~\350\264\376\200~\350"
 	.ascii	"_`\234N\207\231\026\235\332q\246\2378r1\200\342\205"
@@ -5882,7 +5882,7 @@
 	.ascii	"\342\345\014\276\321W\256X\365\351\027\331\271\237\271"
 	.ascii	"VR\371\311\212\345\"\0069\377\003\013\243\260\362"
 	.text
-	.section	.gnu.lto_saveNonVolatileWaypointList.part.21.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_saveNonVolatileWaypointList.part.21.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234}S[KTQ\024\336\337Y\3472\336\246?0\220\020F^\320"
 	.ascii	"\244\307z\350O\364\034bR\363\220AE\3646\333\361:X&\322"
 	.ascii	"\2140\035d*\243|\010\225\2644/\215N7\310\362\202\021"
@@ -5925,7 +5925,7 @@
 	.ascii	"\345n+k\025\302\366\321p\375\261\272\363\277\001\"\032"
 	.ascii	"7\264"
 	.text
-	.section	.gnu.lto_setWaypoint.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_setWaypoint.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\235XkPU\327\025\336k\237\373~\303\275\274AQ\242"
 	.ascii	"D\255b&M\223\231v\332N\247\323ig2\235\376\311L\323\177"
 	.ascii	"4M\034;\215:\321\326\311/\256\240\274D|D\256J\257\221"
@@ -6067,7 +6067,7 @@
 	.ascii	"\027\347\276\277`\376\334y\213\336X\360\227\334Eo\377"
 	.ascii	"\346o\271s\026\376\017b\000\015\265"
 	.text
-	.section	.gnu.lto_resetWaypointList.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_resetWaypointList.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\205RMK[A\024\275gf\362\022\304\270\354\312]\260"
 	.ascii	"`\026>\220\376\241\340B\262PA\305m\246\211_A\027\245"
 	.ascii	"\230T\302C\336\256\010jZ\342\327\263V_\242\340\316\217"
@@ -6093,7 +6093,7 @@
 	.ascii	"t\277\335\237\032I\367\246\206\323\003\315iW\017=\000"
 	.ascii	"g\207\311\303"
 	.text
-	.section	.gnu.lto_loadNonVolatileWaypointList.part.20.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_loadNonVolatileWaypointList.part.20.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\225T\355o\223U\024\277\277\347>\257e\353 ~2it"
 	.ascii	"\211\231\0230\253\013~\323\017\372\027\370\311\317f"
 	.ascii	"Ab\372\301\231\370\026\276\365\262\215\215: \013\322"
@@ -6151,7 +6151,7 @@
 	.ascii	"\246\315\002\021\373\215H\353\233[\266\376\015PN\021"
 	.ascii	"g"
 	.text
-	.section	.gnu.lto_isWaypointListValid.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_isWaypointListValid.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234MN\273J\003A\024\275gF7\333\304\037p\213\200DH"
 	.ascii	"\223\021\374\032\313%\205la\004\025\333\0357\210\006"
 	.ascii	"-D\334\010\032d;+Q\311C76\203\215V*\242Xh%6\212\010"
@@ -6169,7 +6169,7 @@
 	.ascii	"LEM\371AUU\375\371`\322\237\013\246\377\303r\205~\001"
 	.ascii	"V\225ax"
 	.text
-	.section	.gnu.lto_getWaypointCount.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_getWaypointCount.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234MO1KBa\024\275\347]}\276\206\374\0039\010\021\341"
 	.ascii	"\342\033\3725\215\342\020\016\031T\264\372\245\205F"
 	.ascii	"\015\021j`\037\341\326\024\025\232\366\234\036-MV\006"
@@ -6189,7 +6189,7 @@
 	.ascii	"\345\254\277\230\311\345\375|f-\267\220Y\315-\375/\323"
 	.ascii	"Y\372\003<zo\352"
 	.text
-	.section	.gnu.lto_loadNonVolatileWaypointList.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_loadNonVolatileWaypointList.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234UP=KCA\020\334\271\275\227\00416\202U:\021\261"
 	.ascii	"I\024\375C\301BR\250\240b\373N\023\243A\005\021\023"
 	.ascii	"A^$\235\215`\324\370\021-|\250\265_\240\026\001\213"
@@ -6212,7 +6212,7 @@
 	.ascii	"\321\221\376\304`25\224\030J\216\247\006\222c\251\341"
 	.ascii	"\277\327x?}\003\236\036\213\230"
 	.text
-	.section	.gnu.lto_saveNonVolatileWaypointList.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_saveNonVolatileWaypointList.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234m\222\301KTQ\024\306\317w\317}o&qZ\272r\241H\013"
 	.ascii	"]\314\023\374\023\372Cbp!\263\310\300\304\355\2739\226"
 	.ascii	"\015\266\010i\246\220G\014\022\344F\234\324\324Q\253"
@@ -6239,7 +6239,7 @@
 	.ascii	"\255<\266\256|ty\250?\272X(\016F\203\205\221\342@a\270"
 	.ascii	"x\351\3442\337O\177\001\202\261\271\022"
 	.text
-	.section	.gnu.lto_isApproachingLastWaypoint.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_isApproachingLastWaypoint.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234mS\337KSa\030\376\236\363\235_:\265n\212\202]\010"
 	.ascii	"bb\202K\272\352\256?\240\177b\210\204\027\031\244\004"
 	.ascii	"]\371\271\2438SbY\233\"\253\006]\364\0135\311_\233\246"
@@ -6279,7 +6279,7 @@
 	.ascii	"\247\202\365\015\201\206\340\331\372\223\301\246\372"
 	.ascii	"\323\371\327\352Za46\005\233\352~\003\220\327=\204"
 	.text
-	.section	.gnu.lto_getActiveWaypointSpeed.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_getActiveWaypointSpeed.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234m\221\313N\024Q\020\206\353?u\272\247A\340\011"
 	.ascii	"X\230L\\\300b\372\011|\022W\223Y\230Y\210\211\032\267"
 	.ascii	"st\300K$\221\020f$ckz\205+/ 2\016\336Z\324\270\022/"
@@ -6309,7 +6309,7 @@
 	.ascii	"WG\302\221\362\361\352\301\362\261\352\341\235f\251"
 	.ascii	"B\177\000\372P\323p"
 	.text
-	.section	.gnu.lto_applyWaypointNavigationAndAltitudeHold.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_applyWaypointNavigationAndAltitudeHold.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\225\230kPTG\026\307\357\351;/\346=\003\003\003"
 	.ascii	"\214\212\342c\343V\311\032\367\313~\261\266\366\303"
 	.ascii	"\356\247\354\227\335\375\260\265\237(\313JY\265\232"
@@ -6442,7 +6442,7 @@
 	.ascii	"m\374\343\232\265\253\377\264\301\274\201\006\376\017"
 	.ascii	"\276k\031>"
 	.text
-	.section	.gnu.lto_switchNavigationFlightModes.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_switchNavigationFlightModes.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234m\222]H\024Q\024\307\357\177\356\316\356\330\246"
 	.ascii	"+\204\020\344\203\020\033\370\342&>\325SO\275\025\275"
 	.ascii	"\370\330\303\246\213-\230B\212\257{\335\315\217\260"
@@ -6486,7 +6486,7 @@
 	.ascii	"\276\212,_\231i:\356\255J\261\252\025\225\336J\337?"
 	.ascii	"\317ZK\375"
 	.text
-	.section	.gnu.lto_navigationRequiresThrottleTiltCompensation.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navigationRequiresThrottleTiltCompensation.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234]R\337K\224A\024\2353\363\375\330\037\256\371\024"
 	.ascii	"=\354\203 \006*\270IO\341[\377G\301\"\021>d\220\342"
 	.ascii	"\253\343\256\246\213\021\233\265\253\310\032\013=\004"
@@ -6526,7 +6526,7 @@
 	.ascii	"$*jC\315\027\032B\347\302\215M\241\246pk\343\331pK\343"
 	.ascii	"\371\342mm\2030\233[\302-g\376\001\331\361*'"
 	.text
-	.section	.gnu.lto_navigationRequiresAngleMode.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navigationRequiresAngleMode.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234]S\335K\223a\024?\347}\336\217m\357\374\270\211"
 	.ascii	"\202v1\010\213\026\264\242\233\272\211\240\377\240\376"
 	.ascii	"\200\020\221\360\"\003]\335\372\264ejY\254rKd\306\250"
@@ -6574,7 +6574,7 @@
 	.ascii	"\335\356\352H\335\336\322t}\015\370k\36654\324\326G"
 	.ascii	"vF\252#\265Z#\307\177\307\361h;"
 	.text
-	.section	.gnu.lto_navigationRequiresTurnAssistance.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navigationRequiresTurnAssistance.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234]S[O\023Q\020>\263g\273\273\245\264\364M\037\232"
 	.ascii	"HB0\201\007*\301\007}!\376\007\177AC\210!QL\240\372"
 	.ascii	"\312\241\005\241\201\230\212\266 .\246\211\017F\211"
@@ -6618,7 +6618,7 @@
 	.ascii	"s\335\262*\226_u\256\256\256\272\326\177\322\357\363"
 	.ascii	"W\333\352\311\376\003\264\305R\343"
 	.text
-	.section	.gnu.lto_navigationGetHeadingControlState.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navigationGetHeadingControlState.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234]S\337KSa\030\376\236\363\235\263\235m:\275\364"
 	.ascii	"b\201 F\026\270$\274\350\246\242\177$\206Hx\221AJ\267"
 	.ascii	"\373\334\374\231\"\313\332\2241k\020\021Y\261~\2505"
@@ -6660,7 +6660,7 @@
 	.ascii	"\337\345\272\363\276\306\272\213\371\313\312\032a44"
 	.ascii	"\372\032k\377\002\254+?\020"
 	.text
-	.section	.gnu.lto_navigationTerrainFollowingEnabled.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navigationTerrainFollowingEnabled.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234MN\261J\003A\024|\263\253\3115\361\003\364\012"
 	.ascii	"A,\322d\005?\300O\221#\205\\a\004\025\333[\357\010\032"
 	.ascii	"\264\020\311E\220 \327Y\211\212I\364\316\302\303\306"
@@ -6679,7 +6679,7 @@
 	.ascii	"(\250\245\305\242\232w\334\222*9+\356\234\263\354.\374"
 	.ascii	"\207\205\"\375\001\0252l="
 	.text
-	.section	.gnu.lto_navigationPositionEstimateIsHealthy.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navigationPositionEstimateIsHealthy.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234mRKk\023Q\024>\337=w\036J\343/\230\205X\244\266"
 	.ascii	"BGp\353\316_\022\272\320,ZA\305m\256\031\333&\352B$"
 	.ascii	"\211\017\202\314\316\225\304b\254\246\325:\250P\334"
@@ -6706,7 +6706,7 @@
 	.ascii	"\271\341\361\370\304\361\211x\262\\\231\212\247\312"
 	.ascii	"\247*G\312'+\307\266\252\343\023\364\033!\357\276?"
 	.text
-	.section	.gnu.lto_updateReadyStatus.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_updateReadyStatus.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215\220\333+DQ\024\306\327\267\367\3313\223\\"
 	.ascii	"\3365O\344\201\007\303\337\340/\231$\215B!\257\263\031"
 	.ascii	"\032c<H\034\227N\2327\017\224\344:n\235\220\"a<x\361"
@@ -6731,7 +6731,7 @@
 	.ascii	"{x\261\\b\252\322\312PkKm\2501\034i\0125\205\333#\365"
 	.ascii	"\341\266HsnZYK\237 \204\271\274"
 	.text
-	.section	.gnu.lto_updateFlightBehaviorModifiers.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_updateFlightBehaviorModifiers.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215\222\317k\023Q\020\307\347\373f7\011\301\352"
 	.ascii	"\255\007\311-x\250\207.\036=\373\227\204\036$\007+\250"
 	.ascii	"x4\317\244%\215U\0201Q\352\"{\363\244\266\230F\323Z"
@@ -6762,7 +6762,7 @@
 	.ascii	"\374\311\334\271\374\351\355\356\340\020\375\005\335"
 	.ascii	"(\014\254"
 	.text
-	.section	.gnu.lto_navigationUsePIDs.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navigationUsePIDs.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\235ZiPTW\026~\347\335\356fmPq%2!q!.\221\240\231"
 	.ascii	"\037\251T*\223Tj\252&?\246\246&\251T\245\346\307\214"
 	.ascii	"\223L\022j&\231T\222J\315\257\341\311Np\213\201\006"
@@ -6939,7 +6939,7 @@
 	.ascii	"\004\037\263\277\376\363O\014\007\370\367\017\370\373"
 	.ascii	"\232\374\346\273\362\233\251\377\003Rp\326\226"
 	.text
-	.section	.gnu.lto_navigationInit.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navigationInit.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\225\325\315O\023A\030\007\340ywi\273\005A\343"
 	.ascii	"\301\203\312\311x\300\003{\366\257\360\346\235p0\034"
 	.ascii	"\304D\215G\273\266\222\326h\220\200T\"\205\224x\020"
@@ -6980,7 +6980,7 @@
 	.ascii	"o\361t\306\223jW\255z\344p\275z\260\256\241Qm\254;\326"
 	.ascii	"p\240\356h\303!c\265\266\236\375\003\017\004\312\257"
 	.text
-	.section	.gnu.lto_getEstimatedActualVelocity.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_getEstimatedActualVelocity.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234MP[+DQ\024^\337\2543g\306\210?\300\303\024\021"
 	.ascii	"\312\311O\232<h\024\312H\312\303l\206\020\017\322\314"
 	.ascii	"\320t\232\316\203\313\003r\031\206q\353D)\017\343\226"
@@ -7005,7 +7005,7 @@
 	.ascii	"\304U\215V\244\263\331j\013\205\333\255\366Pw\270%\324"
 	.ascii	"\025\356\370_66\223\021\352\011G~\000?z\235<"
 	.text
-	.section	.gnu.lto_getEstimatedActualPosition.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_getEstimatedActualPosition.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234MP\313+Da\024?\2779w\356\214\021\377\200YL\021"
 	.ascii	"\241\334\374I\223\205F\241\220\224\305|\014!\026\322"
 	.ascii	"\314\320t\233\356\302c\241i\274\031\257n\324\224\305"
@@ -7029,7 +7029,7 @@
 	.ascii	"&\253\273\253\305j\017G:\254\216po\2445\334\023\351"
 	.ascii	"\374_6\265\220\021\356\213t\377\000%L\235*"
 	.text
-	.section	.gnu.lto_abortForcedRTH.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_abortForcedRTH.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234UO1K\303`\020\275\227/M\003\242\233\016\332M\034"
 	.ascii	"\212\320\374\036')\035\244\203\012*\216&\266\226V\352"
 	.ascii	" b\343\022$\2708\251T\333jT$vqS\021\244\240\202\305"
@@ -7050,7 +7050,7 @@
 	.ascii	"\216\031\2633\011c2\236\2342\246\342\363\311\211\370"
 	.ascii	"\\r\272\273\215%\350\007N\321\206\004"
 	.text
-	.section	.gnu.lto_getStateOfForcedRTH.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_getStateOfForcedRTH.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234mP\337+\203a\024>\317{\276\375H\346/\330\235\024"
 	.ascii	"S\373\324\376\242\265\013-\241\220\333\2756c\303\205"
 	.ascii	"\344\373HK\313\215+$?7.\276\020W(\251]\314\225\242H"
@@ -7073,7 +7073,7 @@
 	.ascii	"\007\343\311!{(>\236\354\217\217%\207\177?\243\011\372"
 	.ascii	"\006M2\225\207"
 	.text
-	.section	.gnu.lto_navigationIsExecutingAnEmergencyLanding.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navigationIsExecutingAnEmergencyLanding.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234]R]k\023A\024\275wg\263\331ZZ}\024\232\007A*\024"
 	.ascii	"!\261\370\007\374+\241\210\004\261\202\015\276f\232"
 	.ascii	"(I\252\226\3206+\204\250\013>\010\026I\305\032M\242"
@@ -7106,7 +7106,7 @@
 	.ascii	"T4\036;\333\275\015\217P`,\036\215\237\374\013bB\364"
 	.ascii	"\177"
 	.text
-	.section	.gnu.lto_navigationIsControllingThrottle.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navigationIsControllingThrottle.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234]S\337K\024Q\024\276g\356\314\316\376p]{\013\234"
 	.ascii	"\207@\0144\330m\011z\226\036\372?\026\011\221\312 \245"
 	.ascii	"\327\275\272\212\232\025\213\271k\311Z\003>DY\254\225"
@@ -7150,7 +7150,7 @@
 	.ascii	"\324T\236\311]z\313\231\263\272&Ps\342\370\251@E\265"
 	.ascii	"b.\377\000\226\244QG"
 	.text
-	.section	.gnu.lto_navigationIsFlyingAutonomousMode.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navigationIsFlyingAutonomousMode.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234]R\357KSa\024>\317}\267\273\345\234\3721p\037\202"
 	.ascii	"0\360\313\226\004\321G?\365\177\014\011\221\312 \245"
 	.ascii	"\257\276\272D\315\214an\322\230u\301\017\221\022\263"
@@ -7188,7 +7188,7 @@
 	.ascii	"n\254;W\230\006k\250\250\2411\334x\352\344\231pm\203"
 	.ascii	"\333I\377\002\264\302\037\236"
 	.text
-	.section	.gnu.lto_navigationRTHAllowsLanding.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navigationRTHAllowsLanding.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234]R\337K\024Q\024>\337=3wWq{\350%\220}\010\304@"
 	.ascii	"%7\220|\016\372\017\372\017\026\037B2\205\212z\364\266"
 	.ascii	"\233\271\222\240\305\356\032\262\325B`\364\020*i\265"
@@ -7224,7 +7224,7 @@
 	.ascii	"\235'\243\347:{\366\206\255\035\344F\273\272z.\374\001"
 	.ascii	"n\376\373]"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_RTH_HOVER_PRIOR_TO_LANDING.part.26.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_RTH_HOVER_PRIOR_TO_LANDING.part.26.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215U\357oSU\030>\317=\367WK;D\330\020S\222%fN"
 	.ascii	"0Y\211\362A\377\005\277\031\377\000S\221\230}\020\014"
 	.ascii	"\233$~\352\245\335J\213\004\011\320\216\314\253\326"
@@ -7284,7 +7284,7 @@
 	.ascii	"~\373\333\015\2574F\032\267\032\257F^k\330\374/&{\027"
 	.ascii	"\005"
 	.text
-	.section	.gnu.lto_navOnEnteringState_NAV_STATE_RTH_HOVER_PRIOR_TO_LANDING.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navOnEnteringState_NAV_STATE_RTH_HOVER_PRIOR_TO_LANDING.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215TkoLQ\024\335\353\234\373\0343\264\036\011"
 	.ascii	"\311\364\223D=\222N\343\361K\374\202FD\372\301#\224"
 	.ascii	"\304\247^F\231zE\2443\250\301\210\010\222Ro\352y\265"
@@ -7332,7 +7332,7 @@
 	.ascii	"5u\265\213K\207U\363(\266d\351\374\025\265\213\227/"
 	.ascii	"\233[WS7\377\007!\333\251O"
 	.text
-	.section	.gnu.lto_isNavLaunchEnabled.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_isNavLaunchEnabled.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234U\217M/CA\024\206\317;\2473\275\304\307\037\270"
 	.ascii	"\013\211X Q\342\037\370'\215\2054\202\004\261\355(B"
 	.ascii	"\303\302B/i\272\260\263@\020\237M%nH,\253\261`!\261"
@@ -7355,7 +7355,7 @@
 	.ascii	"\270\273\222\241\265+66\332\037\033\212'\206c\303\361"
 	.ascii	"\211\304@|<1\362\267\355\352\247o\3633\2173"
 	.text
-	.section	.gnu.lto_navigationBlockArming.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navigationBlockArming.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215W{P\224\327\025\277\347\273\373b\337\300\262"
 	.ascii	"\313.\313J\265\246MSC\035\362\207\231N\307i:\355_\311"
 	.ascii	"L;\351L\376\306G\023Re3b:\355?\345\023D\241\246\276"
@@ -7476,7 +7476,7 @@
 	.ascii	"e4\372\263\322\025\271\025\364\215p/\225\376\356\265"
 	.ascii	"hY\371\312\237G+\376\007{\340#6"
 	.text
-	.section	.gnu.lto_selectNavEventFromBoxModeInput.part.27.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_selectNavEventFromBoxModeInput.part.27.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\225WyP\225\327\025\277\347~o\343\355\354\333\003"
 	.ascii	"\036\313c\025p\246\213\355L3m\2463\235\374\325v\246"
 	.ascii	"\377t\372\037\265\231\326\031\253\235\210\371\327\027"
@@ -7616,7 +7616,7 @@
 	.ascii	"\362\332\362\352\352\245\257\376\256\272\252z\345\212"
 	.ascii	"\377\002\310\004yU"
 	.text
-	.section	.gnu.lto_selectNavEventFromBoxModeInput.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_selectNavEventFromBoxModeInput.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234mR[KTQ\024^k\257s\231F\235\207 \360a\336b\002_"
 	.ascii	"\034!\314\227z\360\255\207\250\376\3020E\014\230B\016"
 	.ascii	"\276\316\326\361>E\341eR9\305@HA\220f\3268\2325^\272"
@@ -7656,7 +7656,7 @@
 	.ascii	"`8T\023\010\237?\235\2758\230sz\266\252\372dU\305\271"
 	.ascii	"\334\243\362\212\260:\372\007\350)Pn"
 	.text
-	.section	.gnu.lto_updateWaypointsAndNavigationMode.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_updateWaypointsAndNavigationMode.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234u\222\273K\034Q\024\306\317w\357\356\354h\\\323"
 	.ascii	"\245\211\205 \0266\316\177c\277X\310\026\032\210!\355"
 	.ascii	"N\334\204\365\021\202H\034A\006\231F\304BD\242&\353"
@@ -7683,7 +7683,7 @@
 	.ascii	"L\264u:\375O\273\235\336\\\276\317\351\313=\317\367"
 	.ascii	"\344\236\345\237\304\303\316n\271\006%!\373\226"
 	.text
-	.section	.gnu.lto_activateForcedRTH.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_activateForcedRTH.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234UP1K\303`\020\275\227\257M\243\240\233\016\352"
 	.ascii	" \210C\021\232\337\343X:H\007+\2508\211\211\215\245"
 	.ascii	"\225:\210\330\010\022$\2708i)\266\325T\221\320A\027"
@@ -7706,7 +7706,7 @@
 	.ascii	"\306b\372\334lB\237\216'Sz*\276\220\234\212\317'g\376"
 	.ascii	"\227\261\004\375\0006\362\214\314"
 	.text
-	.section	.gnu.lto_navigationGetHomeHeading.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navigationGetHomeHeading.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234M\217=K\003A\020\206\347\335\315\3075\346\017\230"
 	.ascii	"\" \026i\262?\300_\023RH\020#\250\330\336\2313\032?"
 	.ascii	"\212 \346\204\020\344\032\261\212\037$F\023\015\034"
@@ -7727,7 +7727,7 @@
 	.ascii	"l:\2333\271\364Rv:\275\230\235\373\037\2462\364\007"
 	.ascii	"\253\024v\217"
 	.text
-	.section	.gnu.lto_calculateAverageSpeed.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_calculateAverageSpeed.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234UP\317K\002Q\020\236og]W\244\037\367\024\204\350"
 	.ascii	"\340\305\375\233\304Cx\310\300\242\353\276T\314\250"
 	.ascii	"CD\031\330\036\202 \217\026\226\345m\217y(,\250C\035"
@@ -7748,7 +7748,7 @@
 	.ascii	"\031g&\235\3159\271\364Bv:=\237\235\375\033\2462\364"
 	.ascii	"\013\324e\203\270"
 	.text
-	.section	.gnu.lto_getNavigationPIDControllers.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_getNavigationPIDControllers.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234M\217;K\003A\024\205\357\331I6[hj\301\024\001\261"
 	.ascii	"H\223\375M!\205\2440B\224\264;&>\342\013\202\230\010"
 	.ascii	"\262\310v\332\210J^FA\026\213\250\205\212V\242\202\240"
@@ -7768,7 +7768,7 @@
 	.ascii	"\317\344\362n>S\314\315e\226r\013\377\313tV\376\000"
 	.ascii	"\022\016q\207"
 	.text
-	.section	.gnu.lto_isAdjustingPosition.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_isAdjustingPosition.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234MN=K\003A\024|\263\253\227\003\211\275x\205 \026"
 	.ascii	"i\262\202\277\350H!W\030A\305\366\326;\202\006-D\274"
 	.ascii	"\010\022\344\300\302J\242\030\243\027\233\303\306N\305"
@@ -7786,7 +7786,7 @@
 	.ascii	"\225\324\214\353\225U\331]\364\246\335\005o\366?,\226"
 	.ascii	"\350\017>)kt"
 	.text
-	.section	.gnu.lto_isAdjustingHeading.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_isAdjustingHeading.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234MN1K\303@\030\375\336\235\266\001\251\273\230A"
 	.ascii	"\020\207.=\301_\024:H\006+\250\270\346L(Zt\0201\025"
 	.ascii	"\244H\300\301I\252\330VS\227\340\342\246\342`\006\235"
@@ -7805,7 +7805,7 @@
 	.ascii	"\324\362RY-8nEU\234Uw\336Yq\027\377\303R\231\376\000"
 	.ascii	"J\211k\200"
 	.text
-	.section	.gnu.lto_getCruiseHeadingAdjustment.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_getCruiseHeadingAdjustment.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\215\220\317+DQ\024\307\317\367\336\361\346\225"
 	.ascii	"\037\377\000\213)Y\330\314+\377\3214\013\315\002\205"
 	.ascii	"l\337\343\2311\203\305$3\244\227&\205\225\374\032\303"
@@ -7830,7 +7830,7 @@
 	.ascii	"\021\211uZ\235\221\276X{\2447\326\365\323\014G\351\035"
 	.ascii	"=\244\262,"
 	.text
-	.section	.gnu.lto_pgResetTemplate_navConfig.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_pgResetTemplate_navConfig.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234M\222\373O\222a\024\307\337/\017W\345Rfw\262{\332"
 	.ascii	"\305\322\256t\357Oc\245\314\346\017j\371:\033\330\254"
 	.ascii	"\234[\326\210\214$\211\012IC\305\000\351\242\265\332"
@@ -7867,7 +7867,7 @@
 	.ascii	"\351\013\224J0\372\341\232\203Si\360\011\263*.`\206"
 	.ascii	"2\271\210$\341\022\306\340R0+\377\376\003\301\327C\010"
 	.text
-	.section	.gnu.lto_navConfig_Registry.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_navConfig_Registry.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234cc``\270\001\304\252\014\0200\205\231\261\371\327"
 	.ascii	"\376\317|\365\177\033f44<\350^\307\374\227w\0163\303"
 	.ascii	"\002f\210\334\241\247\353\330-\2665t,h\020\230\303\314"
@@ -7881,7 +7881,7 @@
 	.ascii	"\254\247_\\\224\254\237\233\230\231\247\237\227X\226"
 	.ascii	"\231\236X\222\231\217\314\324Kf\000\000\371/Z\004"
 	.text
-	.section	.gnu.lto_nonVolatileWaypointList_Registry.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_nonVolatileWaypointList_Registry.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234cc``\330\007\304\252\014\0200\205\231\361S\377"
 	.ascii	"\271\257,\026\333\032:\0264\010\314af\230\312\314\300"
 	.ascii	"\250'\003\222\230\326z\350<{7\363\034fFF\020w\347\316"
@@ -7894,7 +7894,7 @@
 	.ascii	"\202\201q'\220P\326\323/.J\326\317M\314\314\323\317"
 	.ascii	"K,\313LO,\311\314Gf\352%3\000\000\\qN\333"
 	.text
-	.section	.gnu.lto_.symbol_nodes.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_.symbol_nodes.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234e\227w|\226E\022\307wg\336\027\024EP\201 %(U\252"
 	.ascii	"\365PO\212^\357\305\353^\361\274\323\363\274\352)W<"
 	.ascii	"\357n\302KH$\221\000\011\002\202\264\227\000\"U\010"
@@ -8074,7 +8074,7 @@
 	.ascii	"\025<\301x[\251\367\005K\255\324#\300\376R^#\033+?\326"
 	.ascii	"\325\377\001\202q\212\215"
 	.text
-	.section	.gnu.lto_.refs.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_.refs.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234uUY\210\\E\024=\347\276\236\367\272\247\273\247"
 	.ascii	"\247f\177\311l\231\230\351N2\331L\242\023\315d\004\375"
 	.ascii	"Q\334\025DAEEA\305]\020\367\250\250\355\276\216\373"
@@ -8160,7 +8160,7 @@
 	.ascii	"\324\336\247\255\245\255\363|\265\365\304?\034O\351"
 	.ascii	"d"
 	.text
-	.section	.gnu.lto_.decls.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_.decls.beb8e321b91bc8a0,"",%progbits
 	.ascii	"x\234\264\275\007|]Yq0\256\373\316kz\222\255\305\273"
 	.ascii	"\260\013\230\026\026\326\011\204\032\002|@X\010\004"
 	.ascii	"\226\022H!\260K\010\013\374\011\260$\224\204\032Bx\352"
@@ -10866,7 +10866,7 @@
 	.ascii	"6\037\341\324<\270\334\216\354X\177Z}<M\353\253K\025"
 	.ascii	"(f<\235|\337\234G:\371\376o\310\337W\267"
 	.text
-	.section	.gnu.lto_.symtab.835ebdb7f9d95d54,"",%progbits
+	.section	.gnu.lto_.symtab.beb8e321b91bc8a0,"",%progbits
 	.ascii	"posControl\000"
 	.ascii	"\000"
 	.ascii	"\000"

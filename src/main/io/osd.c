@@ -1169,6 +1169,38 @@ static void osdDrawAdditionnalRadar(wp_planes_t nearPlane,int16_t poiDirection){
 
 }
 
+static int8_t  getPointFromHa(int8_t  haPoiX){
+    
+           int elemPosX = 14;
+           int  elemPosY = 6; // Center of the AH area
+
+
+            float pitch_rad_to_char = (float)(AH_HEIGHT / 2 + 0.5) / DEGREES_TO_RADIANS(osdConfig()->ahi_max_pitch);
+
+            float rollAngle = DECIDEGREES_TO_RADIANS(attitude.values.roll);
+            float pitchAngle = DECIDEGREES_TO_RADIANS(attitude.values.pitch);
+
+            if (osdConfig()->ahi_reverse_roll) {
+                rollAngle = -rollAngle;
+            }
+
+            if (IS_DISPLAY_PAL) {
+                ++elemPosY;
+            }
+
+            float ky = sin_approx(rollAngle);
+            float kx = cos_approx(rollAngle);
+
+            int8_t dx = haPoiX;
+            float fy = dx * (ky / kx) + pitchAngle * pitch_rad_to_char + 0.49f;
+            int8_t dy = floorf(fy);
+            
+           // int8_t chX= dx;
+            int8_t chY= elemPosY - dy;
+            
+        return dy;
+}
+
 
 static void osdSimpleMap(int referenceHeading, uint8_t referenceSym, uint8_t centerSym,
                        uint32_t poiDistance, int16_t poiDirection, uint8_t poiSymbol,
@@ -1312,6 +1344,11 @@ int32_t myAlt = 0;
 
 if (frontview){
 
+
+
+
+
+
 	float pitchAngle = constrain(attitude.values.pitch,  -AH_MAX_PITCH_FV, AH_MAX_PITCH_FV); //-45° to +45° FOV Lens 
 	pitchAngle=pitchAngle/10; //centidegree to degree
 						
@@ -1328,6 +1365,8 @@ if (frontview){
 	}
 	
 	float anglePoiYDeg=anglePoiY*180/M_PIf; //CONVERT RAD TO DEGREES
+
+
 	float finalpoiY=anglePoiYDeg-pitchAngle;
     if( finalpoiY>0){
         finalpoiY=map(finalpoiY,0,45,midY,maxY-1); //map deg to 0 +45°
@@ -1337,7 +1376,7 @@ if (frontview){
 	int poiYFV=(int)finalpoiY; //Difference angle between plane and you and convert angle to ° (not centidegree)
    // poiYFV=constrain(poiYFV,minY+2,maxY-2);
 
-/*
+
  if (near_plane_id==plane_id){
      memset(buf, 0, sizeof(buf));
      tfp_sprintf(buf, "%f", distanceFromMe);
@@ -1349,12 +1388,12 @@ if (frontview){
      displayWrite(osdDisplayPort, minX+10, maxY-1, buf);
 	 
      memset(buf, 0, sizeof(buf));
-     tfp_sprintf(buf, "%f", anglePoiYDeg);
+     tfp_sprintf(buf, "%f", getPointFromHa(0));
      displayWrite(osdDisplayPort, minX+10, maxY-2, buf);
  
 
      memset(buf, 0, sizeof(buf));
-     tfp_sprintf(buf, "%f", finalpoiY);
+     tfp_sprintf(buf, "%f", getPointFromHa(poiY));
      displayWrite(osdDisplayPort, minX+10, maxY-3, buf); 
 	 
 
@@ -1368,7 +1407,7 @@ if (frontview){
      displayWrite(osdDisplayPort, minX+22, maxY-1, buf);
    
 
- }*/
+ }
 
                 //if plane is behind you draw it on the middle right or left edge
                 
