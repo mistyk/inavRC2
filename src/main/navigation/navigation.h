@@ -234,7 +234,7 @@ typedef struct wp_planes_s  {
     uint32_t wp_nb;
     int16_t GPS_distanceToMe;
     int16_t GPS_altitudeToMe;
-    int16_t planePoiDirection;
+    int32_t planePoiDirection;
     uint16_t drawn;
     int posX;
     int posY;

@@ -132,7 +132,7 @@ PG_RESET_TEMPLATE(navConfig_t, navConfig,
         .braking_boost_timeout = 750,           // Timout boost after 750ms
         .braking_boost_speed_threshold = 150,   // Boost can happen only above 1.5m/s
         .braking_boost_disengage_speed = 100,   // Disable boost at 1m/s
-        .braking_bank_angle = 40,               // Max braking angle     
+        .braking_bank_angle = 40,               // Max braking angle
     },
 
     // Fixed wing
@@ -1935,7 +1935,7 @@ uint32_t calculateDistanceToDestination(const fpVector3_t * destinationPos)
 
     return calculateDistanceFromDelta(deltaX, deltaY);
 }
-
+// dh ...
 int32_t calculateBearingToDestination(const fpVector3_t * destinationPos)
 {
     const navEstimatedPosVel_t *posvel = navGetCurrentActualPositionAndVelocity();
@@ -2211,8 +2211,8 @@ static void navRadarUpdatePlane(void){
             planeLocation.lat=planesInfos[y].planeWP.lat;
             planeLocation.lon=planesInfos[y].planeWP.lon;
             planeLocation.alt=planesInfos[y].planeWP.alt;
-            
-            
+
+
             geoConvertGeodeticToLocal( &posPlane, &posControl.gpsOrigin, &planeLocation, GEO_ALT_RELATIVE);
 
 
@@ -2220,7 +2220,7 @@ static void navRadarUpdatePlane(void){
             planesInfos[y].GPS_distanceToMe= calculateDistanceToDestination(&posPlane);
             planesInfos[y].planePoiDirection=calculateBearingToDestination(&posPlane);
             planesInfos[y].GPS_altitudeToMe=calculateAltitudeToMe(&posPlane);
-            
+
 
             y++;
         }

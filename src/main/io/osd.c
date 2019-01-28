@@ -1239,7 +1239,7 @@ static void squareRadarDraw(){
 }
 
 static void osdSimpleMap(int referenceHeading, uint8_t referenceSym, uint8_t centerSym,
-                       uint32_t poiDistance, int16_t poiDirection, uint8_t poiSymbol,
+                       uint32_t poiDistance, int32_t poiDirection, uint8_t poiSymbol,
                        uint16_t *drawn, uint32_t *usedScale,int plane_id,bool frontview, int near_plane_id)
 {
     // TODO: These need to be tested with several setups. We might
@@ -1300,94 +1300,25 @@ int32_t myAlt = 0;
 
     // Try to keep the same scale when getting closer until we draw over the center point
     uint32_t scale = initialScale;
-    if (*usedScale) {
-        scale = *usedScale;
-        if (scale > initialScale && poiDistance < *usedScale * scaleReductionMultiplier) {
-            scale /= scaleMultiplier;
-        }
-    }
 
     if (STATE(GPS_FIX)) {
 
-        int directionToPoi = osdGetHeadingAngle(poiDirection - referenceHeading);
+        int32_t directionToPoi = osdGetHeadingAngle(poiDirection - referenceHeading);
         float poiAngle = DEGREES_TO_RADIANS(directionToPoi);
         float poiSin = sin_approx(poiAngle);
         float poiCos = cos_approx(poiAngle);
 
         // Now start looking for a valid scale that lets us draw everything
-        int ii;
-        for (ii = 0; ii < 50; ii++) {
+
             // Calculate location of the aircraft in map
             int points = poiDistance / ((float)scale / charHeight);
 
             float pointsX = points * poiSin;
             int poiX = midX - roundf(pointsX / charWidth);
-            if (poiX < minX || poiX > maxX) {
-                scale *= scaleMultiplier;
-                continue;
-            }
+
 
             float pointsY = points * poiCos;
             int poiY = midY + roundf(pointsY / charHeight);
-            if (poiY < minY || poiY > maxY) {
-                scale *= scaleMultiplier;
-                continue;
-            }
-
-            if (poiX == midX && poiY == midY) {
-                // We're over the map center symbol, so we would be drawing
-                // over it even if we increased the scale. Alternate between
-                // drawing the center symbol or drawing the POI.
-                if (centerSym != SYM_BLANK && OSD_ALTERNATING_CHOICES(1000, 2) == 0) {
-                    break;
-                }
-            } else {
-
-                uint8_t c;
-                if (displayReadCharWithAttr(osdDisplayPort, poiX, poiY, &c, NULL) && c != SYM_BLANK) {
-                    // Something else written here, increase scale. If the display doesn't support reading
-                    // back characters, we assume there's nothing.
-                    //
-                    // If we're close to the center, decrease scale. Otherwise increase it.
-                    uint8_t centerDeltaX = (maxX - minX) / (scaleMultiplier * 2);
-                    uint8_t centerDeltaY = (maxY - minY) / (scaleMultiplier * 2);
-                    if (poiX >= midX - centerDeltaX && poiX <= midX + centerDeltaX &&
-                        poiY >= midY - centerDeltaY && poiY <= midY + centerDeltaY &&
-                        scale > scaleMultiplier) {
-
-                        scale /= scaleMultiplier;
-                    } else {
-                        scale *= scaleMultiplier;
-                    }
-                    continue;
-                }
-            }
-
-
-			wp_planes_t currentPlane=planesInfos[plane_id];
-
-				//CHANGE SYMBOL IF HIGHER OR LOWER
-                    myAlt = CENTIMETERS_TO_METERS(osdGetAltitude());
-				int currentPlaneAlt=CENTIMETERS_TO_METERS(currentPlane.planeWP.alt);
-                 if (near_plane_id==plane_id){
-                     poiSymbol=SYM_HEADING;//SYM_AH_CENTER
-                 }else{
-                     if (currentPlaneAlt>myAlt){
-                         if(currentPlaneAlt-myAlt>20)
-                         {
-                             poiSymbol=SYM_PLANE_VERY_HIGH;
-                         }else{
-                             poiSymbol=SYM_PLANE_HIGH;
-                         }
-                     }else{
-                         if(myAlt-currentPlaneAlt>20)
-                         {
-                             poiSymbol=SYM_PLANE_VERY_LOW;
-                         }else{
-                             poiSymbol=SYM_PLANE_LOW;
-                         }
-                     }
-                 }
 
             displayWriteChar(osdDisplayPort, poiX, poiY, poiSymbol);
 
@@ -1395,16 +1326,15 @@ int32_t myAlt = 0;
             // Update saved location
             myDrawn[plane_id]=OSD_POS(poiX, poiY) | OSD_VISIBLE_FLAG;
            // *drawn = OSD_POS(poiX, poiY) | OSD_VISIBLE_FLAG;
-            break;
-        }
+
     }
 
     // Draw the used scale
-    /*bool scaled = osdFormatCentiNumber(buf, scale * scaleToUnit, scaleUnitDivisor, maxDecimals, 2, 3);
+    bool scaled = osdFormatCentiNumber(buf, scale * scaleToUnit, scaleUnitDivisor, maxDecimals, 2, 3);
     buf[3] = scaled ? symScaled : symUnscaled;
     buf[4] = '\0';
-    displayWrite(osdDisplayPort, minX + 1, maxY, buf);
-    */
+    displayWrite(osdDisplayPort, minX + 7, maxY, buf);
+
     *usedScale = scale;
 }
 
@@ -1460,7 +1390,7 @@ static void osdSimpleRadar(uint16_t *drawn, uint32_t *usedScale,bool frontview)
         if (currentPlane.planeWP.p3==1){
 
 			// GET CURRENT PLANE INFOS TO DISPLAY PLANES
-            int16_t directionToPlane=planesInfos[plane_id].planePoiDirection/100;
+            int32_t directionToPlane=planesInfos[plane_id].planePoiDirection/100;
             int16_t distanceToMe=planesInfos[plane_id].GPS_distanceToMe/100;
             int16_t poiDirection = osdGetHeadingAngle(directionToPlane + 180);
 
@@ -1837,7 +1767,7 @@ static bool osdDrawSingleElement(uint8_t item)
             bool frontview=false;
             osdSimpleRadar(&drawn, &scale,frontview);
 
-            squareRadarDraw(GRID_SIZE);
+            //squareRadarDraw(GRID_SIZE);
             //osdDrawRadar(&drawn, &scale);
 
 

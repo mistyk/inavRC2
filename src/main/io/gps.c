@@ -260,7 +260,7 @@ static bool gpsFakeGPSUpdate(void)
 #define FAKE_GPS_INITIAL_LON 87632280
 #define FAKE_GPS_GROUND_ARMED_SPEED 350 // In cm/s
 #define FAKE_GPS_GROUND_UNARMED_SPEED 0
-#define FAKE_GPS_GROUND_COURSE_DECIDEGREES 300 //30deg
+#define FAKE_GPS_GROUND_COURSE_DECIDEGREES 900 //30deg
 
     // Each degree in latitude corresponds to 111km.
     // Each degree in longitude at the equator is 111km,
