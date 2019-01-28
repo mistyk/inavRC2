@@ -468,7 +468,7 @@
 #define MATEKF405SE 1
 #define __FORKNAME__ "inav"
 #define __TARGET__ "MATEKF405SE"
-#define __REVISION__ "4a9a34e"
+#define __REVISION__ "a441c97"
 # 1 "./src/main/fc/cli.c"
 # 18 "./src/main/fc/cli.c"
 # 1 "/usr/lib/gcc/arm-none-eabi/7.3.1/include/stdbool.h" 1 3 4
@@ -28333,7 +28333,7 @@ typedef struct wp_planes_s {
     uint32_t wp_nb;
     int16_t GPS_distanceToMe;
     int16_t GPS_altitudeToMe;
-    int16_t planePoiDirection;
+    int32_t planePoiDirection;
     uint16_t drawn;
     int posX;
     int posY;

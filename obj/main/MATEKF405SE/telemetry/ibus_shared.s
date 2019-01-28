@@ -11,10 +11,10 @@
 	.eabi_attribute 34, 1
 	.eabi_attribute 18, 4
 	.file	"ibus_shared.c"
-	.section	.gnu.lto_.profile.39f0737d9b7d3b2,"",%progbits
+	.section	.gnu.lto_.profile.fc5fb6d7b76b46e3,"",%progbits
 	.ascii	"x\234cc```\003bF\206]\334\267X\000\005e\001\261"
 	.text
-	.section	.gnu.lto_.icf.39f0737d9b7d3b2,"",%progbits
+	.section	.gnu.lto_.icf.fc5fb6d7b76b46e3,"",%progbits
 	.ascii	"x\234cc``\360g@\000^\206\246\353\027\016\3600n\377z"
 	.ascii	"\271\231\237\351\303\323\027u\314\037;>\255dd\271\322"
 	.ascii	"\333\374\233\225\365v\313\261vV\266\276=\227W\261\260"
@@ -22,7 +22,7 @@
 	.ascii	"=\302$2e\323\276v~\321\315\017\337>\343\022\353\377"
 	.ascii	"\371c?\037\003\000DI'\260"
 	.text
-	.section	.gnu.lto_.jmpfuncs.39f0737d9b7d3b2,"",%progbits
+	.section	.gnu.lto_.jmpfuncs.fc5fb6d7b76b46e3,"",%progbits
 	.ascii	"x\234\305VMk\023Q\024}\347\315$\2234I\343BEa\026YJW"
 	.ascii	"\356\364O\370\203\272j\240J\024\241($\012\0327BU\260"
 	.ascii	"\245\326\332\232\217\3264\261\265\032\333\306(-Y\264"
@@ -64,7 +64,7 @@
 	.ascii	"N{[\217)\236\310q\221\237A\377\372\033\213\375\005\273"
 	.ascii	"\330\263\351"
 	.text
-	.section	.gnu.lto_.inline.39f0737d9b7d3b2,"",%progbits
+	.section	.gnu.lto_.inline.fc5fb6d7b76b46e3,"",%progbits
 	.ascii	"x\234\355T=K\003A\020\235\231\235\\6\311\231K41\202"
 	.ascii	"B\322\331ii\347O\270\177`c\251\265\245p*\210`s\205\205"
 	.ascii	"\205\221\224\001;\215\275\225M@D\362\003Tl\003\326\001"
@@ -86,11 +86,11 @@
 	.ascii	"]\010\030\212\347\253\001k\340\323b\300-\015t\253\002"
 	.ascii	"4\266\233\027xfs\301\003i\364\003\324\240\225q"
 	.text
-	.section	.gnu.lto_.pureconst.39f0737d9b7d3b2,"",%progbits
+	.section	.gnu.lto_.pureconst.fc5fb6d7b76b46e3,"",%progbits
 	.ascii	"x\234cc``\020\006bN\006)&\011f\011V\0116\011v\011\021"
 	.ascii	"IQ\0111\011\000\014\316\001T"
 	.text
-	.section	.gnu.lto_transmitIbusPacket.39f0737d9b7d3b2,"",%progbits
+	.section	.gnu.lto_transmitIbusPacket.fc5fb6d7b76b46e3,"",%progbits
 	.ascii	"x\234m\224]h\034U\024\307\317\23133;\273\263\331\265"
 	.ascii	"R\"\350\"\013ZC@\232\212\357\276\352C\037|\364M\342"
 	.ascii	"\272\230PSJ\222>\010\342\336f\233\244\251-h\261S\334"
@@ -146,7 +146,7 @@
 	.ascii	"5\267#\337\235\334\245?\333\363;_\351n\363rm\371\334"
 	.ascii	"\216\256\335\035\330~\017\340\203\275;"
 	.text
-	.section	.gnu.lto_sendIbusCommand.39f0737d9b7d3b2,"",%progbits
+	.section	.gnu.lto_sendIbusCommand.fc5fb6d7b76b46e3,"",%progbits
 	.ascii	"x\234m\222\313O\023Q\024\306\3577w\372B*q\253\26301"
 	.ascii	"H\330th\334t\355?b\220\016\261\211\260\350\300\302U"
 	.ascii	"\257\255h\361A@\244\306fbj\032\203;\212b\261\2422V@"
@@ -181,7 +181,7 @@
 	.ascii	"F\243q\3034\333Lc0zr\270\277\337\210\377\005@\315\355"
 	.ascii	"d"
 	.text
-	.section	.gnu.lto_sendIbusSensorType.39f0737d9b7d3b2,"",%progbits
+	.section	.gnu.lto_sendIbusSensorType.fc5fb6d7b76b46e3,"",%progbits
 	.ascii	"x\234\215\223\333O\023A\024\306\347\354t\273\245\264"
 	.ascii	"E\023}\321\372d\220\360Bi|!\361\315\177\304 -\221Dx"
 	.ascii	"h\341\301\247\216EnJ\010\240\324\210\3254\202\201\230"
@@ -227,7 +227,7 @@
 	.ascii	"\245\320\345\362\270\275^\263\327]\346:]Q\\\354\366"
 	.ascii	"\374\002\346\253p\253"
 	.text
-	.section	.gnu.lto_SENSOR_ADDRESS_TYPE_LOOKUP.39f0737d9b7d3b2,"",%progbits
+	.section	.gnu.lto_SENSOR_ADDRESS_TYPE_LOOKUP.fc5fb6d7b76b46e3,"",%progbits
 	.ascii	"x\234}\223mORa\034\207\317}n\036\003\341M/\317\207\350"
 	.ascii	"\341\015_\251oA\333\321\264`\251\303\255\311q\353\301"
 	.ascii	"V+C\027\206\200\206\250\030jj\022\222\021\007\037\246"
@@ -260,7 +260,7 @@
 	.ascii	"\201\253`\032\\\006\337\202K`\022L\2001\360\015\363"
 	.ascii	"I\354\004_\177\001\320/~\370"
 	.text
-	.section	.gnu.lto_sendIbusMeasurement4.39f0737d9b7d3b2,"",%progbits
+	.section	.gnu.lto_sendIbusMeasurement4.fc5fb6d7b76b46e3,"",%progbits
 	.ascii	"x\234m\223\333O\023A\024\306\347\354\354v\267\320V\237"
 	.ascii	"\014\321\306\230\030%\276P\033_\214\217\306\377\303"
 	.ascii	"T\251\321Dxh\341\301\247\216\310E\361V\215\2426U\010"
@@ -309,7 +309,7 @@
 	.ascii	"\315L\017\344\347\207\202\341pvA0\020.\016aLaQV8X\230"
 	.ascii	"\277\276x\313\226`\350\027`\303\237\017"
 	.text
-	.section	.gnu.lto_sendIbusMeasurement2.39f0737d9b7d3b2,"",%progbits
+	.section	.gnu.lto_sendIbusMeasurement2.fc5fb6d7b76b46e3,"",%progbits
 	.ascii	"x\234m\222\333O\023A\024\306\347\354lw{\001\3217\243"
 	.ascii	"\365\311 \341\205\322\370B|4\376\037\246\322%\222\010"
 	.ascii	"\017-<\370\324\261(\027%ZT0\324\2254\242\2511\032\012"
@@ -353,7 +353,7 @@
 	.ascii	"\324TV\331\375J\245\367xuY\231\342\373\013\253\316F"
 	.ascii	"l"
 	.text
-	.section	.gnu.lto_dispatchMeasurementRequest.39f0737d9b7d3b2,"",%progbits
+	.section	.gnu.lto_dispatchMeasurementRequest.fc5fb6d7b76b46e3,"",%progbits
 	.ascii	"x\234\215[w\\UG\026\2363\227G/\366\212\212\275\213\275"
 	.ascii	"\227\364\336{7\306\236h\212%\273\331\335$(`K\342\232"
 	.ascii	"\030\320 \352\213\03516\214\345aA\024\025\304\336\261"
@@ -717,7 +717,7 @@
 	.ascii	"\372\365\367\035>\242\317\210\221\303\377\017\236\312"
 	.ascii	"\374\362"
 	.text
-	.section	.gnu.lto_flightModeToIBusTelemetryMode2.39f0737d9b7d3b2,"",%progbits
+	.section	.gnu.lto_flightModeToIBusTelemetryMode2.fc5fb6d7b76b46e3,"",%progbits
 	.ascii	"x\234M\216MjB1\024\205\3571j\025\254\335@6a;y\013r!"
 	.ascii	"\016T\212N\035\025A\007\212\203R*\250\257\365i\353\253"
 	.ascii	"?\224v\326\231\013p\350H\004\021\013z\310\005I\310\307"
@@ -731,7 +731,7 @@
 	.ascii	"/\022\223\031\371$\037dJ&$\"c\362N\336HH\036,F\034C"
 	.ascii	"2\200\025,\021\310\005\317\322k\263"
 	.text
-	.section	.gnu.lto_flightModeToIBusTelemetryMode1.39f0737d9b7d3b2,"",%progbits
+	.section	.gnu.lto_flightModeToIBusTelemetryMode1.fc5fb6d7b76b46e3,"",%progbits
 	.ascii	"x\234M\217\317JBA\024\306\317\347\250\335 \365\005\346"
 	.ascii	"%\252\315}\240\036\304E\211\350V\020\302\205H\321\""
 	.ascii	"B!\275y\257\177\362/R\273\336\301\235\255D\270\210\212"
@@ -746,7 +746,7 @@
 	.ascii	"\014H\237\364HDB\322%\037$ \267\032\035\2266y\207\026"
 	.ascii	"\314\340\313\037\266\277k\245"
 	.text
-	.section	.gnu.lto_respondToIbusRequest.39f0737d9b7d3b2,"",%progbits
+	.section	.gnu.lto_respondToIbusRequest.fc5fb6d7b76b46e3,"",%progbits
 	.ascii	"x\234\235\224\317OTW\024\307\317\367\335\367c\336\300"
 	.ascii	"Ht\341jLL*5F#\032\273l\322\270\352\302\215\377\201\241"
 	.ascii	"\360\022M\253if\306D7reP\204Z\305\244\216J&\3554t$\215"
@@ -796,7 +796,7 @@
 	.ascii	"\330\256\315\365\3651/\036\017y{\276\364\352\022^\375"
 	.ascii	"\177\037\345\320\346"
 	.text
-	.section	.gnu.lto_initSharedIbusTelemetry.39f0737d9b7d3b2,"",%progbits
+	.section	.gnu.lto_initSharedIbusTelemetry.fc5fb6d7b76b46e3,"",%progbits
 	.ascii	"x\234%\220\301K\002Q\020\306\347\333\267\351R\344\245"
 	.ascii	"K\220\207\240H\354\340\322\337\322\037\020fBBV\254v"
 	.ascii	"\350\344K3\225:D\224\201H\354E;Vd\345\326e1\350\226"
@@ -817,7 +817,7 @@
 	.ascii	"\321\244\265n\306\346\327\022s\211\305\260\025]\010"
 	.ascii	"EH_]\261\222\277\241\205s|"
 	.text
-	.section	.gnu.lto_changeTypeIbusTelemetry.39f0737d9b7d3b2,"",%progbits
+	.section	.gnu.lto_changeTypeIbusTelemetry.fc5fb6d7b76b46e3,"",%progbits
 	.ascii	"x\234\215S\355KSa\024\177\316\363\334\335\335\255\251"
 	.ascii	"D\220\032\342\227$\361\213S\014\377\227>\205\351 A#"
 	.ascii	"|\011\374\344u\332\246d\020\221\032SkA:\302L4_\232\256"
@@ -864,7 +864,7 @@
 	.ascii	"\312\313\225W\213*\034%\271\305\204\226\226HU5\327\035"
 	.ascii	"\246\033Ee\325\216\177P\022\305\263"
 	.text
-	.section	.gnu.lto_.symbol_nodes.39f0737d9b7d3b2,"",%progbits
+	.section	.gnu.lto_.symbol_nodes.fc5fb6d7b76b46e3,"",%progbits
 	.ascii	"x\234]\222\315k\023A\024\300\337\333\311f\233~\250\325"
 	.ascii	"\202\215\037\375\002AAo\036<\352_6\313\262(\364\344"
 	.ascii	"M\250\340a\273'\017\012\025\244F(\272\3046V\232jb\323"
@@ -899,7 +899,7 @@
 	.ascii	"o\324\343\362\200.#Z\344;Q\230\260\300[\373\243(\324"
 	.ascii	"\013\334Rt\300+\356X\360\017#\367+1"
 	.text
-	.section	.gnu.lto_.refs.39f0737d9b7d3b2,"",%progbits
+	.section	.gnu.lto_.refs.fc5fb6d7b76b46e3,"",%progbits
 	.ascii	"x\234\015\306\257\012\302`\030G\341\363n\357\334\334"
 	.ascii	"\267\371\027\005\203\301\253\260xq\202\311\346\025\230"
 	.ascii	"4\331m&\203`\031\010b0\030\004\213`\322$\202?8\017\234"
@@ -909,7 +909,7 @@
 	.ascii	"\033\331\312N\016R\311Y\256r\227\247\274\345'\263\310"
 	.ascii	"zf\226\364\315#\363\330<1\317\315\003\177\351?\030\275"
 	.text
-	.section	.gnu.lto_.decls.39f0737d9b7d3b2,"",%progbits
+	.section	.gnu.lto_.decls.fc5fb6d7b76b46e3,"",%progbits
 	.ascii	"x\234\255\275\011XUI\226.\312>q&F\307\31423\255\254"
 	.ascii	"\354l\273\212~\267\252\2342\263\262\276\357\336\357"
 	.ascii	"5\351P\332%\352\025\255\312\364\336\333\024)'\225\333"
@@ -1796,7 +1796,7 @@
 	.ascii	"\226\255\203\247~\216`K:<\374s\327\331\321\207\014\234"
 	.ascii	")\376?!\020\367\277"
 	.text
-	.section	.gnu.lto_.symtab.39f0737d9b7d3b2,"",%progbits
+	.section	.gnu.lto_.symtab.fc5fb6d7b76b46e3,"",%progbits
 	.ascii	"respondToIbusRequest\000"
 	.ascii	"\000"
 	.ascii	"\000"

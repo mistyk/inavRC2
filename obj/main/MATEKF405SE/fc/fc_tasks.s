@@ -11,11 +11,11 @@
 	.eabi_attribute 34, 1
 	.eabi_attribute 18, 4
 	.file	"fc_tasks.c"
-	.section	.gnu.lto_.profile.9775fa06dd7176e4,"",%progbits
+	.section	.gnu.lto_.profile.6db56e051e20be35,"",%progbits
 	.ascii	"x\234cc```\003bF\206\325\034\353\231\000\004\310\001"
 	.ascii	"r"
 	.text
-	.section	.gnu.lto_.icf.9775fa06dd7176e4,"",%progbits
+	.section	.gnu.lto_.icf.6db56e051e20be35,"",%progbits
 	.ascii	"x\234cc``(f@\000a\206w\235M=\374,+\376\037\275\316\314"
 	.ascii	":\355\336\367f~\266\265\277~\376`f_\267\371\304+.\216"
 	.ascii	"\256\275\307\026sr.\\;\253\237\203\253\345\347\231%"
@@ -25,7 +25,7 @@
 	.ascii	"\326M[g\260\213\276\232\267\352\0277\003\000\034\012"
 	.ascii	"9\217"
 	.text
-	.section	.gnu.lto_.jmpfuncs.9775fa06dd7176e4,"",%progbits
+	.section	.gnu.lto_.jmpfuncs.6db56e051e20be35,"",%progbits
 	.ascii	"x\234\215\226\331OSA\024\306\347\233{\333\336n\224-"
 	.ascii	"<\361\300\273\177\240\361\2517\022C\\bb\202%\222\032"
 	.ascii	"$\021\002\302\203\210\250\005*\245U\226B\0017\026y\321"
@@ -70,7 +70,7 @@
 	.ascii	"0\260Cv#\\\357\236j'\267\327\232\335\257\367\010\264"
 	.ascii	"\241\310\330?\213\206\311q"
 	.text
-	.section	.gnu.lto_.inline.9775fa06dd7176e4,"",%progbits
+	.section	.gnu.lto_.inline.6db56e051e20be35,"",%progbits
 	.ascii	"x\234\305R=\016\2020\024\376Z\020\245\024\0201\361o"
 	.ascii	" n\306\301\321\331\321\211\033x\004\357\302\021\034"
 	.ascii	"=\200\211\253Gpttt\364\010\266\265\022\332\2240\312"
@@ -87,12 +87,12 @@
 	.ascii	"B[&\265^\315\363\377weOf]w\233`\362\324B\360\001\372"
 	.ascii	"\224G\213"
 	.text
-	.section	.gnu.lto_.pureconst.9775fa06dd7176e4,"",%progbits
+	.section	.gnu.lto_.pureconst.6db56e051e20be35,"",%progbits
 	.ascii	"x\234\015\303;\016\200 \024\000\2607\030@\371(\342\320"
 	.ascii	"\335\373\337Q\2334E\304\373\237a\223d\305\356P5\335"
 	.ascii	"p\272L\267\345\361\001.m\002\232"
 	.text
-	.section	.gnu.lto_taskHandleSerial.9775fa06dd7176e4,"",%progbits
+	.section	.gnu.lto_taskHandleSerial.6db56e051e20be35,"",%progbits
 	.ascii	"x\234mR\315k\023A\024\177\277\231\335\315\032\233\364"
 	.ascii	"&\026\367\340\255\344\322 \370\247\350Y\312R\241H{H"
 	.ascii	"\3529cb>\212\037\250\350\026\312\"+Rz\360 b4\306\370"
@@ -124,7 +124,7 @@
 	.ascii	"Y\230.\236+N\371\224\361\317\027\0123\363\013\247f\347"
 	.ascii	"fN\027\377\002\325W\344\301"
 	.text
-	.section	.gnu.lto_taskUpdateBattery.9775fa06dd7176e4,"",%progbits
+	.section	.gnu.lto_taskUpdateBattery.6db56e051e20be35,"",%progbits
 	.ascii	"x\234\205TMl\023W\020\236\331\267?\266c;\345\022\342"
 	.ascii	"\312\207\012)B\364\220\010\251\275#\316 \016\300\031"
 	.ascii	"\271\256)&\212#\331\246\342\226%\316\257\022Q@\260\240"
@@ -178,7 +178,7 @@
 	.ascii	"\252\234.\331\332\322\322\232i\312\023\266q\007\274"
 	.ascii	"\005\241\321\347\243"
 	.text
-	.section	.gnu.lto_taskUpdateTemperature.9775fa06dd7176e4,"",%progbits
+	.section	.gnu.lto_taskUpdateTemperature.6db56e051e20be35,"",%progbits
 	.ascii	"x\234%NAK\002Q\020\236o\307]\367\"]\213\244\253x\321"
 	.ascii	"?S\347\220\305@B\017\256\235\367\245\230F\201\005\245"
 	.ascii	"\020{\260Ct\350\020\241e\213\227Gt\352\020\341\261:"
@@ -197,7 +197,7 @@
 	.ascii	"<y\253\225\234\277\356g<Jx\033\345r\276TY.\024\363+"
 	.ascii	"\376\037j\032et"
 	.text
-	.section	.gnu.lto_taskProcessGPS.9775fa06dd7176e4,"",%progbits
+	.section	.gnu.lto_taskProcessGPS.6db56e051e20be35,"",%progbits
 	.ascii	"x\234mP\315k\023A\024\177\277y;\273\233jn\036\014\254"
 	.ascii	"x,\2714\010\376)z\023\244\204\012A\332CR\317\031\333"
 	.ascii	"\306\266\350A!n \354!=\224\036*\210D\2151~\254\265'"
@@ -227,7 +227,7 @@
 	.ascii	"\365\305\331\312\315\312L\221\262\305[\345\362\334\302"
 	.ascii	"\342\225\322\374\334\325\312\037\015\020\332\257"
 	.text
-	.section	.gnu.lto_taskUpdateCompass.9775fa06dd7176e4,"",%progbits
+	.section	.gnu.lto_taskUpdateCompass.6db56e051e20be35,"",%progbits
 	.ascii	"x\234UO\315K\002Q\020\237\337\316\356\272E\036\203\202"
 	.ascii	"\275\213\035\222\240?\245\316!R \241\007\265\263\257"
 	.ascii	"\322\276\211\2024\220=\324!:t\220H3\263\303b\235\"J"
@@ -251,7 +251,7 @@
 	.ascii	"=\233\036\215Q06\227JM'3\023\361\304\364d\372\027\245"
 	.ascii	"\024\220g"
 	.text
-	.section	.gnu.lto_taskUpdatePitot.9775fa06dd7176e4,"",%progbits
+	.section	.gnu.lto_taskUpdatePitot.6db56e051e20be35,"",%progbits
 	.ascii	"x\234mPAK\033Q\020\236o\347\355f\033\233\263m\331\203"
 	.ascii	"\267\220C\015\005\177\212\236EB\004\021=$z\316k\223"
 	.ascii	"\030\203\036*\350\006\302\036\364 \241\210\024Ik\032"
@@ -276,7 +276,7 @@
 	.ascii	"\031Jd6s\271\354\372\306\374\312Zv!\177\007\260B\232"
 	.ascii	"."
 	.text
-	.section	.gnu.lto_taskDashboardUpdate.9775fa06dd7176e4,"",%progbits
+	.section	.gnu.lto_taskDashboardUpdate.6db56e051e20be35,"",%progbits
 	.ascii	"x\234UP;K\003A\020\236\357\346\356r\212\2616p\326\222"
 	.ascii	"\306 \330\3717\264\026\011\012AL\221\304:\253&>PDA#"
 	.ascii	"\204\013h!\026\026\">b\214\305\241ba\241\301\302F+A"
@@ -300,7 +300,7 @@
 	.ascii	"h\262;J\301\350x\"1\034O\365\307\306\206\007\222\277"
 	.ascii	"\027\\\222\237"
 	.text
-	.section	.gnu.lto_taskLedStrip.9775fa06dd7176e4,"",%progbits
+	.section	.gnu.lto_taskLedStrip.6db56e051e20be35,"",%progbits
 	.ascii	"x\234UO\315+DQ\024?\277w\356{\363\310dK\275\262\324"
 	.ascii	"lL\312\326\177\301Z\232(\311,fX\317\3651>\"Q\214\232"
 	.ascii	"^\206$1\013\311\307\030c\361\302\312\202\311\226\225"
@@ -325,7 +325,7 @@
 	.ascii	"\004E\023C\251TOr\260\243o\240\2473\375\015\327_\222"
 	.ascii	"C"
 	.text
-	.section	.gnu.lto_taskSyncPwmDriver.9775fa06dd7176e4,"",%progbits
+	.section	.gnu.lto_taskSyncPwmDriver.6db56e051e20be35,"",%progbits
 	.ascii	"x\234UO=K\003A\020\235wsw9\305`k\340\3002\2441\010\326"
 	.ascii	"\376\012\255E\202B\020S$\261\316\372\021\223\240\205"
 	.ascii	"BL@\016\214\205XX\210\370\021c,\016\265\022\321\220"
@@ -349,7 +349,7 @@
 	.ascii	"\210N\306\344\214\245\307SS\251\201\030\005c3\311\344"
 	.ascii	"D\"=\022\237\236\030M\375\000HL\222\027"
 	.text
-	.section	.gnu.lto_taskUpdateOsd.9775fa06dd7176e4,"",%progbits
+	.section	.gnu.lto_taskUpdateOsd.6db56e051e20be35,"",%progbits
 	.ascii	"x\234UO;K\003A\020\236\357\346\356r\212i\254\024\256"
 	.ascii	"\024B\032\203\340\217\360\007h-\022\024D\222\"\211u"
 	.ascii	"\326h|\240\205\212F\010W((\026\026\"Q\343\031\213#\246"
@@ -373,7 +373,7 @@
 	.ascii	"\234\317d\246\323\271\361\331\324\364D\366\007\240\341"
 	.ascii	"\222\254"
 	.text
-	.section	.gnu.lto_taskUpdateBaro.part.0.9775fa06dd7176e4,"",%progbits
+	.section	.gnu.lto_taskUpdateBaro.part.0.6db56e051e20be35,"",%progbits
 	.ascii	"x\234m\222\317k\023A\024\307\347;ov\263M\023\017\036"
 	.ascii	"\244\201\034z)\245\"\215\240\376\007\305\277@\317\022"
 	.ascii	"\322\010A\233CR\361\2301MLJ=T\321-\204=\024E\213\030"
@@ -406,7 +406,7 @@
 	.ascii	"\2472c\351\323\371\336l\372\342H:9z>\223M\377\001\366"
 	.ascii	"\037\311\361"
 	.text
-	.section	.gnu.lto_taskUpdateBaro.9775fa06dd7176e4,"",%progbits
+	.section	.gnu.lto_taskUpdateBaro.6db56e051e20be35,"",%progbits
 	.ascii	"x\234U\221\317kSA\020\307\347\373f\337\3133m<J-\357"
 	.ascii	"\340\245\224*4\210\370\037\370'\350YB|\205\240\315!"
 	.ascii	"\251x\314j\023\333\242\207Vl\012\341\035\374\201J\251"
@@ -435,7 +435,7 @@
 	.ascii	"\224\273\212\341\271ca\356\324\231B1\374\013\277.\255"
 	.ascii	"\312"
 	.text
-	.section	.gnu.lto_taskUpdateRangefinder.part.1.9775fa06dd7176e4,"",%progbits
+	.section	.gnu.lto_taskUpdateRangefinder.part.1.6db56e051e20be35,"",%progbits
 	.ascii	"x\234U\221\317k\023Q\020\307\347\373\346\355f\265\306"
 	.ascii	"\213\227\0129\364RK\005\233\223\377\201\177\202\236"
 	.ascii	"%\304\025\2026\207\244\342I\362lM\233\242\207V4\305"
@@ -463,7 +463,7 @@
 	.ascii	"3GK\323\361\261\352H9>{$.\2348]*\307\177\001\021\246"
 	.ascii	"\236q"
 	.text
-	.section	.gnu.lto_taskUpdateRangefinder.9775fa06dd7176e4,"",%progbits
+	.section	.gnu.lto_taskUpdateRangefinder.6db56e051e20be35,"",%progbits
 	.ascii	"x\234mSMO\023Q\024\275g\336|\224B\013~\006\314,\330"
 	.ascii	"\020\242\013\252Q\377\201+\327\272raH\255\011\021\272"
 	.ascii	"\240\030\027,\372\004*\020]\240\321iBfQ5J\214FPQ\250"
@@ -501,7 +501,7 @@
 	.ascii	"j\210S$~\274\2655\221l;\320\324\2228\230*O&N\354K4\036"
 	.ascii	"inJ&\376\000\215\251\035*"
 	.text
-	.section	.gnu.lto_taskTelemetry.part.2.9775fa06dd7176e4,"",%progbits
+	.section	.gnu.lto_taskTelemetry.part.2.6db56e051e20be35,"",%progbits
 	.ascii	"x\234UP;K\003A\020\236o\347\356r\212\301\302F\341zI"
 	.ascii	"\241\301\306\312\237\241\265H\210 \242E\242u\326h4>"
 	.ascii	"\020\005\215\020\216`#\026\026\">b\214`P+\013\015\301"
@@ -525,7 +525,7 @@
 	.ascii	"o<\235J\304'F\306&\343\243\0119\303S#\351\361to\202"
 	.ascii	"\242\211\351T*99586\221\034J\377\002-\200\215\377"
 	.text
-	.section	.gnu.lto_taskTelemetry.9775fa06dd7176e4,"",%progbits
+	.section	.gnu.lto_taskTelemetry.6db56e051e20be35,"",%progbits
 	.ascii	"x\234m\220\317K\033Q\020\307\347\273\363\366GC\323^"
 	.ascii	"\025\026\257!\027C\361\332?\243=\027\011\012\"\311!"
 	.ascii	"I\317yMLU\332C+v\205\260\204\355\241x\360 \0225\306"
@@ -551,7 +551,7 @@
 	.ascii	"\275\250L\227\347\313\223yJ\347_\226J3\305\312\263\271"
 	.ascii	"\302\314\363\362_.\\\242\000"
 	.text
-	.section	.gnu.lto_fcTasksInit.9775fa06dd7176e4,"",%progbits
+	.section	.gnu.lto_fcTasksInit.6db56e051e20be35,"",%progbits
 	.ascii	"x\234\215\226\335o\024U\024\300\357\231\273\363\261"
 	.ascii	"\263\337\253\017\032\367\201D\321\200J\343\253\217\276"
 	.ascii	"\351\177\340\223!ML\214\321\007\353{G\226\272\254%F"
@@ -614,7 +614,7 @@
 	.ascii	"\323\330\360\326\3167\336nx\275\021\377^{wg\323\233"
 	.ascii	"M;\032\331\177U\252\034\361"
 	.text
-	.section	.gnu.lto_cfTasks.9775fa06dd7176e4,"",%progbits
+	.section	.gnu.lto_cfTasks.6db56e051e20be35,"",%progbits
 	.ascii	"x\234m\326[L\024W\030\000\34093{eo^\333\232\220\264"
 	.ascii	"\363\320\364\251\222^\036\350C\233r\331\332M@\310\356"
 	.ascii	"j\365\245\2151ib\232\366\2416}k\\\024\020\005\025,\213"
@@ -713,7 +713,7 @@
 	.ascii	"6\263\325\022\021\303p\326]\214v\333nk\\X\274%\032\217"
 	.ascii	"\356\266\341\327\231\377\001\263r\254\365"
 	.text
-	.section	.gnu.lto_.symbol_nodes.9775fa06dd7176e4,"",%progbits
+	.section	.gnu.lto_.symbol_nodes.6db56e051e20be35,"",%progbits
 	.ascii	"x\234]\324\327n\023Q\020\006\340\361\277qz\334bzI/N"
 	.ascii	"\357=\224'\033',\011\304\340\204\004B\207\000K\357\235"
 	.ascii	"P\023\264\022W\360\014\020\355\005HH\210;\270A\354\331"
@@ -755,14 +755,14 @@
 	.ascii	"\216T7\250{\311\223l/\232\272\207\234E\351\373\225\376"
 	.ascii	"\002\365z\332Z"
 	.text
-	.section	.gnu.lto_.refs.9775fa06dd7176e4,"",%progbits
+	.section	.gnu.lto_.refs.6db56e051e20be35,"",%progbits
 	.ascii	"x\234\025\311\307\015\2000\024D\301\375\317\001\223"
 	.ascii	"\204\220\2051\261\035\372\357\0108\314i\242\244\347"
 	.ascii	"\343$3\341q\011\257`\026\252e\031e\241\260R\331\370"
 	.ascii	"7\262\323\220\230h\231\351\310\364\014\214\034\234\\"
 	.ascii	"\334z\001T\226\002k"
 	.text
-	.section	.gnu.lto_.decls.9775fa06dd7176e4,"",%progbits
+	.section	.gnu.lto_.decls.6db56e051e20be35,"",%progbits
 	.ascii	"x\234\255|\011TTW\2666\267NU1\203A\223\230n\272\223"
 	.ascii	"N\333\035z\212I\317\375^\277\301(I\\\355\300B\222\356"
 	.ascii	"d\255\377\247\011\224\206\277\031\374\2512\235\274\277"
@@ -1401,7 +1401,7 @@
 	.ascii	"\224\336\237{\0059\351\350vXF\320\012;\344\251\263\366"
 	.ascii	"\366\337\356\301\256 \377?\315\330\336\203"
 	.text
-	.section	.gnu.lto_.symtab.9775fa06dd7176e4,"",%progbits
+	.section	.gnu.lto_.symtab.6db56e051e20be35,"",%progbits
 	.ascii	"taskHandleSerial\000"
 	.ascii	"\000"
 	.ascii	"\000"

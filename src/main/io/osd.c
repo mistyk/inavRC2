@@ -1205,7 +1205,7 @@ static void squareRadarDraw(){
     uint8_t midY = osdDisplayPort->rows / 2;
 
     uint8_t gridSize= GRID_SIZE;
-    uint8_t gridY=GRID_SIZE/2;
+    uint8_t gridY=GRID_SIZE/2+1;
     //TOP LINE
      for (int c = midX-GRID_SIZE+1; c <= midX+GRID_SIZE-1; c++)
 	 {
@@ -1244,8 +1244,8 @@ static void osdSimpleMap(int referenceHeading, uint8_t referenceSym, uint8_t cen
 {
     // TODO: These need to be tested with several setups. We might
     // need to make them configurable.
-    const int hMargin = 1;
-    const int vMargin = 1;
+    const int hMargin = 7;
+    const int vMargin = 2;
 
     // TODO: Get this from the display driver?
     const int charWidth = 12;
@@ -1319,7 +1319,8 @@ int32_t myAlt = 0;
 
             float pointsY = points * poiCos;
             int poiY = midY + roundf(pointsY / charHeight);
-
+            poiY=constrain(poiY,minY,maxY);
+            poiX=constrain(poiX,minX,maxX);
             displayWriteChar(osdDisplayPort, poiX, poiY, poiSymbol);
 
 
@@ -1333,7 +1334,7 @@ int32_t myAlt = 0;
     bool scaled = osdFormatCentiNumber(buf, scale * scaleToUnit, scaleUnitDivisor, maxDecimals, 2, 3);
     buf[3] = scaled ? symScaled : symUnscaled;
     buf[4] = '\0';
-    displayWrite(osdDisplayPort, minX + 7, maxY, buf);
+    displayWrite(osdDisplayPort, minX, maxY-2, buf);
 
     *usedScale = scale;
 }
@@ -1767,7 +1768,7 @@ static bool osdDrawSingleElement(uint8_t item)
             bool frontview=false;
             osdSimpleRadar(&drawn, &scale,frontview);
 
-            //squareRadarDraw(GRID_SIZE);
+            //squareRadarDraw();
             //osdDrawRadar(&drawn, &scale);
 
 

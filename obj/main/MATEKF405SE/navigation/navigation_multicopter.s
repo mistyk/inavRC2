@@ -11,11 +11,11 @@
 	.eabi_attribute 34, 1
 	.eabi_attribute 18, 4
 	.file	"navigation_multicopter.c"
-	.section	.gnu.lto_.profile.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_.profile.9120199e0a254a10,"",%progbits
 	.ascii	"x\234cc```\003bF\206\235\374\177\330\000\005\263\001"
 	.ascii	"\330"
 	.text
-	.section	.gnu.lto_.icf.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_.icf.9120199e0a254a10,"",%progbits
 	.ascii	"x\234cc``\370\310\200\000\232\014\347\177\257\235\314"
 	.ascii	"\315\364\257}\316}>\346C\023_\210\261\235X\375\363#"
 	.ascii	"3\307\266\246\223O\2308\347\035\271\377\212\227k\347"
@@ -31,7 +31,7 @@
 	.ascii	"\333\334\206+\017\237\271\313d\004\366\242\361\271\271"
 	.ascii	"Ggp3\000\000g\265\200."
 	.text
-	.section	.gnu.lto_.jmpfuncs.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_.jmpfuncs.9120199e0a254a10,"",%progbits
 	.ascii	"x\234\245W[o\023G\024\236\263\263Y_\2228\255\020\240"
 	.ascii	"V\001$\332\007\024\204\334\300\357\351\033\217\374\001"
 	.ascii	"\244\202\027DK\000U\342\201D\205\270(\"\334\204H%\010"
@@ -93,7 +93,7 @@
 	.ascii	"\3276\005\337\204n\352\361\277O.\264\206\347\364\356"
 	.ascii	"\005\366\026\02510,"
 	.text
-	.section	.gnu.lto_.inline.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_.inline.9120199e0a254a10,"",%progbits
 	.ascii	"x\234\215T\317k\023A\024\376\336\354\217l7\333d+\261"
 	.ascii	"\261\"\331\232\024\261\001E+\004\251Rz\366\220?@\020"
 	.ascii	"\357\355?\321\213\036\024J\012\301C\251\020=\211\275"
@@ -127,12 +127,12 @@
 	.ascii	"\207\223\372\2702\330\"\365^\331d\221\275\034f\300\031"
 	.ascii	"\361\003\300R"
 	.text
-	.section	.gnu.lto_.pureconst.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_.pureconst.9120199e0a254a10,"",%progbits
 	.ascii	"x\234cc``\320\007bq\006\011&\011fI6IN\011.InIA\011Q"
 	.ascii	"I1\011q\011II)\0119\011%\011e\011\025I\015\011]I\003"
 	.ascii	")C\011#\011c\011\000e\327\004\320"
 	.text
-	.section	.gnu.lto_applyMulticopterHeadingController.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_applyMulticopterHeadingController.9120199e0a254a10,"",%progbits
 	.ascii	"x\234UP;K\003A\020\236o\307\\\256Q\261U\013[-r\372s"
 	.ascii	"\254$\004\221\200/b\264\315\351\251\361U\250\230\010"
 	.ascii	"r\310\201\205 \210\212\361qIs\244\021-\024\005\265\320"
@@ -155,7 +155,7 @@
 	.ascii	"\354\352\033\356M'\023\003\203\351\356T,A?y\012\217"
 	.ascii	"\371"
 	.text
-	.section	.gnu.lto_getVelocityExpoAttenuationFactor.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_getVelocityExpoAttenuationFactor.9120199e0a254a10,"",%progbits
 	.ascii	"x\234\205RMh\023Q\020~\263o\177bcS\361 \202\015\006"
 	.ascii	"\264\204\202t\325\2537\217\202'=x\223%\004\011\244\215"
 	.ascii	"\324X\274\345\331\330\230\322\036b\261\333\230\3066"
@@ -192,7 +192,7 @@
 	.ascii	"H\324\010\253\230\0347.P}\"`\204\203\177\000\376\023"
 	.ascii	"\034\242"
 	.text
-	.section	.gnu.lto_updateAltitudeVelocityController_MC.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_updateAltitudeVelocityController_MC.9120199e0a254a10,"",%progbits
 	.ascii	"x\234\215W[P\223W\020>\373\237\334\023\002\242\022\305"
 	.ascii	"X\321\212\214>\230\332\231\216o}jg\372\322W_;)b\207"
 	.ascii	"\031\225\016b\247/\325\037\202\001\004Z\353H\264\230"
@@ -289,7 +289,7 @@
 	.ascii	"\363a~~^~\312\032\367\227\250\374 w\325\252\234\374"
 	.ascii	"\234\265\3319\377\003\251\267\240s"
 	.text
-	.section	.gnu.lto_updateAltitudeThrottleController_MC.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_updateAltitudeThrottleController_MC.9120199e0a254a10,"",%progbits
 	.ascii	"x\234\225UmP\224U\024\276\347\275\373\275\260,_\233"
 	.ascii	"\004\004\231H4\215;\324\377f\372\323?\247\337\375r\030"
 	.ascii	"d\012G\240\201\265\351W\274\260\011\024\206\016#K\341"
@@ -363,7 +363,7 @@
 	.ascii	"rC1\263o.\331\352)\332XZ\\YQ\345\364\274U\371\352\346"
 	.ascii	"-\333\252<e%\345\236\215E\357\3069J\313\377\003k22\261"
 	.text
-	.section	.gnu.lto_getVelocityHeadingAttenuationFactor.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_getVelocityHeadingAttenuationFactor.9120199e0a254a10,"",%progbits
 	.ascii	"x\234\215T[oTU\024\336\337Y\347\314\234\031\333\221"
 	.ascii	"2\226D3\243\274\364\201\3040\321\370\300\213\217>\370"
 	.ascii	"\342\213?\300Lj\203cJk\306\312\353l9\355HA\014\222v"
@@ -416,7 +416,7 @@
 	.ascii	"\335\271\236\315-Oue\237\344\367#\371|o\376/\000&\307"
 	.ascii	"7"
 	.text
-	.section	.gnu.lto_updatePositionVelocityController_MC.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_updatePositionVelocityController_MC.9120199e0a254a10,"",%progbits
 	.ascii	"x\234\225W[L\224G\024\2363\2637\330\005T\024\025\251"
 	.ascii	"\002\"^j\331\3324\351k_l\372\324>\264i\3244i\010\222"
 	.ascii	"\206T\305 \265\276TW\301E\305\013^X\205\256\315\252"
@@ -521,7 +521,7 @@
 	.ascii	"\344\344\271fe\234\255\375\235\025\2640u\321\314\264"
 	.ascii	"\264\324\264\331\336\326\254\377\000&2|o"
 	.text
-	.section	.gnu.lto_updatePositionAccelController_MC.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_updatePositionAccelController_MC.9120199e0a254a10,"",%progbits
 	.ascii	"x\234\255Y\011XU\305\036?s\346\356\227E\321\264\014"
 	.ascii	"\227J#\255D\323v_\213\225\355\257\327\256\275>_H\244"
 	.ascii	"\327\024|Dj}\237\317+ \202\246Y*)\335\352\272\225f\344"
@@ -753,7 +753,7 @@
 	.ascii	"i\270uT\\\334G\011\303\242\242\023\342\342C\342\243"
 	.ascii	"&\015u\275\376\027\340S\224="
 	.text
-	.section	.gnu.lto_adjustMulticopterAltitudeFromRCInput.part.0.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_adjustMulticopterAltitudeFromRCInput.part.0.9120199e0a254a10,"",%progbits
 	.ascii	"x\234\225V\353SUU\024\337\353\354s\317\271o\036\202"
 	.ascii	"\274.xE\001m\032\257\3324S_zL\377@S\326\247\246\206"
 	.ascii	"\2101\032\320\006\257\215\3378\201 \0243\231#\230t\315"
@@ -839,7 +839,7 @@
 	.ascii	"\375\342\245\301`a\376\313\357}\260|Y\260(\177I\320"
 	.ascii	"\221[\030\\\224[\2748?\370?\2034\033\367"
 	.text
-	.section	.gnu.lto_adjustMulticopterPositionFromRCInput.part.1.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_adjustMulticopterPositionFromRCInput.part.1.9120199e0a254a10,"",%progbits
 	.ascii	"x\234\225ViLTW\024~\347\335\331`6\030\220u\220\301\204"
 	.ascii	"X\333\324\251m\232\246i\322\324\244\377\332\037\246"
 	.ascii	"I\033\373\243i\225\222\026\203`\000\233\364\027O\206"
@@ -932,7 +932,7 @@
 	.ascii	"\264\344\325\237$\247~\252>\227\3522\222\350U<\226\376"
 	.ascii	"\017-\325R\310"
 	.text
-	.section	.gnu.lto_adjustMulticopterAltitudeFromRCInput.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_adjustMulticopterAltitudeFromRCInput.9120199e0a254a10,"",%progbits
 	.ascii	"x\234\215\225\355oTE\024\306\347\271s\337v\267/Ti\345"
 	.ascii	"eW\233\030\322\020\015+\3527\023\377\012\277\233M\323"
 	.ascii	"\220&\274\230\272\372\265\227\226\245\335\260\206b\350"
@@ -994,7 +994,7 @@
 	.ascii	"\232o\357zog\274\261~\317;\361\206\246m\365\"\020\333"
 	.ascii	"\031\177+\326\264\243!\376\037\003I_R"
 	.text
-	.section	.gnu.lto_setupMulticopterAltitudeController.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_setupMulticopterAltitudeController.9120199e0a254a10,"",%progbits
 	.ascii	"x\234\225U\337OTG\024\236s\347\376\332\313\262\313\256"
 	.ascii	"U@x 1<h\215\013\255\017}\354k\037\372\344\037`\0101"
 	.ascii	"\226D\305\340\312+W\266\374\330B\"id%fcnb\2141E6Zm\273"
@@ -1054,7 +1054,7 @@
 	.ascii	"\005\242_45F\243\273vl\213\326E\367\357{\003\344\276"
 	.ascii	"z\036"
 	.text
-	.section	.gnu.lto_resetMulticopterAltitudeController.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_resetMulticopterAltitudeController.9120199e0a254a10,"",%progbits
 	.ascii	"x\234\225V\353SSG\024\337s77\011\011\020\013\210/\250"
 	.ascii	"\264Hgt:d\350\267\366C\377\212\366s\207a\234\0163U\034"
 	.ascii	"\241\375\330\\\010\004b\2602\216\004\260wl\372\260v"
@@ -1131,7 +1131,7 @@
 	.ascii	"\355\336\237\235\307\314\373\012\012\337+x\277p\367"
 	.ascii	"\1776\016\354\257"
 	.text
-	.section	.gnu.lto_applyMulticopterEmergencyLandingController.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_applyMulticopterEmergencyLandingController.9120199e0a254a10,"",%progbits
 	.ascii	"x\234\215W\331S\224G\020\377\372\233=\276=9\2253\021"
 	.ascii	"bpK\223rC\252Ry\365\017H\252\362\020\237S\024\241RT"
 	.ascii	"\251X\200y\310\013\237,\267Xj\"\253\254\233\324\246"
@@ -1225,7 +1225,7 @@
 	.ascii	"%\226O\013\326\224\346}X\230_\\T\222\0266\377\250\250"
 	.ascii	"\244\220\224W\257\3774\257\264\340\177G\372\207\177"
 	.text
-	.section	.gnu.lto_applyMulticopterAltitudeController.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_applyMulticopterAltitudeController.9120199e0a254a10,"",%progbits
 	.ascii	"x\234\215V\333O\224G\024\237\363\315~\227\335e\027\271"
 	.ascii	"T@.\362b\210I\343\326\276\330\276\365\017h\223>\324"
 	.ascii	"\347\206 i6Q0\200}\360\205\257,\270Ji\264\215\254\355"
@@ -1302,7 +1302,7 @@
 	.ascii	"\246\272\266 \311~\267\272\326O\2337n\335T^W\371\037"
 	.ascii	"\361@M\353"
 	.text
-	.section	.gnu.lto_adjustMulticopterHeadingFromRCInput.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_adjustMulticopterHeadingFromRCInput.9120199e0a254a10,"",%progbits
 	.ascii	"x\234\215\222\337K\024Q\024\307\357w\316\314:\253\253"
 	.ascii	"\353c\017K\005\341\203>8ZA\364R\257\375\027\262I\304"
 	.ascii	"Bj\250\365\352\315m\263m\015$Z\223e\213\245 {)\221\324"
@@ -1340,7 +1340,7 @@
 	.ascii	"aC\323\211c\355\241\306\226\343\355GZk\033\205\321\020"
 	.ascii	"<\334V\367\013\357|E\310"
 	.text
-	.section	.gnu.lto_resetMulticopterPositionController.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_resetMulticopterPositionController.9120199e0a254a10,"",%progbits
 	.ascii	"x\234\215\224[O\023A\024\307\347?\263\275p+\012/J\212"
 	.ascii	"\341\205\007\321\330`\210\337\301g?\200i\010\232&\002"
 	.ascii	"F\320\370\326\225R\220\324\030#P\023\334h\021Q\"*\032"
@@ -1386,7 +1386,7 @@
 	.ascii	",\334\277\247\324\223_\274\267\264`\337\226|\246\271"
 	.ascii	"\017zJ~\003\274\244\257\210"
 	.text
-	.section	.gnu.lto_applyMulticopterPositionController.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_applyMulticopterPositionController.9120199e0a254a10,"",%progbits
 	.ascii	"x\234\215VmP\224\327\025\276\347\336\375\376\344\253"
 	.ascii	"\021t\371\250)\325\330\211\033\232\351d\246\351\264"
 	.ascii	"\231\351\277\316t&?\232\231\366W\207 Iv\212\342\000"
@@ -1498,7 +1498,7 @@
 	.ascii	"-\345u\225\371)\316\237\253\012<\377B\235\177{`\313"
 	.ascii	"\346\027\330\377\001\012\030-W"
 	.text
-	.section	.gnu.lto_resetMulticopterLandingDetector.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_resetMulticopterLandingDetector.9120199e0a254a10,"",%progbits
 	.ascii	"x\234m\221\317K\002Q\020\307\347\273OW/\005\335\202"
 	.ascii	":u\363\342\322_\024\"\021\013\251a\326\325M\011\265"
 	.ascii	":T\230A,\2617)\214\220\354\307\246\325*x\255\210\240"
@@ -1521,7 +1521,7 @@
 	.ascii	"\215\207\225HH\215*\321\320\274:\025J\250\261\356t\""
 	.ascii	"27\235P\303\261\231\304d<\030\246o1\277\274\232"
 	.text
-	.section	.gnu.lto_isMulticopterLandingDetected.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_isMulticopterLandingDetected.9120199e0a254a10,"",%progbits
 	.ascii	"x\234\215WyL\225W\026\277\347~o\347-\354\233OD\021q"
 	.ascii	"\177\322f21\321Dc\377\320\3164\231\311t\222\371c\222"
 	.ascii	"\211cIK\242\320\000\372\307\374\343\247(\212\240\242"
@@ -1667,7 +1667,7 @@
 	.ascii	"\014\327\222\34599\370\367\303\314e\031\277\317\375"
 	.ascii	"?T\315}9"
 	.text
-	.section	.gnu.lto_calculateMulticopterInitialHoldPosition.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_calculateMulticopterInitialHoldPosition.9120199e0a254a10,"",%progbits
 	.ascii	"x\234\225\224\317O\023A\024\307\347\355l\267\013-4\015"
 	.ascii	"\007\023\345\300AB\360@\023\017\236=x\360O\220\223A"
 	.ascii	"BH\023\371\021\250^<0\024\344\207x\000\002(M\325&\210"
@@ -1717,7 +1717,7 @@
 	.ascii	"\317\317+\264\026:\362\362\363\355\271\331\307\354\205"
 	.ascii	"\216\214\334\314\254\364=#'\376\000i\225=\251"
 	.text
-	.section	.gnu.lto_adjustMulticopterPositionFromRCInput.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_adjustMulticopterPositionFromRCInput.9120199e0a254a10,"",%progbits
 	.ascii	"x\234mS]l\024U\024\276\337\334\371\243\335\355\026\026"
 	.ascii	"\215&k\342\013nxa\375y!>\020I|5!&>\233f%\272\244\355"
 	.ascii	"\222v\361u/[\026v\003IK\355n\203\216:\321\210>hL\003"
@@ -1771,7 +1771,7 @@
 	.ascii	";vu\346\332\266\267\347\232;\322\257f[[\0378\"\235\271"
 	.ascii	"\354\316m\331\316\014\247\377\013\333T\273\211"
 	.text
-	.section	.gnu.lto_resetMulticopterHeadingController.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_resetMulticopterHeadingController.9120199e0a254a10,"",%progbits
 	.ascii	"x\234UPA/\003Q\020\236\357\275v\273\027\304\025\007"
 	.ascii	"\327:t\343\3478I\323\2104\241\225*\327\256V\265\302"
 	.ascii	"\001\321Jd#\2338\224\203 \332\262\345\260\351E\342\200"
@@ -1794,7 +1794,7 @@
 	.ascii	"\341\361\251\261x8\024\235\210\217\304\002!\372\001"
 	.ascii	"\343$\220("
 	.text
-	.section	.gnu.lto_applyMulticopterNavigationController.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_applyMulticopterNavigationController.9120199e0a254a10,"",%progbits
 	.ascii	"x\234u\221]H\024Q\024\307\317\271w\346\316\354\354\216"
 	.ascii	"V\004Z\371.\366\340R\004\276\366\324[\275T\317\261,"
 	.ascii	"\213,\370\021\353\332\353\336\334\025\265\226H\310\025"
@@ -1833,7 +1833,7 @@
 	.ascii	"\214\207\342\221cM\241\3066;\334\036\213EZ\342\247\242"
 	.ascii	"\315\221\323m\177\000:\3257\263"
 	.text
-	.section	.gnu.lto_.symbol_nodes.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_.symbol_nodes.9120199e0a254a10,"",%progbits
 	.ascii	"x\234]\223}sSU\020\306w\317i\022\222\360\026 I\223b"
 	.ascii	"xiDT\220\326\332\232\342\373g\342\003l\214\327T\033"
 	.ascii	"\255\014\177\330\2312#\232\271\243\343G\300\321\231"
@@ -1888,7 +1888,7 @@
 	.ascii	"\252B\273\271\242\365\020@c\354X\017\374\0033\232\026"
 	.ascii	"x"
 	.text
-	.section	.gnu.lto_.refs.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_.refs.9120199e0a254a10,"",%progbits
 	.ascii	"x\2345\222\333n\323@\024E\367\232\330\036\273\216s\031"
 	.ascii	"\273M\332$m\3226isi\322P\025\020\027\361\201<\361\031"
 	.ascii	"\375\214\"\004\017H\010\004\210W~\000\204\020\342\231"
@@ -1918,7 +1918,7 @@
 	.ascii	"\365^\232\177\260p?\312]\012\233\305\324m\315m\233\022"
 	.ascii	"\356\325a\374\001\341\3030\200"
 	.text
-	.section	.gnu.lto_.decls.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_.decls.9120199e0a254a10,"",%progbits
 	.ascii	"x\234\304\275\011\\UG\266/\314>u\316a\206DMb\322&\235"
 	.ascii	"N\333i\273ow\246\356\327\267\373\336\276\367\265mL\342"
 	.ascii	"\275f\370\214\351!\337@\323J\022o\033\361\001\246;\367"
@@ -3218,7 +3218,7 @@
 	.ascii	"!\272\316\375\300{C\"\210\206]j\354\362 r\262\212&\264"
 	.ascii	"\352Z\231\277\243\307>t"
 	.text
-	.section	.gnu.lto_.symtab.2928b776d981caec,"",%progbits
+	.section	.gnu.lto_.symtab.9120199e0a254a10,"",%progbits
 	.ascii	"adjustMulticopterAltitudeFromRCInput\000"
 	.ascii	"\000"
 	.ascii	"\000"

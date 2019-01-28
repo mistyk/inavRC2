@@ -11,10 +11,10 @@
 	.eabi_attribute 34, 1
 	.eabi_attribute 18, 4
 	.file	"mavlink.c"
-	.section	.gnu.lto_.profile.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_.profile.857539caac127713,"",%progbits
 	.ascii	"x\234cc```\003bF\206Wb7\271\000\006J\001\361"
 	.text
-	.section	.gnu.lto_.icf.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_.icf.857539caac127713,"",%progbits
 	.ascii	"x\234cc``\230\304\310\000\007.\014\253v\275\232\306"
 	.ascii	"\304xz\375\351\005LL\007\326\266m\345b\236\362\365\317"
 	.ascii	"Q\026\226M\257\333\312X\2675\235|\302\304v\345\351\341"
@@ -40,7 +40,7 @@
 	.ascii	"\317\344\366\006\033\3463\355\336\367f~\337\211??Lf"
 	.ascii	"c\000\000'\356\322\321"
 	.text
-	.section	.gnu.lto_.jmpfuncs.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_.jmpfuncs.857539caac127713,"",%progbits
 	.ascii	"x\234\315Z[s\024\307\025\356\323{\233]VZ\201WX\220\005"
 	.ascii	"\011\260\214\215\035\223\270R\271T\222\262\223\007W"
 	.ascii	"%U\256\274\344)Uy\315\177\340%Z\214\001\313`\014A\006"
@@ -177,7 +177,7 @@
 	.ascii	"\332\025\025B\250\275\212\272\277\027\335x\201\350\027"
 	.ascii	"\2756\010\371?J5W\\"
 	.text
-	.section	.gnu.lto_.inline.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_.inline.857539caac127713,"",%progbits
 	.ascii	"x\234\245V[L\034U\030\376\3763\263\273\303^\207\005"
 	.ascii	"\226-,\260\226[*\024k\202\304\306\226\254}0\251\321"
 	.ascii	"}2\276\371fcl}\345\321d\022c\240\2456\253!\212\015Q"
@@ -248,7 +248,7 @@
 	.ascii	"\277kS\036F\\~\253\304\027\237\250\316\322\243\310$"
 	.ascii	"y%w\361\231\352\025\265\033\374\007\252|\036\346"
 	.text
-	.section	.gnu.lto_.pureconst.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_.pureconst.857539caac127713,"",%progbits
 	.ascii	"x\234\015\303I\012\302@\000D\321V\241EPpJ\362\253\300"
 	.ascii	"y\310\"N\013\011\212\012\352N!g\310\375o\241\017^\014"
 	.ascii	"!\324\377\307\340\206\232j\021\335v\207\256{\3645\320"
@@ -256,7 +256,7 @@
 	.ascii	"o\311)\330y\317\341r\342L\311U7\356<x\362\342\315\207"
 	.ascii	"/\025?\334Z\013\233"
 	.text
-	.section	.gnu.lto_crc_accumulate.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_crc_accumulate.857539caac127713,"",%progbits
 	.ascii	"x\234]RMHTQ\024>\347\335\367\336\274\371st\024\177\320"
 	.ascii	"\205\213\304\244\2301Z\005m\334\327\266\275\275\012"
 	.ascii	"\305F\243t\355s\314\377\202\026\376\3040\305@\204H\320"
@@ -297,7 +297,7 @@
 	.ascii	"\333MG\355\226S\035\211X\023\350G\032\333\033-\373\244"
 	.ascii	"\335`\333\035\011\321\2368\361\017\354'Bv"
 	.text
-	.section	.gnu.lto_crc_calculate.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_crc_calculate.857539caac127713,"",%progbits
 	.ascii	"x\234US]HTQ\020>s\317\275w\257\3362\037\012\014|\360"
 	.ascii	"!1\011v\203\036\222\336\354-\2507\351\275\026M\3215"
 	.ascii	"\261|\013\366\350\252iJ\211\344\252\333\265\334\254"
@@ -344,7 +344,7 @@
 	.ascii	"\272\267\334\233\347+3\360\312\365z+|\377\000c\325]"
 	.ascii	"\322"
 	.text
-	.section	.gnu.lto_crc_accumulate_buffer.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_crc_accumulate_buffer.857539caac127713,"",%progbits
 	.ascii	"x\234]RMH\025Q\024>\347\236\231y\363\236\232\321\256"
 	.ascii	"r\341\"1\011|-\2026n\254\226\265\213\366\365\320\024"
 	.ascii	"}*\226\273\300\353\277\226B\213T\234\246\320\3764\010"
@@ -387,7 +387,7 @@
 	.ascii	"\224F\262#\221\262h\240\344HYnnN\251U\230St\366|\036"
 	.ascii	"\226\374\006\327( !"
 	.text
-	.section	.gnu.lto_mavlinkStreamTrigger.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlinkStreamTrigger.857539caac127713,"",%progbits
 	.ascii	"x\234\225\223\355K\323Q\024\307\317\271\367\367\344"
 	.ascii	"\\\332\213\202\210\365@\021\322\012\037\352M\177E\377"
 	.ascii	"\203\310\002)%\324\204^yuf\256\224F\224\311\374a3\251"
@@ -434,7 +434,7 @@
 	.ascii	";s\213 \243\274\242,PX\262}O\211QVX\021\370\005\221"
 	.ascii	"\210{\240"
 	.text
-	.section	.gnu.lto_mavRates.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavRates.857539caac127713,"",%progbits
 	.ascii	"x\234cc``\330\016\304\214\014\0200\205\231\361\357\207"
 	.ascii	"\013\177y\272\231\347030r\001\271\327o\266\354d\004"
 	.ascii	"q\031\031\271\221e\031\301\262G\377\177?\300\017Q\314"
@@ -444,7 +444,7 @@
 	.ascii	"w1\3120n\003\342\235@\274\003\210\267C\371[\201x3\020"
 	.ascii	"o\201\320\014\214\273\031-\030\000\263x:\372"
 	.text
-	.section	.gnu.lto_mavlink_msg_to_send_buffer.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlink_msg_to_send_buffer.857539caac127713,"",%progbits
 	.ascii	"x\234\225SMHTQ\024\276\347\3357o\336\374[\322\257-\\"
 	.ascii	"\024\342f\006\332\265\210h_\333\266Qa%:\026Jm\27595"
 	.ascii	"V\206H\324D\303+\224~L\302\322\312rF\247&\313J\033\377"
@@ -495,7 +495,7 @@
 	.ascii	"\275\025\265u\301\335\314\330\276o\347\316\212Z\036"
 	.ascii	"\256\333\245\355\250\372\015\222=\331\200"
 	.text
-	.section	.gnu.lto_mavlink_frame_char_buffer.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlink_frame_char_buffer.857539caac127713,"",%progbits
 	.ascii	"x\234\245ZiTTG\026~\367U\357tCK+ \213\222\305\0305\241"
 	.ascii	"cLN\362#'\223\374\311\234\331~\314\237\231?s&G\031\222"
 	.ascii	"\030\305\314\321\230\223\2313gl\327\246!:&\"(\266\212"
@@ -722,7 +722,7 @@
 	.ascii	"\356\344\177h\246rr\225'\373u)\367\255\274\334\011S"
 	.ascii	"\246\346\243/\377\0053\223\250\216"
 	.text
-	.section	.gnu.lto_mavlink_message_crcs.13789.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlink_message_crcs.13789.857539caac127713,"",%progbits
 	.ascii	"x\234UXW[d\311\221\315\204\236\321\314h\314jeV\246e"
 	.ascii	"W\332]\331\321\214\334\310\354\352Uz\321O\320\223>\275"
 	.ascii	"\351m\037\366ERA\343\033hL5\036\232\306tC\003\215m\212"
@@ -921,7 +921,7 @@
 	.ascii	"\270\010\325Z\362\274J\276\253t\366\235O\324\377\003"
 	.ascii	"\023\314m\027"
 	.text
-	.section	.gnu.lto_mavlink_frame_char.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlink_frame_char.857539caac127713,"",%progbits
 	.ascii	"x\234\225\222ML\023A\024\307\347\355l\267\333\322\202"
 	.ascii	"\007\017~\220\206\013!\\Z\321\203\361\340\301x\325\223"
 	.ascii	"\211WRI\025\"-\206\202\007/\035\013X\010&\032\205B\326"
@@ -965,7 +965,7 @@
 	.ascii	"\375\276`\320{\316\267\013GfV\260\312[U\035\374\003"
 	.ascii	"S\267mU"
 	.text
-	.section	.gnu.lto_mavlink_parse_char.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlink_parse_char.857539caac127713,"",%progbits
 	.ascii	"x\234\225V[P\023g\024\376\317\376\233\013$\200q|p:X"
 	.ascii	"\255S\307jg\210\266\017\3267\035\037\372\322\276u\372"
 	.ascii	"\352\3204\025F\202\226\200\323>\261\210\\\"Lk\035.\232"
@@ -1050,7 +1050,7 @@
 	.ascii	"\315\226\341xoFb\266$\273m\2633\303\201\214\376\003"
 	.ascii	"\275<\267&"
 	.text
-	.section	.gnu.lto_mavlinkSendMessage.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlinkSendMessage.857539caac127713,"",%progbits
 	.ascii	"x\234m\223\317O\023Q\020\307gvv\373\233J\364f\032mL"
 	.ascii	"8\240H\303E9{\366\344\177`HA\"p\0004\361\324\225\202"
 	.ascii	"m#1J\264\204f5%\0069V\261 U)\333\"\312\217\200\312\201"
@@ -1094,7 +1094,7 @@
 	.ascii	"\303\313u\265\015\027\313\253\300Y\337Ts6\330P\323|"
 	.ascii	"\301\311\213g.UW\007\033\261\366//4O\244"
 	.text
-	.section	.gnu.lto_mavlink_msg_mission_clear_all_decode.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlink_msg_mission_clear_all_decode.857539caac127713,"",%progbits
 	.ascii	"x\234}QMHTQ\030\275\347}o~\032\377\262EP\0152\033\021"
 	.ascii	"[\370\222\266BD\333Z\026\265\032L\244\206fFHh;w\306"
 	.ascii	"r\014]H\344d\303c\232\210\351\007\012\225J\033\177\352"
@@ -1132,7 +1132,7 @@
 	.ascii	"\203`\244\365D0\022jm\015\265D\203M\341\346\306\323"
 	.ascii	"\301\306p\270\356\244 .T\376U\240ps\3647\3543\031\021"
 	.text
-	.section	.gnu.lto_mavlink_msg_mission_count_decode.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlink_msg_mission_count_decode.857539caac127713,"",%progbits
 	.ascii	"x\234}QMHTQ\024\276\337;o~\324\324j\021H\023\314\"\021"
 	.ascii	"[\370\2226A\013i\237\320*h5\224D\01593\013\253\355\\"
 	.ascii	"\307r\014[X\344T\303C&r(\242p&+\033\323|Ni\006Y&HQ\024"
@@ -1170,7 +1170,7 @@
 	.ascii	"\2174\034\022\304\301\312\277\202\324z \374\033\371"
 	.ascii	"M\026\203"
 	.text
-	.section	.gnu.lto_mavlink_msg_mission_item_decode.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlink_msg_mission_item_decode.857539caac127713,"",%progbits
 	.ascii	"x\234}QMHTQ\024\276\337;o~\362\257\\V/\030\004\021\203"
 	.ascii	"|J\213\240E\320\272\237e\320J*\244\206\234qa\264\235"
 	.ascii	"\353\330\314X\026\250\344X\303#\006\304j\343\037\375"
@@ -1207,7 +1207,7 @@
 	.ascii	"\250\365lc(\330\332\032l\0117\006/4\205\352\316\011"
 	.ascii	"\342X\331\346\03057\205\377\002\206b\030\341"
 	.text
-	.section	.gnu.lto_mavlink_msg_mission_request_list_decode.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlink_msg_mission_request_list_decode.857539caac127713,"",%progbits
 	.ascii	"x\234}QMHTQ\030\275\347}o~\032\377*\"\250\206\232\215"
 	.ascii	"\210-|I\333 j\321\252\266A\004\015\025RC3#5\326v\256"
 	.ascii	"c9\023\272\220\310\311\206\207M\204dQ\250e\331\230\326"
@@ -1244,7 +1244,7 @@
 	.ascii	"\356\364\331\272XC0\034\2125\324\234\024\304\265\015"
 	.ascii	"\253\325(\\\027\375\013\004\376\033\235"
 	.text
-	.section	.gnu.lto_mavlink_msg_mission_request_decode.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlink_msg_mission_request_decode.857539caac127713,"",%progbits
 	.ascii	"x\234}QMHTQ\024\276\337;o~\032\323\251\026A5\304,\022"
 	.ascii	"\261\205/i\027D\270\257E\020A\253\241Bj\310\031\251"
 	.ascii	"\251\266sg\246\034\303\026\0269\325\360\210\211\224"
@@ -1283,7 +1283,7 @@
 	.ascii	"\3113\325\261\323\025\307\005q\330\277*L5\325\321\337"
 	.ascii	"j\001\030\271"
 	.text
-	.section	.gnu.lto_mavlink_finalize_message_chan.isra.0.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlink_finalize_message_chan.isra.0.857539caac127713,"",%progbits
 	.ascii	"x\234\225V]LTW\020\276\263\347\356\335\313\376\361#"
 	.ascii	"\"\340\222\360\2401\266\011[j\332\244om\322\247\246"
 	.ascii	"\276\364\241I\037\014\261\224\010)\273\030\241M\333"
@@ -1370,7 +1370,7 @@
 	.ascii	"\274\313*\212\223\012W\024\026\024}T\261b\251\325S\342"
 	.ascii	"-\020\306\377\000Im\341\320"
 	.text
-	.section	.gnu.lto_mavlink_finalize_message.isra.1.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlink_finalize_message.isra.1.857539caac127713,"",%progbits
 	.ascii	"x\234\205\223ML\023Q\020\307\337\354l\267E>\275\021"
 	.ascii	"\323DL \004\016\255\321\204x\324\304\243\334\214G\033"
 	.ascii	"\254\033h\354.\244m\214\034L\037-\012\006\016\232h\305"
@@ -1411,7 +1411,7 @@
 	.ascii	"\211\204\232vh\001\335g/\356\366x\303!\277\035&\242"
 	.ascii	"\006UM\215\204\332\363\362\036?\373\015\021V0N"
 	.text
-	.section	.gnu.lto_mavlink_msg_mission_request_pack.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlink_msg_mission_request_pack.857539caac127713,"",%progbits
 	.ascii	"x\234}\223]l\024U\024\307\357\231;\235n\273\273]\340"
 	.ascii	"Id\243%\221\024x\3301\341\205\220\230\350\223/\372f"
 	.ascii	"\214o\233RF\334\320\335\226\356\202!>\364v\013\331\266"
@@ -1468,7 +1468,7 @@
 	.ascii	"\241\306\251\2370j\215\250\221h\330U,\034\252a\377\000"
 	.ascii	"\330`\311\273"
 	.text
-	.section	.gnu.lto_mavlink_msg_mission_count_pack.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlink_msg_mission_count_pack.857539caac127713,"",%progbits
 	.ascii	"x\234}\223QLSg\024\307\277s\277\333K\241-u{\333l\024"
 	.ascii	"\023\015j\226\336%\276\220\354e{\360\315\275\370\340"
 	.ascii	"\303^\032,\2156\322\226\320jb|\340\243\250\005eF\035"
@@ -1524,7 +1524,7 @@
 	.ascii	"_\217\327\006\355\372\211Pu(\022J\324\356.\024\366\007"
 	.ascii	"\331k\375\306\310\243"
 	.text
-	.section	.gnu.lto_handleIncoming_MISSION_REQUEST_LIST.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_handleIncoming_MISSION_REQUEST_LIST.857539caac127713,"",%progbits
 	.ascii	"x\234\215T]K\024a\024~\2379\263\273\223_\253\025]-$"
 	.ascii	"\201\027u\341\012u!\324E\177%L\"J\011\215\240\253}\335"
 	.ascii	"\315\324\354\242\244]\331\232b\241\213> Jr\255\325\262"
@@ -1567,7 +1567,7 @@
 	.ascii	"m/\016VW\225\005+\016\034\256\014\036/?Z^Q~\274\352"
 	.ascii	"$/O\034=\\y\244\270LQE\365\241\27708\211\332"
 	.text
-	.section	.gnu.lto_mavlink_msg_sys_status_pack.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlink_msg_sys_status_pack.857539caac127713,"",%progbits
 	.ascii	"x\234}\225{LSW\030\300\317\327\323\336\266\224\266\242"
 	.ascii	"q\306\211\202q\306h\026:\347\226\270d\177l\373\313d"
 	.ascii	"\257?\226,Y\262\244)p\247\304\322\222\366j\342_\\Ay"
@@ -1657,7 +1657,7 @@
 	.ascii	"+I)\256` M,\240\"{\345LY\011,\323W.%\215\374\013MM\277"
 	.ascii	"\034"
 	.text
-	.section	.gnu.lto_mavlink_msg_rc_channels_raw_pack.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlink_msg_rc_channels_raw_pack.857539caac127713,"",%progbits
 	.ascii	"x\234}\224{LSg\024\300\357\351w\373\242\005|D\035[}"
 	.ascii	"e3F\227\3209\367`[L\334_\333\222\355\277e\331\177\004"
 	.ascii	"Y7\231\264\020\332l\361\237q)\233\305\0157u\202Z\357"
@@ -1736,7 +1736,7 @@
 	.ascii	"x\2759\246\374\254\354\025.\337\354t\247\267 [\344\340"
 	.ascii	"s\345\272\334._\301J=\370\364l\351_\332\3576u"
 	.text
-	.section	.gnu.lto_mavlink_msg_gps_raw_int_pack.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlink_msg_gps_raw_int_pack.857539caac127713,"",%progbits
 	.ascii	"x\234\205\225mLSg\024\307\357\351\323\336\266\024\250"
 	.ascii	"/1nP\321%3N\262\321\231%\213\373\266e_\267d\037\226"
 	.ascii	"}\\\203\254bc[\210\355pf\037\270\266\0160\2329\337\252"
@@ -1815,7 +1815,7 @@
 	.ascii	"\334\"whE\211H\015C\274\001ox\305*#\247\242\022\351"
 	.ascii	"\037\311\351\010\242"
 	.text
-	.section	.gnu.lto_mavlink_msg_global_position_int_pack.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlink_msg_global_position_int_pack.857539caac127713,"",%progbits
 	.ascii	"x\234\205\225]L\024W\024\307\357\231\273;\263\300\002"
 	.ascii	"~\304D\3036j\2421\222\206\255\355\213OM}k\322\366\265"
 	.ascii	"\351C\223\015\340V7\356\007\205-\251}aXT0V\353\027\210"
@@ -1891,7 +1891,7 @@
 	.ascii	"\026\270\313J\213\245\246\260\327\357\015x\303\245\253"
 	.ascii	"Sb\012\212\331\337\0326\343\354"
 	.text
-	.section	.gnu.lto_mavlink_msg_gps_global_origin_pack.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlink_msg_gps_global_origin_pack.857539caac127713,"",%progbits
 	.ascii	"x\234}T_lSe\024\377N\277\366\366\226v-\372\344\237F"
 	.ascii	"G\002\231\354\241\327\205\027\036L\324G\023\365\221"
 	.ascii	"\007_\232\256\324\332\320?\313ZI\366\324\273\016\326"
@@ -1951,7 +1951,7 @@
 	.ascii	"$\007\242fJj\010\004w\204R\317\372\224dc\320,\235\012"
 	.ascii	"EC\261P\252\261i\265\246/\310\376\001\325\202\361\032"
 	.text
-	.section	.gnu.lto_mavlink_msg_attitude_pack.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlink_msg_attitude_pack.857539caac127713,"",%progbits
 	.ascii	"x\234}\224]P\224e\024\307\237\263\317\356\273\273\354"
 	.ascii	"\002\342\3508\324\2464\243Cr\301f\3164^\332]\027y\321"
 	.ascii	"M\2271\260l\271#\2730\260\346p\305\013\030\013\221M"
@@ -2020,7 +2020,7 @@
 	.ascii	"8\275\3332\355E\205\016\265\036\2573\317\351vz\013\213"
 	.ascii	"c\205d:\330\337~e\222\356"
 	.text
-	.section	.gnu.lto_mavlink_msg_vfr_hud_pack.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlink_msg_vfr_hud_pack.857539caac127713,"",%progbits
 	.ascii	"x\234}\224]LSg\030\307\337\247o{\332\332R\234\037Y\234"
 	.ascii	"5\262DC\344\202\316-K\274\333v\267\013\227\354j\211"
 	.ascii	"W\204\217\012\215m!\245\222\270\033\016eR\230\2230>"
@@ -2088,7 +2088,7 @@
 	.ascii	"\271n\227'G*\312\316=\340\364o\317t\024\373r\265 \374"
 	.ascii	"N\267\323\343\364\373\016\255x\317\314e\177\001ZEeO"
 	.text
-	.section	.gnu.lto_mavlink_msg_heartbeat_pack.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlink_msg_heartbeat_pack.857539caac127713,"",%progbits
 	.ascii	"x\234\205\224_L[u\024\307\177\247\277\366\266]\241\260"
 	.ascii	"e1[V\025\023\0272\036\250S\023\367\350\336\325\007\037"
 	.ascii	"\364\221\024V\035\201\266\204^4<qie\200s\211\233PY\275"
@@ -2156,7 +2156,7 @@
 	.ascii	"\227\026\350Jdw\261\333\343\226K\313S\022r\013\330_"
 	.ascii	"Q\000S\322"
 	.text
-	.section	.gnu.lto_mavlink_msg_mission_ack_pack.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlink_msg_mission_ack_pack.857539caac127713,"",%progbits
 	.ascii	"x\234}R]L[e\030\376\336~\355iY\377\246W\3065\312\022"
 	.ascii	"\027\034\027=.K\314\274\323x\251&^\030o\033\300:\233"
 	.ascii	"\321Bh\263\214\253~\224\315B\300\304)\224qv\304.\004"
@@ -2214,7 +2214,7 @@
 	.ascii	"\323A5\336Tg6O\204\353\303\321p\242\251\271\3345X\307"
 	.ascii	"\376\005h\261\360\025"
 	.text
-	.section	.gnu.lto_handleIncoming_MISSION_CLEAR_ALL.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_handleIncoming_MISSION_CLEAR_ALL.857539caac127713,"",%progbits
 	.ascii	"x\234\215T\337KTQ\020>\337\235\273w\327\365\307&DO\013"
 	.ascii	"\211\340\203/\256Q\017B=\364\257\204HH*\241\022\364"
 	.ascii	"\264G\315\374\325CJ\256X\267X\350!\202\302\226\324Z"
@@ -2256,7 +2256,7 @@
 	.ascii	"VR^R]y\236\227\347\312J+\316\024\024+*\257:\375\007"
 	.ascii	"A\007\233Q"
 	.text
-	.section	.gnu.lto_handleIncoming_MISSION_COUNT.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_handleIncoming_MISSION_COUNT.857539caac127713,"",%progbits
 	.ascii	"x\234\215V\355O[U\030?\317=\367\255\357\250l\363C\211"
 	.ascii	"\304\205\017[\226\225\304\017.\321D\377\025\263\240"
 	.ascii	"Y\034\213\331\210\211\237z\007\014\350F@\227\321\011"
@@ -2324,7 +2324,7 @@
 	.ascii	"\361\367p\372\356\321#\307\336>x\230\361\332\023o\375"
 	.ascii	"\007\026\231<\335"
 	.text
-	.section	.gnu.lto_handleIncoming_MISSION_ITEM.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_handleIncoming_MISSION_ITEM.857539caac127713,"",%progbits
 	.ascii	"x\234\215Y\351STW\026\277\347\336\3367\232}\261Q\324"
 	.ascii	"\200\022\243`\320\232T\315\227\251\371\037\346\333|"
 	.ascii	"\231JYS\251\211\251Tb\315\324|\031Z@\004\305\214q\264"
@@ -2468,7 +2468,7 @@
 	.ascii	"\177~\377\275\017\376\264\340]&\226~\374G\376\227\017"
 	.ascii	"\377\017\265\001W|"
 	.text
-	.section	.gnu.lto_mavlink_msg_mission_item_pack.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlink_msg_mission_item_pack.857539caac127713,"",%progbits
 	.ascii	"x\234\205\326mPTU\030\000\340\373\356\331/X\226\305"
 	.ascii	"q\034SV1\215a\264\211\315l&s\252\251\246\237\365\243"
 	.ascii	"\037\365\227\301u\265\035\331\305\330\265\321~\304\025"
@@ -2555,7 +2555,7 @@
 	.ascii	"\373r\2077.\321\346I\263\363\014\274\216\024\207\313"
 	.ascii	"\341M[\255\206\236h\027\376\001\254\344\253\352"
 	.text
-	.section	.gnu.lto_handleIncoming_MISSION_REQUEST.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_handleIncoming_MISSION_REQUEST.857539caac127713,"",%progbits
 	.ascii	"x\234\215V\353OTG\024\237s\347\276v\227]@y\211\227\024"
 	.ascii	"\233\330\306~\020\023cc\322~h\342_\322\030\323\230\252"
 	.ascii	"5>j\372i\257,*T\233\266F\266B\267v\033[+>\321\002\025"
@@ -2644,7 +2644,7 @@
 	.ascii	"\227\237\257X\276\352\323\371K\031_\271\366\023c\303"
 	.ascii	"\352%\237\255_\265N\331\260\372?\224.\364\317"
 	.text
-	.section	.gnu.lto_processMAVLinkIncomingTelemetry.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_processMAVLinkIncomingTelemetry.857539caac127713,"",%progbits
 	.ascii	"x\234\215\225\337O\\E\024\307\317\271\263\367\307\336"
 	.ascii	"\375QDB[C\"1!J\253\245I\023\237|\320G\377\014\203<4"
 	.ascii	"\322\306P4\321\227\275\260T~\331\004HY\024W\274\321"
@@ -2710,7 +2710,7 @@
 	.ascii	"#z\375\260\374\360\321\367\016\224\202VQv\354\203\362"
 	.ascii	"J,\375\017\005\274\206y"
 	.text
-	.section	.gnu.lto_mavlinkSendPosition.part.2.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlinkSendPosition.part.2.857539caac127713,"",%progbits
 	.ascii	"x\234\215W\353S\023W\024\337s\357f\263I \341a\224G\220"
 	.ascii	"\207:\214\037\024\247~\351\370\007\364S?\332?\240c\231"
 	.ascii	"\016Su:h;\365KYA$Tm\325J\224\230J\234N\265\016>j} \370"
@@ -2800,7 +2800,7 @@
 	.ascii	"\316\267\337]\363Z\305\007\313\327\275[\376?\354\267"
 	.ascii	"\325E"
 	.text
-	.section	.gnu.lto_freeMAVLinkTelemetryPort.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_freeMAVLinkTelemetryPort.857539caac127713,"",%progbits
 	.ascii	"x\234\215\220\315K\002A\030\306\337g\306]E\250sPP\035"
 	.ascii	":\354E\377\246\020\017\222z0\011:\355\246\231\212\035"
 	.ascii	"\"j\203Xd\011\312cTZm\237\213\177@A\207.]\312CTH\020"
@@ -2820,7 +2820,7 @@
 	.ascii	"\202h4\022\235\316\304\242\251\311D:\232\215'\343\251"
 	.ascii	"x63\313\327\231d\"=\025\211\321\027\354\314\232t"
 	.text
-	.section	.gnu.lto_initMAVLinkTelemetry.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_initMAVLinkTelemetry.857539caac127713,"",%progbits
 	.ascii	"x\234]\220\315K\002Q\024\305\357yOgF\241vA\220\020-"
 	.ascii	"u\241\373\376\233\020\027\222\2720\011Z\315\250\231"
 	.ascii	"Z-\"\232\011b\210i\325\242\205\210\3661}\300\340\037"
@@ -2842,7 +2842,7 @@
 	.ascii	"\255\230N\345W\262\205T)\223\313\3443\245\342\006\037"
 	.ascii	"\327s\331\302j2M\177\354U\217H"
 	.text
-	.section	.gnu.lto_configureMAVLinkTelemetryPort.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_configureMAVLinkTelemetryPort.857539caac127713,"",%progbits
 	.ascii	"x\234}S\313O\023A\034\236og\037\245\264\210\012\306"
 	.ascii	"C\023\215\0111x\240\020O\376\011\336\214g/\250=\020"
 	.ascii	"\201\003\242\321S\207\"\226\212\007\242R\036i\310\006"
@@ -2890,7 +2890,7 @@
 	.ascii	"\244\351\361\352\252\332#e\207\230\377`\345\261\303"
 	.ascii	"\373+\353C{k\017\207N\374\001bQ\201J"
 	.text
-	.section	.gnu.lto_checkMAVLinkTelemetryState.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_checkMAVLinkTelemetryState.857539caac127713,"",%progbits
 	.ascii	"x\234m\222Mh\023Q\020\307\347\377fw\223\032\353A\017"
 	.ascii	"\215\020Q\224\036\352!\021\204\036<y\361\350M\274\307"
 	.ascii	"\272B1\315\241V\305S\236Ic\033\364 ~\244*\213,\010\025"
@@ -2921,7 +2921,7 @@
 	.ascii	"\231\302p\361dv\210\322E\367\354\221\365\370\241b\376"
 	.ascii	"X\301=~4_8\355\376\006\021\264\333\267"
 	.text
-	.section	.gnu.lto_mavlinkSendSystemStatus.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlinkSendSystemStatus.857539caac127713,"",%progbits
 	.ascii	"x\234mU\335O\034U\024\277\347\336\331\371\332\235\001"
 	.ascii	"\264\352\202\333tcS\033^JL|0\306\027\343\223\317\376"
 	.ascii	"\005\265\345\241\221.\011\020\023\237v\312\322e\221"
@@ -2988,7 +2988,7 @@
 	.ascii	"\221hk\342\325\326\275m\373_jMt\264\265\266\274\230"
 	.ascii	"\330\377Js\242\275\265\255\375\177\365st\347"
 	.text
-	.section	.gnu.lto_mavlinkSendRCChannelsAndRSSI.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlinkSendRCChannelsAndRSSI.857539caac127713,"",%progbits
 	.ascii	"x\234\215\226mo\024U\024\307\357\231\347\235\235\231"
 	.ascii	"}\350\243\351B\037\014iZ\011\015|\001_\370I\014\351"
 	.ascii	"\013\"\360\002\211\211\257\272RJ[\254\206\030Y\312f"
@@ -3062,7 +3062,7 @@
 	.ascii	"l\336\325\274w\317\353\370\365\265\235;v\277\262e;\373"
 	.ascii	"\017\007I.\213"
 	.text
-	.section	.gnu.lto_mavlinkSendPosition.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlinkSendPosition.857539caac127713,"",%progbits
 	.ascii	"x\234UQ\317k\023Q\020\236o\347\355f\215\346\342I\312"
 	.ascii	"\212\240\224\322\036\222Bo\376\001\036<\327?@\302\""
 	.ascii	"\301&\224$\212=\3455ml\213\036\0244\011a\017\025Y<\210"
@@ -3091,7 +3091,7 @@
 	.ascii	"\305t\226R\331K\305\242_(\317\346\362\376\271R\362\302"
 	.ascii	"|\351L\356\312\354\302\274\377\033B\346\257\365"
 	.text
-	.section	.gnu.lto_mavlinkSendAttitude.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlinkSendAttitude.857539caac127713,"",%progbits
 	.ascii	"x\234\215TMOSA\024\235\373\246\037\257\205~i\374H\264"
 	.ascii	"\001\227lx\177\310\215!,\210\300\002\211\211\253>iZ"
 	.ascii	"0\2101\006\252b5\317\2251j\210\212hQ\240\026\024A,\210"
@@ -3134,7 +3134,7 @@
 	.ascii	"\266\241\266\271\351\034\376\236\255\257k<]]#\376\001"
 	.ascii	"Od\344\203"
 	.text
-	.section	.gnu.lto_mavlinkSendHUDAndHeartbeat.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_mavlinkSendHUDAndHeartbeat.857539caac127713,"",%progbits
 	.ascii	"x\234\215WYP\224W\026\376\317\275\275ACwC\263\323(\210"
 	.ascii	"\310`\034\026S5\245\2115V*\017\3634\0173\316\323\274"
 	.ascii	"\2442\221\231\262F4\2458U>\321,\262\214b4\023Z\304\326"
@@ -3280,7 +3280,7 @@
 	.ascii	"\\\263b\251x\025G\313\013\227\025\256Y\232\377\177\320"
 	.ascii	"\300h\033"
 	.text
-	.section	.gnu.lto_CSWTCH.147.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_CSWTCH.147.857539caac127713,"",%progbits
 	.ascii	"x\234cc``8\007\304\214\014\0200\205\231\361\372\315"
 	.ascii	"\226\235\214\335\314s\230\031\030\271\201\334\223Kv"
 	.ascii	"\375\341\201pY\201\334\277\037.\374\205r\271\200\334"
@@ -3292,7 +3292,7 @@
 	.ascii	";\200x;\224\275\025\210\267\000\361fF\031\006\306=\214"
 	.ascii	"\026\014\000\242\314@("
 	.text
-	.section	.gnu.lto_inavToArduPlaneMap.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_inavToArduPlaneMap.857539caac127713,"",%progbits
 	.ascii	"x\234M\217\275j\002A\024\205\357qt\223\370\373\002\373"
 	.ascii	"\022\211\215O\220\347\262P\021mSnaaH D\205\230\325]"
 	.ascii	"\343/JH\027\253`\237\322BD\0201b\216{\027q\230\217\313"
@@ -3307,7 +3307,7 @@
 	.ascii	"\22272\010g\237|\220\036\361\211G\272\244C\\\222\265"
 	.ascii	"\361\316\321\326\272`\202\234\374\003\305=a\365"
 	.text
-	.section	.gnu.lto_inavToArduCopterMap.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_inavToArduCopterMap.857539caac127713,"",%progbits
 	.ascii	"x\234M\215M\013\001Q\024\206\357q}\3463\353\371\023"
 	.ascii	"X\360\363,\220\330Z\216\262 \013\011a0\006C$e\303/\260"
 	.ascii	"\260T$%\231\3425Gr\273O\247\347\274\347\336\343\026"
@@ -3321,7 +3321,7 @@
 	.ascii	"\214\201\016F`\010\006@\003\011\205\372(=\036\0274\247"
 	.ascii	"\224x\003\316\355^\025"
 	.text
-	.section	.gnu.lto_processMAVLinkTelemetry.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_processMAVLinkTelemetry.857539caac127713,"",%progbits
 	.ascii	"x\234u\222\337K\024Q\024\307\357\367\336\231;\263\263"
 	.ascii	"\273\017>\225\260 \364\"\366\340\022\364\336?Q\177@"
 	.ascii	",\373 \251\017\253\005=\355\315\037\251\344CB\255&\003"
@@ -3358,7 +3358,7 @@
 	.ascii	"\\\245\362JgG\367\245\366\034K\347.\027\012\371\356"
 	.ascii	"\336\363\035]\371\013=\377\000\031\201]C"
 	.text
-	.section	.gnu.lto_handleMAVLinkTelemetry.part.3.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_handleMAVLinkTelemetry.part.3.857539caac127713,"",%progbits
 	.ascii	"x\234\205RKk\023Q\024>\337=wn\0061\356\013\025A\027"
 	.ascii	"\245\233d\343\017p%\376\000\375\001\022f\021l\262H\243"
 	.ascii	"\340*\327\332\322\004\025T4\205\020d\020\304\205\202"
@@ -3387,7 +3387,7 @@
 	.ascii	"h\"*D\345\322IiOL\344\213\30729J\347\216\227JQ\261|"
 	.ascii	"8_\210\216L\376\002f\276\317\017"
 	.text
-	.section	.gnu.lto_handleMAVLinkTelemetry.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_handleMAVLinkTelemetry.857539caac127713,"",%progbits
 	.ascii	"x\234mSMO\023Q\024\275g\336|\001\255kMH\214\272 \020"
 	.ascii	"C\267\376\020\375\001\006\273\250\322.J5q\325'\025\201"
 	.ascii	" \321\032-\015\2512.\214\013\027\015\261X\013\212c)"
@@ -3424,7 +3424,7 @@
 	.ascii	"G\303\211\370E6/\014Fb\347\372\007(8p>\036\017\307\022"
 	.ascii	"'#\321\360\251\241\277\250>3*"
 	.text
-	.section	.gnu.lto_.symbol_nodes.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_.symbol_nodes.857539caac127713,"",%progbits
 	.ascii	"x\234]\224YsTU\020\307{\356\235;!\220\241o\366\204\220"
 	.ascii	"}S\263\030\025Q\314D\300}\373$~\010;\\C\006\211\202"
 	.ascii	"\225\224hY\012US\226\245\017>Y>`i\231\271B D\010\373"
@@ -3498,7 +3498,7 @@
 	.ascii	",\177\344\322y\224I+\024\362w.\315\207x\010\306AY\036"
 	.ascii	"\206n\310\354mg=\304`l\316\201\177\001\371$\210\035"
 	.text
-	.section	.gnu.lto_.refs.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_.refs.857539caac127713,"",%progbits
 	.ascii	"x\234U\222\331NTA\024E\3279w\352\276\267\273n\323\014"
 	.ascii	"\322U\0051@\323\003\242Vc\013\242r#\217&\376\222\377"
 	.ascii	"f\230T0\016q\302\257\261P|\360a'g\257\354:\225\332\251"
@@ -3525,7 +3525,7 @@
 	.ascii	"\\\221\312%Y\372\212y\3749I\234\013\256h\361\033\300"
 	.ascii	"\304A\222"
 	.text
-	.section	.gnu.lto_.decls.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_.decls.857539caac127713,"",%progbits
 	.ascii	"x\234\254\275\007x$\307u \214\236\232\001\0063\003\200"
 	.ascii	"\\R\344\222\\R\301k\012\242\"\225\254\223\345 \331'"
 	.ascii	"\313\201\266\177\207\263E\007\311\351\377\255\377|\362"
@@ -5307,7 +5307,7 @@
 	.ascii	"P|\"\037\212\023p\252\034CV$\357\271\030\331\377\017"
 	.ascii	"y\324BR"
 	.text
-	.section	.gnu.lto_.symtab.4172f5a62e9ad98f,"",%progbits
+	.section	.gnu.lto_.symtab.857539caac127713,"",%progbits
 	.ascii	"freeMAVLinkTelemetryPort\000"
 	.ascii	"\000"
 	.ascii	"\000"

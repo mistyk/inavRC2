@@ -11,10 +11,10 @@
 	.eabi_attribute 34, 1
 	.eabi_attribute 18, 4
 	.file	"navigation_fw_launch.c"
-	.section	.gnu.lto_.profile.971087372ab47a35,"",%progbits
+	.section	.gnu.lto_.profile.ef5997ddf3d0f941,"",%progbits
 	.ascii	"x\234cc```\003bF\206\271\314W\031\001\004\314\001\204"
 	.text
-	.section	.gnu.lto_.icf.971087372ab47a35,"",%progbits
+	.section	.gnu.lto_.icf.ef5997ddf3d0f941,"",%progbits
 	.ascii	"x\234cc``\010`@\000^\206\017\273\326\26522\3758\267"
 	.ascii	"\350(;\363\347\235\223\246\361\261\255^\264h\035\033"
 	.ascii	"{\337\315\307_x9\366>|\327\316\312\271\372\320\361\345"
@@ -22,7 +22,7 @@
 	.ascii	"\307\316L?\316%\000f\013\376\376\273\266\217Gh\312\303"
 	.ascii	"S]L\014\000V\213'\305"
 	.text
-	.section	.gnu.lto_.jmpfuncs.971087372ab47a35,"",%progbits
+	.section	.gnu.lto_.jmpfuncs.ef5997ddf3d0f941,"",%progbits
 	.ascii	"x\234}P\273\012\0021\020\234\335\034\347\013\275S\256"
 	.ascii	"\364~\313\177\261\272\224\202\215\205\235W\212\225\235"
 	.ascii	"O\2609\020?\301\322\316\336Rm\324l\022NDta`\222\231"
@@ -35,7 +35,7 @@
 	.ascii	"\265\217\221\330\030`\356\277\0338\303\337\3257_+\205"
 	.ascii	"\277\315\333\322\354~\346\005\222\312;\243"
 	.text
-	.section	.gnu.lto_.inline.971087372ab47a35,"",%progbits
+	.section	.gnu.lto_.inline.ef5997ddf3d0f941,"",%progbits
 	.ascii	"x\234e\217-\022\3020\024\2047i\322\016\244\377\030\\"
 	.ascii	"\035\242\002\211\300cs\000\206\031N\201\347\000\210"
 	.ascii	"\314p\201\236\000\211\306`P\025x8\002G\34054a:\215x"
@@ -49,11 +49,11 @@
 	.ascii	"\026\373\025\351\277iwW\275\263\030-SR\355\325{\360"
 	.ascii	"\005O\323'd"
 	.text
-	.section	.gnu.lto_.pureconst.971087372ab47a35,"",%progbits
+	.section	.gnu.lto_.pureconst.ef5997ddf3d0f941,"",%progbits
 	.ascii	"x\234cc``\020\007bn\006\011&\011f\011v\011N\011^\011"
 	.ascii	">\026~\011\001\026A\011!I\000\0228\001|"
 	.text
-	.section	.gnu.lto_isFixedWingLaunchMaxAltitudeReached.971087372ab47a35,"",%progbits
+	.section	.gnu.lto_isFixedWingLaunchMaxAltitudeReached.ef5997ddf3d0f941,"",%progbits
 	.ascii	"x\234\215R\317k\023Q\020\236\357M\366mLmr\363\264\007"
 	.ascii	"\301S\253v\025\017\336\375GJ\010\250\001\215\340\317"
 	.ascii	"c\236ik\033Z\260H\023\245\004YO\036DT\254?\222\370c"
@@ -85,7 +85,7 @@
 	.ascii	"\356\350\321\013\243'\262\347\012\271\343#9\372\015"
 	.ascii	"ix\337B"
 	.text
-	.section	.gnu.lto_isFixedWingLaunchCompleted.971087372ab47a35,"",%progbits
+	.section	.gnu.lto_isFixedWingLaunchCompleted.ef5997ddf3d0f941,"",%progbits
 	.ascii	"x\234\235\224\357KSQ\030\307\317s\316\275\273ws\233"
 	.ascii	"\372\"{\263B(\021\255\234\320_\320\373z\325\313\002"
 	.ascii	"[\303j\220\013\322\352\345N\323\324\241\221\204\233"
@@ -132,7 +132,7 @@
 	.ascii	"\236\212\362\303\036\257\273\374\240a:T\371\033\227"
 	.ascii	"\266\211Q"
 	.text
-	.section	.gnu.lto_updateFixedWingLaunchDetector.971087372ab47a35,"",%progbits
+	.section	.gnu.lto_updateFixedWingLaunchDetector.ef5997ddf3d0f941,"",%progbits
 	.ascii	"x\234\215VYP\024W\024\355\333o\246\247g\307\235e\214"
 	.ascii	"\226KYj\024\223T>\222\017+\346#\225\017+?Y\252\362e"
 	.ascii	"Q8\352(b\025\240V~B\313 K\3340*`;\230IRjIb\271/\340"
@@ -235,7 +235,7 @@
 	.ascii	"7\203\337\363\271o\346,g&\271\373\306\2336/\325\227"
 	.ascii	"\365\335\377#\302\252H"
 	.text
-	.section	.gnu.lto_applyFixedWingLaunchIdleLogic.part.0.971087372ab47a35,"",%progbits
+	.section	.gnu.lto_applyFixedWingLaunchIdleLogic.part.0.ef5997ddf3d0f941,"",%progbits
 	.ascii	"x\234\225S\335KTA\024\237\337\235\273\327U3a\241\207"
 	.ascii	"D\304\227}\360\301\217\372\013z\352){\261\367eY\374"
 	.ascii	"X\320\025\326[=\305N\272~lI\210\344\266\310U6\202\314"
@@ -274,7 +274,7 @@
 	.ascii	"7\230n\277Y\337Q\340\362{\233[\3143\206\253\265\261"
 	.ascii	"\311\254\373\003\263\014Tc"
 	.text
-	.section	.gnu.lto_applyFixedWingLaunchIdleLogic.971087372ab47a35,"",%progbits
+	.section	.gnu.lto_applyFixedWingLaunchIdleLogic.ef5997ddf3d0f941,"",%progbits
 	.ascii	"x\234\215VmL\233U\024\276\347\275\355\373\366\273\005"
 	.ascii	"\031\370A\031\211!:\343\306\370\275\370\327\17731\363"
 	.ascii	"?!\204mM6HX\325_\312\353\200\002\212J\026Zk-\263\306"
@@ -346,7 +346,7 @@
 	.ascii	"\313}\007\016\372\013\324\302C%\373\375\273\377\007"
 	.ascii	"\312{\327p"
 	.text
-	.section	.gnu.lto_resetFixedWingLaunchController.971087372ab47a35,"",%progbits
+	.section	.gnu.lto_resetFixedWingLaunchController.ef5997ddf3d0f941,"",%progbits
 	.ascii	"x\234\215\222\317kSA\020\307\347\3736\357\345y\210\007"
 	.ascii	"\017\"\230\233\207\322\203}\376\003\376\027\012\336"
 	.ascii	"J\010U\0036B\332\3521kBlK=\250\330\024B\220\020\020"
@@ -376,7 +376,7 @@
 	.ascii	"\304H:y\262/I\261\344H&3\220\036>\222\032\0348:\364"
 	.ascii	"\013k\3336\330"
 	.text
-	.section	.gnu.lto_isFixedWingLaunchDetected.971087372ab47a35,"",%progbits
+	.section	.gnu.lto_isFixedWingLaunchDetected.ef5997ddf3d0f941,"",%progbits
 	.ascii	"x\234MN=K\303P\024\275'O\223\200TW\301\010];\330\010"
 	.ascii	"\376\240\022\002j@#\3709\346\231\020\264\350 b*H\220"
 	.ascii	"t\352$\"\326j\353\022\\\334\024\\\034\024\004\235\024"
@@ -394,7 +394,7 @@
 	.ascii	"<\337\366\235Uo\306Y\366\026\376\303\312\364Ze\316Y"
 	.ascii	"\361\335\331\262K\277H-a\306"
 	.text
-	.section	.gnu.lto_enableFixedWingLaunchController.971087372ab47a35,"",%progbits
+	.section	.gnu.lto_enableFixedWingLaunchController.ef5997ddf3d0f941,"",%progbits
 	.ascii	"x\234\205PM+Da\024>\317}\347\336\271\251\261\261Qdc"
 	.ascii	"!\013\256?\340_\260\3264\371\230b\324\370Z\316k4\206"
 	.ascii	"X \0375M\232H\026\222&3\306\030\0377\224\222\220,\024"
@@ -419,7 +419,7 @@
 	.ascii	"\245\332G\036_W0\330\030\350\254\363\2675\326w|\001"
 	.ascii	".L\256\016"
 	.text
-	.section	.gnu.lto_isFixedWingLaunchFinishedOrAborted.971087372ab47a35,"",%progbits
+	.section	.gnu.lto_isFixedWingLaunchFinishedOrAborted.ef5997ddf3d0f941,"",%progbits
 	.ascii	"x\234MN=K\303P\024\275'O\223\200TW\301\200];\330\010"
 	.ascii	"\376\240\022\002j@#\3709\346\231\020\264\350 b*H\220"
 	.ascii	"8u\022\021k\265\272\004\027\267\012.\016:\351\244\250"
@@ -438,7 +438,7 @@
 	.ascii	"f\376\303\312\370Re\312Y\360\335\311\262K\277\263\\"
 	.ascii	"b="
 	.text
-	.section	.gnu.lto_abortFixedWingLaunch.971087372ab47a35,"",%progbits
+	.section	.gnu.lto_abortFixedWingLaunch.ef5997ddf3d0f941,"",%progbits
 	.ascii	"x\234MN\277K\303`\020\275\367}m\023\004\235\005\005"
 	.ascii	"'\207\0166\177R\011\0015\240\025\3749\346\263\245&\245"
 	.ascii	"\016\"\266.A\202\213\223H\351\017\315\026\272\270\210"
@@ -457,7 +457,7 @@
 	.ascii	"-Y%{\323]\260\327\335\225\377\2648\277U\\\2627J\316"
 	.ascii	"b\301\241_<\326i\013"
 	.text
-	.section	.gnu.lto_applyFixedWingLaunchController.971087372ab47a35,"",%progbits
+	.section	.gnu.lto_applyFixedWingLaunchController.ef5997ddf3d0f941,"",%progbits
 	.ascii	"x\234\215WkP\324\327\025\277\347\336\335\377\276wAA"
 	.ascii	"A\001\265\221PD!4\311L\235\316t\372\245\037\232\211"
 	.ascii	"\371\222t:\323/\016\203\250\264\010\016\220t\232\231"
@@ -585,7 +585,7 @@
 	.ascii	"\277*\025\264\355\345\262E\305\205)a\360\026\226\320"
 	.ascii	"\276\274\245\305\013r\027\263\377\003\370\014\363\261"
 	.text
-	.section	.gnu.lto_.symbol_nodes.971087372ab47a35,"",%progbits
+	.section	.gnu.lto_.symbol_nodes.ef5997ddf3d0f941,"",%progbits
 	.ascii	"x\234]\221\311N\002A\024E\337\255Gw\323\316\266\200"
 	.ascii	"8b\374\000\267n\365\313^\307\240$\256\334\231\350\302"
 	.ascii	"\204\360\023\2723!\2600\202\212S\342\000b;\243\270\323"
@@ -606,7 +606,7 @@
 	.ascii	"\324\334\374r\330cZ\331:\264\302{>\342,e\267\3654o\206"
 	.ascii	"\262;\255\014\375\000\025\253\244\352"
 	.text
-	.section	.gnu.lto_.refs.971087372ab47a35,"",%progbits
+	.section	.gnu.lto_.refs.ef5997ddf3d0f941,"",%progbits
 	.ascii	"x\234-\215\313j\002A\020E\357\351\351\271\2663m\234"
 	.ascii	"\214\013\0370\233\020A\023\202\032\320E ~\277\237e-"
 	.ascii	"\204*\250C\335\207%=b\223\004\"\247$b\312\262QFmV[\304"
@@ -617,7 +617,7 @@
 	.ascii	"\243\272\215\330\211\017\261\247F\3677\365G\376\245"
 	.ascii	"^\305M\253?\352?\365\256'\335S\007\306"
 	.text
-	.section	.gnu.lto_.decls.971087372ab47a35,"",%progbits
+	.section	.gnu.lto_.decls.ef5997ddf3d0f941,"",%progbits
 	.ascii	"x\234\275|yXTW\266o\235\332U\014\305\244h\2421d\270"
 	.ascii	"ioBw'\232N\362\372K\367\367\356{M\224t\274\327\351S"
 	.ascii	"s\373\246\337\355W\251@\241\325\315\340\007EL\356}\337"
@@ -1222,7 +1222,7 @@
 	.ascii	"d\012\344.\301\366\027d0;q9\350hmG:I\375\377\007\213"
 	.ascii	"\325,\233"
 	.text
-	.section	.gnu.lto_.symtab.971087372ab47a35,"",%progbits
+	.section	.gnu.lto_.symtab.ef5997ddf3d0f941,"",%progbits
 	.ascii	"resetFixedWingLaunchController\000"
 	.ascii	"\000"
 	.ascii	"\000"

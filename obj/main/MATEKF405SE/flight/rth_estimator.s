@@ -11,11 +11,11 @@
 	.eabi_attribute 34, 1
 	.eabi_attribute 18, 4
 	.file	"rth_estimator.c"
-	.section	.gnu.lto_.profile.cd482d4199cd4133,"",%progbits
+	.section	.gnu.lto_.profile.c255ae7f7a4e5bac,"",%progbits
 	.ascii	"x\234cc```\003bF\206\037\354\355\314\000\005\252\001"
 	.ascii	"\227"
 	.text
-	.section	.gnu.lto_.icf.cd482d4199cd4133,"",%progbits
+	.section	.gnu.lto_.icf.c255ae7f7a4e5bac,"",%progbits
 	.ascii	"x\234cc``\360g@\000^\2069\323~7\2632\035\2322g++\363"
 	.ascii	"\325I\023\216\262\261\314|\261\354&+[\307\205\355\237"
 	.ascii	"\2309O>\331\335\300\316\265\361\353\247\233\274\334"
@@ -23,7 +23,7 @@
 	.ascii	"3'&_g\021[~\352P\214\370\204\265\033\377\2613\000\000"
 	.ascii	"\352\240&\023"
 	.text
-	.section	.gnu.lto_.jmpfuncs.cd482d4199cd4133,"",%progbits
+	.section	.gnu.lto_.jmpfuncs.c255ae7f7a4e5bac,"",%progbits
 	.ascii	"x\234\205R\273N\303@\020\334\331s.`\210\354\012\032"
 	.ascii	"K\364|\032\177\220\312i\250\240DT\221RQP\201\004\004"
 	.ascii	"\220(\"$:$\276\200?@\202\016\361\020\307\355\255\037"
@@ -43,7 +43,7 @@
 	.ascii	"o\224+\241 \356&\207\247\251\"\0307s\202[\2724S\015"
 	.ascii	"\254\026\007m/\013\320/\011\210z\363"
 	.text
-	.section	.gnu.lto_.inline.cd482d4199cd4133,"",%progbits
+	.section	.gnu.lto_.inline.c255ae7f7a4e5bac,"",%progbits
 	.ascii	"x\234uR\273J\003A\024=w\036\233\315\313\335\200&\026"
 	.ascii	"\206\004!\330\211\020\321\277\310g\210h\347\027\244"
 	.ascii	"P\033\233\005%\215)RXZ\370J\032A$bm\024\304\326\322"
@@ -67,12 +67,12 @@
 	.ascii	"\214\260\267bw\376\0151\224c\021~\231\361\376\307\361"
 	.ascii	"Hvr\302\022\362%\266%\363\2631\263\214?r\356xX"
 	.text
-	.section	.gnu.lto_.pureconst.cd482d4199cd4133,"",%progbits
+	.section	.gnu.lto_.pureconst.c255ae7f7a4e5bac,"",%progbits
 	.ascii	"x\234cc``\220\006b^\006\026&\011f\011\026\0116)N\011"
 	.ascii	".\011n\011\036\011~\011\001I1\011q\011\000\030H\001"
 	.ascii	"\333"
 	.text
-	.section	.gnu.lto_RTHAltitudeChangePitchAngle.cd482d4199cd4133,"",%progbits
+	.section	.gnu.lto_RTHAltitudeChangePitchAngle.c255ae7f7a4e5bac,"",%progbits
 	.ascii	"x\234\215\221\357KSa\024\307\317y\316s\177\030\272\327"
 	.ascii	"\011\023$\012\361\215\267\320\327\275\351\017\211a\313"
 	.ascii	"\015\324`\336^\357QW:\022Z\341\014\327\315F\020\003"
@@ -105,7 +105,7 @@
 	.ascii	"\206\375\244\177\376L\374T\"6:\024\377\007\303\263\345"
 	.ascii	"\336"
 	.text
-	.section	.gnu.lto_estimateRTHAltitudeChangeTime.cd482d4199cd4133,"",%progbits
+	.section	.gnu.lto_estimateRTHAltitudeChangeTime.c255ae7f7a4e5bac,"",%progbits
 	.ascii	"x\234mR\335K\024Q\024\277g\356\354\314\250\273\333\307"
 	.ascii	"C\020*I$\342\213\373P\375\005A\377@P/Al\356\344.\250"
 	.ascii	"\305:\365\272Ww\335\214\324\314t\243u\222\241\250\010"
@@ -145,7 +145,7 @@
 	.ascii	"\364\270\021\253\014W\037\212\325F\016\234\320\365\310"
 	.ascii	"6/[\217\034\364\256\034\370/\027\0202\220"
 	.text
-	.section	.gnu.lto_forwardWindSpeed.cd482d4199cd4133,"",%progbits
+	.section	.gnu.lto_forwardWindSpeed.c255ae7f7a4e5bac,"",%progbits
 	.ascii	"x\234m\221=L\024Q\020\307\347\277o\357\330\305\017H"
 	.ascii	"\254\014\240\304h.\024r\265%\035\005\235\205\235\346"
 	.ascii	"\302\235\334&pg\216MHl\356)\334\011\021\014!\210f\331"
@@ -175,7 +175,7 @@
 	.ascii	"\344\\,\026\334\314\360\031\247\220=}!\227\313\356\033"
 	.ascii	"c\253\277\371\377\037D\205\276\026"
 	.text
-	.section	.gnu.lto_estimateRTHAltitudeChangeGroundDistance.cd482d4199cd4133,"",%progbits
+	.section	.gnu.lto_estimateRTHAltitudeChangeGroundDistance.c255ae7f7a4e5bac,"",%progbits
 	.ascii	"x\234mSMLSK\024\236\323\271\275\267\005\332\012\302"
 	.ascii	"\323(D\363\"A7v\241o\341\372m\330k\362V\3064\264B\023"
 	.ascii	",\246TM\\\310hi\205\210<\237BM\352\325\334\304\2501"
@@ -228,7 +228,7 @@
 	.ascii	"P \030\216T\027n\016Ec\341\252\031\267\363\355h\241"
 	.ascii	"`\345O\250\274\370\001\224:\320$"
 	.text
-	.section	.gnu.lto_estimateRTHDistanceAndHeadingAfterAltitudeChange.cd482d4199cd4133,"",%progbits
+	.section	.gnu.lto_estimateRTHDistanceAndHeadingAfterAltitudeChange.c255ae7f7a4e5bac,"",%progbits
 	.ascii	"x\234\215VYL\224W\024\276g\356l,3,\012\242\254.HP\303"
 	.ascii	"\204Pcj\365\241\251I}\351K5\351K\223\206\310 \223\350"
 	.ascii	"\320\214\243M\372\342\257,j\305\245V\247v\034uRc\325"
@@ -332,7 +332,7 @@
 	.ascii	"\345\234\340\316u\271\243{\316F\024tC\377\003\213\312"
 	.ascii	"c\237"
 	.text
-	.section	.gnu.lto_windDriftCompensationAngle.cd482d4199cd4133,"",%progbits
+	.section	.gnu.lto_windDriftCompensationAngle.c255ae7f7a4e5bac,"",%progbits
 	.ascii	"x\234\205\222\317k\323`\030\307\337'o\232\266\353\354"
 	.ascii	"*^DW7D-\273\254\240\010\242\177\200;y\320\203\210\007"
 	.ascii	")k\267\006\266V\262\302\300K\343\326f\033\256\"e\233"
@@ -369,7 +369,7 @@
 	.ascii	"\371B2\221\212t\235\226\023\366;_/zm\366\373\277*\255"
 	.ascii	"\033\272"
 	.text
-	.section	.gnu.lto_windDriftCorrectedForwardSpeed.cd482d4199cd4133,"",%progbits
+	.section	.gnu.lto_windDriftCorrectedForwardSpeed.c255ae7f7a4e5bac,"",%progbits
 	.ascii	"x\234m\222\317k\023Q\020\307gv\366G$\321\012^D[[D\011"
 	.ascii	"\2754\340M\377\001{\362\342\241x\222\245I\233\205&\221"
 	.ascii	"\355B\301K\236m\322VlEJ\215\270\335C\016\326^\324Zm"
@@ -401,7 +401,7 @@
 	.ascii	"\0313m\345\007\017d\013\266u\261\220w\314\241>+\037"
 	.ascii	"\305\342#l\365F\361\2771\213\340\367"
 	.text
-	.section	.gnu.lto_windCompensatedForwardSpeed.cd482d4199cd4133,"",%progbits
+	.section	.gnu.lto_windCompensatedForwardSpeed.c255ae7f7a4e5bac,"",%progbits
 	.ascii	"x\234m\321\317k\323`\030\007\360\347\233'M\272\037n"
 	.ascii	"\007/\242\025\207(e\227\025\274m\377\200\236\274x\020"
 	.ascii	"O\022\326n\015l\255d\201\201\227F77\207=\310\230\025"
@@ -432,7 +432,7 @@
 	.ascii	"s\255\261\343v\256\371\256kR\242#\315\367\177\000\270"
 	.ascii	"\340\316J"
 	.text
-	.section	.gnu.lto_estimateRTHAltitudeChangePower.cd482d4199cd4133,"",%progbits
+	.section	.gnu.lto_estimateRTHAltitudeChangePower.c255ae7f7a4e5bac,"",%progbits
 	.ascii	"x\234\215V\355o\223U\024\277\347\271}]_\267u\335[G:"
 	.ascii	"\267\261\360\205\306D?\232\230\360\037\030\324\217\246"
 	.ascii	"\342dM\012K\272\362\211\017{Xg7\302T \254J-\320H@@\214"
@@ -500,7 +500,7 @@
 	.ascii	"\013\315\265\355\221\265\035k\"\233B\235\264})\030\015"
 	.ascii	"ux\237:\321\021\215\206\333\376\007e\364\333\201"
 	.text
-	.section	.gnu.lto_estimateRTHAltitudeChangeEnergy.cd482d4199cd4133,"",%progbits
+	.section	.gnu.lto_estimateRTHAltitudeChangeEnergy.c255ae7f7a4e5bac,"",%progbits
 	.ascii	"x\234mQMk\023Q\024\275g\356d24\332\326e1\205\"J\350"
 	.ascii	"\246\331\270w!\376\202.\\\312\220\214\315@\032%\035"
 	.ascii	"\335\3465\215\261\242\224\212\032a\234B\005E\244B\375"
@@ -530,7 +530,7 @@
 	.ascii	"\335u\322-\373^\316)\036\366J\371\321\343\256\233\337"
 	.ascii	"\002\243\222\300\015"
 	.text
-	.section	.gnu.lto_calculateRemainingEnergyBeforeRTH.cd482d4199cd4133,"",%progbits
+	.section	.gnu.lto_calculateRemainingEnergyBeforeRTH.c255ae7f7a4e5bac,"",%progbits
 	.ascii	"x\234\235X\011PTg\022\376\373\275\271g`8\344\222\001"
 	.ascii	"\215\361\276\360\276\217\334\225\335\252\255\255\332"
 	.ascii	"\243\262I\271E\021\234(\265\012\026\222\244\262[\265"
@@ -729,7 +729,7 @@
 	.ascii	"\036\361&\336\275(4\236sN\313t:gGN\317\310L\373wFz\226"
 	.ascii	"F\314\252\021\373?\360K\243\244"
 	.text
-	.section	.gnu.lto_calculateRemainingFlightTimeBeforeRTH.cd482d4199cd4133,"",%progbits
+	.section	.gnu.lto_calculateRemainingFlightTimeBeforeRTH.c255ae7f7a4e5bac,"",%progbits
 	.ascii	"x\234m\223]HSa\030\307\237\347}\317\316>\264\274\010"
 	.ascii	"\302\213]H0\207\004\233\321U\227\005A\336EH]\312Z\307"
 	.ascii	"9\322\015\346*\302\213\035\3352W\021j9m\214\222B\244"
@@ -773,7 +773,7 @@
 	.ascii	"]T<6\207r\322}I\361\024z\024Q\317\351r\034w)\036\307"
 	.ascii	"\345ci\331\251\362\023\377\000\327\211E\266"
 	.text
-	.section	.gnu.lto_calculateRemainingDistanceBeforeRTH.cd482d4199cd4133,"",%progbits
+	.section	.gnu.lto_calculateRemainingDistanceBeforeRTH.c255ae7f7a4e5bac,"",%progbits
 	.ascii	"x\234UPAh\023Q\020\235\371\377'\233\230Z\017\202\247"
 	.ascii	"\034\212\020C\021\232\202\202\364\250\007\321\253T<"
 	.ascii	"J\210\333v\321$\220\256\347|\2631\032\025\251`\242\015"
@@ -805,7 +805,7 @@
 	.ascii	"+u\352h\312N\037L$\322gSv8c\262\304J\215\037\356\210"
 	.ascii	"F\255\244y\310\034Kg\314c\243G\376\001\372x\323\210"
 	.text
-	.section	.gnu.lto_.symbol_nodes.cd482d4199cd4133,"",%progbits
+	.section	.gnu.lto_.symbol_nodes.c255ae7f7a4e5bac,"",%progbits
 	.ascii	"x\234]\216\313R\023A\024\206\317?=\031\310E3\336r%$"
 	.ascii	"\200\027\274\276\002\372:\276\304I\245\246\312\205\013"
 	.ascii	"-]X%\013Kk6>\002\354\210#h\300\240 \3405\2060\240\201"
@@ -837,7 +837,7 @@
 	.ascii	"\360\241\276\324(\370\251.97\372z\3562y\375\031\221"
 	.ascii	"\317Ee\376\012\371\375\031\372\013WI2-"
 	.text
-	.section	.gnu.lto_.refs.cd482d4199cd4133,"",%progbits
+	.section	.gnu.lto_.refs.c255ae7f7a4e5bac,"",%progbits
 	.ascii	"x\234\025\312\261\016\001A\030E\341s\307\316\356\354"
 	.ascii	"f\014cgE\"\341\021$\012\211\306Kz#\012\012\012\255h"
 	.ascii	"\025\336\302\277\305\275_sj\340ls \207\252\361\344*"
@@ -846,7 +846,7 @@
 	.ascii	"\007\374\221r\322p\201r\265\370f\336\315\207\3714_\220"
 	.ascii	"\336\266\017\364_\363\007\177H\352\015\326"
 	.text
-	.section	.gnu.lto_.decls.cd482d4199cd4133,"",%progbits
+	.section	.gnu.lto_.decls.c255ae7f7a4e5bac,"",%progbits
 	.ascii	"x\234\275|\011TTY\232f\334\270\021,\301\246\270\244"
 	.ascii	"\251TeU\246UR\225\225\251UYSS\325\323\323\247-s\235"
 	.ascii	"I3\235L+\263;\273\353\304\211\204Pc\032#l\"H\323\351"
@@ -1414,7 +1414,7 @@
 	.ascii	"\005.\244\267`\376Z\372\001V\020\213\301\366\177\001"
 	.ascii	"[\035:\276"
 	.text
-	.section	.gnu.lto_.symtab.cd482d4199cd4133,"",%progbits
+	.section	.gnu.lto_.symtab.c255ae7f7a4e5bac,"",%progbits
 	.ascii	"calculateRemainingFlightTimeBeforeRTH\000"
 	.ascii	"\000"
 	.ascii	"\000"

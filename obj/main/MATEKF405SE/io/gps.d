@@ -46,13 +46,13 @@ obj/main/MATEKF405SE/io/gps.o: src/main/io/gps.c src/main/platform.h \
  src/main/drivers/rcc_types.h src/main/drivers/bus_spi.h \
  src/main/drivers/dma.h src/main/drivers/light_led.h \
  src/main/drivers/serial.h src/main/drivers/system.h \
- src/main/drivers/time.h src/main/sensors/sensors.h \
- src/main/sensors/compass.h src/main/io/serial.h src/main/io/gps.h \
- src/main/io/gps_private.h src/main/navigation/navigation.h \
- src/main/common/filter.h src/main/config/feature.h \
- src/main/flight/failsafe.h src/main/fc/config.h src/main/drivers/adc.h \
- src/main/drivers/rx_pwm.h src/main/fc/stats.h \
- src/main/fc/runtime_config.h
+ src/main/drivers/time.h src/main/fc/runtime_config.h \
+ src/main/sensors/sensors.h src/main/sensors/compass.h \
+ src/main/io/serial.h src/main/io/gps.h src/main/io/gps_private.h \
+ src/main/navigation/navigation.h src/main/common/filter.h \
+ src/main/config/feature.h src/main/flight/failsafe.h \
+ src/main/fc/config.h src/main/drivers/adc.h src/main/drivers/rx_pwm.h \
+ src/main/fc/stats.h
 
 src/main/platform.h:
 
@@ -176,6 +176,8 @@ src/main/drivers/system.h:
 
 src/main/drivers/time.h:
 
+src/main/fc/runtime_config.h:
+
 src/main/sensors/sensors.h:
 
 src/main/sensors/compass.h:
@@ -201,5 +203,3 @@ src/main/drivers/adc.h:
 src/main/drivers/rx_pwm.h:
 
 src/main/fc/stats.h:
-
-src/main/fc/runtime_config.h:

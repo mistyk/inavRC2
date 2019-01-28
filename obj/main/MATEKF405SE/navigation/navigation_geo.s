@@ -11,16 +11,16 @@
 	.eabi_attribute 34, 1
 	.eabi_attribute 18, 4
 	.file	"navigation_geo.c"
-	.section	.gnu.lto_.profile.d8596e53355ea56e,"",%progbits
+	.section	.gnu.lto_.profile.447a0fb48e058464,"",%progbits
 	.ascii	"x\234cc```\003bF\2067L\273\030\001\005\317\001\267"
 	.text
-	.section	.gnu.lto_.icf.d8596e53355ea56e,"",%progbits
+	.section	.gnu.lto_.icf.447a0fb48e058464,"",%progbits
 	.ascii	"x\234cc``0b@\000\016\206\326\276\347\363\231\031?\334"
 	.ascii	"\352\370\300\317\324s\365\361\037&\346\377\217\266\236"
 	.ascii	"\345b\371z\370\327e&\326\277\263W\277eg[\265\366\375"
 	.ascii	"\035V\216yk\246\337ec\000\000\223\310\031\243"
 	.text
-	.section	.gnu.lto_.jmpfuncs.d8596e53355ea56e,"",%progbits
+	.section	.gnu.lto_.jmpfuncs.447a0fb48e058464,"",%progbits
 	.ascii	"x\234\215Q=K\003Q\020\234y\373\356\303\306\363\007\030"
 	.ascii	"\374\005!\277\357\252{\026\202`#\022\323x\004!\371\007"
 	.ascii	"1\012\202\020\016{\313\353-,\264\263\024\345\334M.\011"
@@ -36,7 +36,7 @@
 	.ascii	"g\325Kr!f\003\037xl\334>\362\306|\351rsi\273\327\203"
 	.ascii	"\371;\256\017\374\002\213\347|\212"
 	.text
-	.section	.gnu.lto_.inline.d8596e53355ea56e,"",%progbits
+	.section	.gnu.lto_.inline.447a0fb48e058464,"",%progbits
 	.ascii	"x\234uS\261n\023A\020}3{{^\237\255\334E\240\004\311"
 	.ascii	"\221r\242\211h\"\374\007WQ\372\033\322\320$?\261\015"
 	.ascii	"\"\022\022\030)I\205\242\024\024\264\010\202RZ)\"\204"
@@ -66,11 +66,11 @@
 	.ascii	"\370=\311\262\311\342My\345o\263\016\370\013\313\021"
 	.ascii	"\216\345"
 	.text
-	.section	.gnu.lto_.pureconst.d8596e53355ea56e,"",%progbits
+	.section	.gnu.lto_.pureconst.447a0fb48e058464,"",%progbits
 	.ascii	"x\234cc``\340\007bv\006)F)&V\026)V)6\011\016)\000\006"
 	.ascii	"\344\000\326"
 	.text
-	.section	.gnu.lto_geoSetOrigin.part.0.d8596e53355ea56e,"",%progbits
+	.section	.gnu.lto_geoSetOrigin.part.0.447a0fb48e058464,"",%progbits
 	.ascii	"x\234\235TQL\024W\024}g\336\314\354\260+\013i\372\301"
 	.ascii	"\007\233\362QC\244\221\245i\372\335\237\376\366\243"
 	.ascii	"\037\3756\324\022\272\211\205\004\214\237\345\271\312"
@@ -125,7 +125,7 @@
 	.ascii	"\374^\203\265\245\376\335\326\272\177\000\320\242\006"
 	.ascii	"\225"
 	.text
-	.section	.gnu.lto_geoConvertGeodeticToLocal.part.1.d8596e53355ea56e,"",%progbits
+	.section	.gnu.lto_geoConvertGeodeticToLocal.part.1.447a0fb48e058464,"",%progbits
 	.ascii	"x\234\235T[kSY\024\336\353\254sk\322$\265j+\022\007"
 	.ascii	"\037\204\252\003\315@\361a^D\020\006\037\006\374\011"
 	.ascii	"RDj\2406\322\212\257n\253M\033\025\321\321V9\0153E\247"
@@ -181,7 +181,7 @@
 	.ascii	"Z\023\255\303\332\332\265Nu\355\206\345\261\272\215"
 	.ascii	"\037\000\327\340^\270"
 	.text
-	.section	.gnu.lto_geoCalculateMagDeclination.d8596e53355ea56e,"",%progbits
+	.section	.gnu.lto_geoCalculateMagDeclination.447a0fb48e058464,"",%progbits
 	.ascii	"x\234\245X\373SU\327\025\336\353\354\373\346>\010Q\342"
 	.ascii	"\013\305\007\203\240\202\0174\211\235\366\247\376\320"
 	.ascii	"\351\017\375\003:\323f\034\343\244\314\0302\323d\232"
@@ -316,7 +316,7 @@
 	.ascii	"\331U\224c\237\343\277\316\320\014g\010\371?\375~\361"
 	.ascii	"\235"
 	.text
-	.section	.gnu.lto_declination_table.d8596e53355ea56e,"",%progbits
+	.section	.gnu.lto_declination_table.447a0fb48e058464,"",%progbits
 	.ascii	"x\234\215\230iPT\331\025\307\337k\334\2271\373d1{*\225"
 	.ascii	"\244\262T\314\027\277\347\303$\225JU\252\222\017\311"
 	.ascii	"\207T\222Jj\262\357\373.\012\212\"\310(\332\202\022"
@@ -454,7 +454,7 @@
 	.ascii	"\224\254\340vJVp;$+\270\247\366v\313\026\263\254\377"
 	.ascii	"\002F\230R\362"
 	.text
-	.section	.gnu.lto_geoSetOrigin.d8596e53355ea56e,"",%progbits
+	.section	.gnu.lto_geoSetOrigin.447a0fb48e058464,"",%progbits
 	.ascii	"x\234}R\337K\024Q\024\276\337\334\371\261\356\272\372"
 	.ascii	"h\204\202P\260\270\017\256\021\341[\377A\177A\017!\266"
 	.ascii	"\330\202\271\240\322c;\253k\353\352>X\371\253e\210%"
@@ -495,7 +495,7 @@
 	.ascii	"\251\301\306@]\240\201\327\327_*h\3647\371\233\317\005"
 	.ascii	"/\372\377\000A(4v"
 	.text
-	.section	.gnu.lto_geoConvertGeodeticToLocal.d8596e53355ea56e,"",%progbits
+	.section	.gnu.lto_geoConvertGeodeticToLocal.447a0fb48e058464,"",%progbits
 	.ascii	"x\234\235R\337K\323Q\024\277\237\357\371~\267\3456{"
 	.ascii	"\365a\202\017\301\322\007\027DA\017A\320\037\022K\302"
 	.ascii	"\006\266\205\212\257\273N\207\212>h\271\025\363KIe\276"
@@ -536,7 +536,7 @@
 	.ascii	"\252\254\022t:Tg\013\325\006\252\003A\252\2519i\367"
 	.ascii	"\327\324\037\015\005\033~\002\211\337g2"
 	.text
-	.section	.gnu.lto_geoConvertGeodeticToLocalOrigin.d8596e53355ea56e,"",%progbits
+	.section	.gnu.lto_geoConvertGeodeticToLocalOrigin.447a0fb48e058464,"",%progbits
 	.ascii	"x\234]RMk\023Q\024\275g\356df44\356Dq\004\027B\250`"
 	.ascii	"Ft\345\332\037\"\241H\015\304D\332\322\355<\033C[\254"
 	.ascii	"\240bF\231\016:\202_\033\251\322\032M\353\307\330\205"
@@ -565,7 +565,7 @@
 	.ascii	"X\251\272\325<>|\242Z\030\">]\035\345r\371\244],\217"
 	.ascii	"\035\253V\306\377\001v\237\277\351"
 	.text
-	.section	.gnu.lto_geoConvertLocalToGeodetic.d8596e53355ea56e,"",%progbits
+	.section	.gnu.lto_geoConvertLocalToGeodetic.447a0fb48e058464,"",%progbits
 	.ascii	"x\234\245V[O\\U\024\336\353\354s\346>\303\220\264\246"
 	.ascii	"\017\203%\255d,\211\214\211\361\301\027\237\364\315"
 	.ascii	"\377`\010ip\022d\014\030}\344\224\313\264\024bZ-P\307"
@@ -634,7 +634,7 @@
 	.ascii	"\352-K\250&X\031\254\346\357\204j]\265\025\345U{\337"
 	.ascii	"\010U\277\026z\277\372_\305\274\205\206"
 	.text
-	.section	.gnu.lto_.symbol_nodes.d8596e53355ea56e,"",%progbits
+	.section	.gnu.lto_.symbol_nodes.447a0fb48e058464,"",%progbits
 	.ascii	"x\234]\316=\016\3020\014\005\340\367\222&\264p\210\""
 	.ascii	"\006\256\001\234\314\031*!1\000g\340\004\254\374S(\003"
 	.ascii	"\014\234\001U\035{\006D\012\014\204\305O\372l\313\266"
@@ -645,11 +645,11 @@
 	.ascii	"m_\033\242\\\016\2645X<\236\324q\007U3\345\263\230~"
 	.ascii	"\262\232\325)^>\311Cq"
 	.text
-	.section	.gnu.lto_.refs.d8596e53355ea56e,"",%progbits
+	.section	.gnu.lto_.refs.447a0fb48e058464,"",%progbits
 	.ascii	"x\234cc``\020\007b\026&\006fK\006\346\203\014\014\314"
 	.ascii	"'\201\370\002\003#\033\023;#\003\000$\371\002\324"
 	.text
-	.section	.gnu.lto_.decls.d8596e53355ea56e,"",%progbits
+	.section	.gnu.lto_.decls.447a0fb48e058464,"",%progbits
 	.ascii	"x\234\305|yTU\327\232'\347\354;0\223\250IL\302KRy\276"
 	.ascii	"\027\273\253*\343[\325U\353\275\356\325Fy\211U\016Y"
 	.ascii	"JR\025\327\252\346\361\364\306P\217\210\015\327\344"
@@ -1312,7 +1312,7 @@
 	.ascii	"\373\323\216\355\210\361\372\321\333\367\377\000\232"
 	.ascii	"#\306\030"
 	.text
-	.section	.gnu.lto_.symtab.d8596e53355ea56e,"",%progbits
+	.section	.gnu.lto_.symtab.447a0fb48e058464,"",%progbits
 	.ascii	"geoCalculateMagDeclination\000"
 	.ascii	"\000"
 	.ascii	"\000"

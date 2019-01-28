@@ -468,7 +468,7 @@
 #define MATEKF405SE 1
 #define __FORKNAME__ "inav"
 #define __TARGET__ "MATEKF405SE"
-#define __REVISION__ "7212749"
+#define __REVISION__ "a441c97"
 # 1 "./src/main/io/gps.c"
 # 18 "./src/main/io/gps.c"
 # 1 "/usr/lib/gcc/arm-none-eabi/7.3.1/include/stdbool.h" 1 3 4
@@ -21259,8 +21259,136 @@ uint32_t ticks(void);
 timeDelta_t ticks_diff_us(uint32_t begin, uint32_t end);
 # 43 "./src/main/io/gps.c" 2
 
+#define USE_FAKE_GPS 
 
 
+# 1 "./src/main/fc/runtime_config.h" 1
+# 18 "./src/main/fc/runtime_config.h"
+       
+
+
+typedef enum {
+    ARMED = (1 << 2),
+    WAS_EVER_ARMED = (1 << 3),
+
+    ARMING_DISABLED_FAILSAFE_SYSTEM = (1 << 7),
+
+    ARMING_DISABLED_NOT_LEVEL = (1 << 8),
+    ARMING_DISABLED_SENSORS_CALIBRATING = (1 << 9),
+    ARMING_DISABLED_SYSTEM_OVERLOADED = (1 << 10),
+    ARMING_DISABLED_NAVIGATION_UNSAFE = (1 << 11),
+    ARMING_DISABLED_COMPASS_NOT_CALIBRATED = (1 << 12),
+    ARMING_DISABLED_ACCELEROMETER_NOT_CALIBRATED = (1 << 13),
+    ARMING_DISABLED_ARM_SWITCH = (1 << 14),
+    ARMING_DISABLED_HARDWARE_FAILURE = (1 << 15),
+    ARMING_DISABLED_BOXFAILSAFE = (1 << 16),
+    ARMING_DISABLED_BOXKILLSWITCH = (1 << 17),
+    ARMING_DISABLED_RC_LINK = (1 << 18),
+    ARMING_DISABLED_THROTTLE = (1 << 19),
+    ARMING_DISABLED_CLI = (1 << 20),
+    ARMING_DISABLED_CMS_MENU = (1 << 21),
+    ARMING_DISABLED_OSD_MENU = (1 << 22),
+    ARMING_DISABLED_ROLLPITCH_NOT_CENTERED = (1 << 23),
+    ARMING_DISABLED_SERVO_AUTOTRIM = (1 << 24),
+    ARMING_DISABLED_OOM = (1 << 25),
+    ARMING_DISABLED_INVALID_SETTING = (1 << 26),
+
+    ARMING_DISABLED_ALL_FLAGS = (ARMING_DISABLED_FAILSAFE_SYSTEM | ARMING_DISABLED_NOT_LEVEL | ARMING_DISABLED_SENSORS_CALIBRATING | ARMING_DISABLED_SYSTEM_OVERLOADED |
+                                                       ARMING_DISABLED_NAVIGATION_UNSAFE | ARMING_DISABLED_COMPASS_NOT_CALIBRATED | ARMING_DISABLED_ACCELEROMETER_NOT_CALIBRATED |
+                                                       ARMING_DISABLED_ARM_SWITCH | ARMING_DISABLED_HARDWARE_FAILURE | ARMING_DISABLED_BOXFAILSAFE | ARMING_DISABLED_BOXKILLSWITCH |
+                                                       ARMING_DISABLED_RC_LINK | ARMING_DISABLED_THROTTLE | ARMING_DISABLED_CLI | ARMING_DISABLED_CMS_MENU | ARMING_DISABLED_OSD_MENU |
+                                                       ARMING_DISABLED_ROLLPITCH_NOT_CENTERED | ARMING_DISABLED_SERVO_AUTOTRIM | ARMING_DISABLED_OOM | ARMING_DISABLED_INVALID_SETTING)
+} armingFlag_e;
+
+extern uint32_t armingFlags;
+
+extern const char *armingDisableFlagNames[];
+
+#define isArmingDisabled() (armingFlags & (ARMING_DISABLED_ALL_FLAGS))
+#define DISABLE_ARMING_FLAG(mask) (armingFlags &= ~(mask))
+#define ENABLE_ARMING_FLAG(mask) (armingFlags |= (mask))
+#define ARMING_FLAG(mask) (armingFlags & (mask))
+
+
+
+armingFlag_e isArmingDisabledReason(void);
+
+typedef enum {
+    ANGLE_MODE = (1 << 0),
+    HORIZON_MODE = (1 << 1),
+    HEADING_MODE = (1 << 2),
+    NAV_ALTHOLD_MODE= (1 << 3),
+    NAV_RTH_MODE = (1 << 4),
+    NAV_POSHOLD_MODE= (1 << 5),
+    HEADFREE_MODE = (1 << 6),
+    NAV_LAUNCH_MODE = (1 << 7),
+    MANUAL_MODE = (1 << 8),
+    FAILSAFE_MODE = (1 << 9),
+    AUTO_TUNE = (1 << 10),
+    NAV_WP_MODE = (1 << 11),
+    NAV_CRUISE_MODE = (1 << 12),
+    FLAPERON = (1 << 13),
+    TURN_ASSISTANT = (1 << 14),
+} flightModeFlags_e;
+
+extern uint32_t flightModeFlags;
+
+#define DISABLE_FLIGHT_MODE(mask) disableFlightMode(mask)
+#define ENABLE_FLIGHT_MODE(mask) enableFlightMode(mask)
+#define FLIGHT_MODE(mask) (flightModeFlags & (mask))
+
+typedef enum {
+    GPS_FIX_HOME = (1 << 0),
+    GPS_FIX = (1 << 1),
+    CALIBRATE_MAG = (1 << 2),
+    SMALL_ANGLE = (1 << 3),
+    FIXED_WING = (1 << 4),
+    ANTI_WINDUP = (1 << 5),
+    FLAPERON_AVAILABLE = (1 << 6),
+    NAV_MOTOR_STOP_OR_IDLE = (1 << 7),
+    COMPASS_CALIBRATED = (1 << 8),
+    ACCELEROMETER_CALIBRATED= (1 << 9),
+    PWM_DRIVER_AVAILABLE = (1 << 10),
+    HELICOPTER = (1 << 11),
+    NAV_CRUISE_BRAKING = (1 << 12),
+    NAV_CRUISE_BRAKING_BOOST = (1 << 13),
+    NAV_CRUISE_BRAKING_LOCKED = (1 << 14),
+} stateFlags_t;
+
+#define DISABLE_STATE(mask) (stateFlags &= ~(mask))
+#define ENABLE_STATE(mask) (stateFlags |= (mask))
+#define STATE(mask) (stateFlags & (mask))
+
+extern uint32_t stateFlags;
+
+typedef enum {
+    FLM_MANUAL,
+    FLM_ACRO,
+    FLM_ANGLE,
+    FLM_HORIZON,
+    FLM_ALTITUDE_HOLD,
+    FLM_POSITION_HOLD,
+    FLM_RTH,
+    FLM_MISSION,
+    FLM_LAUNCH,
+    FLM_FAILSAFE,
+    FLM_COUNT
+} flightModeForTelemetry_e;
+
+flightModeForTelemetry_e getFlightModeForTelemetry(void);
+
+uint32_t enableFlightMode(flightModeFlags_e mask);
+uint32_t disableFlightMode(flightModeFlags_e mask);
+
+
+# 134 "./src/main/fc/runtime_config.h" 3 4
+_Bool 
+# 134 "./src/main/fc/runtime_config.h"
+    sensors(uint32_t mask);
+void sensorsSet(uint32_t mask);
+void sensorsClear(uint32_t mask);
+uint32_t sensorsMask(void);
+# 48 "./src/main/io/gps.c" 2
 
 
 # 1 "./src/main/sensors/sensors.h" 1
@@ -21307,7 +21435,7 @@ typedef enum {
 
 extern uint8_t requestedSensors[SENSOR_INDEX_COUNT];
 extern uint8_t detectedSensors[SENSOR_INDEX_COUNT];
-# 49 "./src/main/io/gps.c" 2
+# 51 "./src/main/io/gps.c" 2
 # 1 "./src/main/sensors/compass.h" 1
 # 18 "./src/main/sensors/compass.h"
        
@@ -21372,7 +21500,7 @@ _Bool
 _Bool 
 # 74 "./src/main/sensors/compass.h"
     compassIsHealthy(void);
-# 50 "./src/main/io/gps.c" 2
+# 52 "./src/main/io/gps.c" 2
 
 # 1 "./src/main/io/serial.h" 1
 # 18 "./src/main/io/serial.h"
@@ -21547,7 +21675,7 @@ baudRate_e lookupBaudRateIndex(uint32_t baudRate);
 
 
 void serialPassthrough(serialPort_t *left, serialPort_t *right, serialConsumer *leftC, serialConsumer *rightC);
-# 52 "./src/main/io/gps.c" 2
+# 54 "./src/main/io/gps.c" 2
 # 1 "./src/main/io/gps.h" 1
 # 18 "./src/main/io/gps.h"
        
@@ -21746,7 +21874,7 @@ _Bool
     isGPSHeadingValid(void);
 struct serialPort_s;
 void gpsEnablePassthrough(struct serialPort_s *gpsPassthroughPort);
-# 53 "./src/main/io/gps.c" 2
+# 55 "./src/main/io/gps.c" 2
 # 1 "./src/main/io/gps_private.h" 1
 # 18 "./src/main/io/gps_private.h"
        
@@ -21811,7 +21939,7 @@ extern void gpsHandleMTK(void);
 
 extern void gpsRestartNAZA(void);
 extern void gpsHandleNAZA(void);
-# 54 "./src/main/io/gps.c" 2
+# 56 "./src/main/io/gps.c" 2
 
 # 1 "./src/main/navigation/navigation.h" 1
 # 18 "./src/main/navigation/navigation.h"
@@ -22326,7 +22454,7 @@ typedef struct wp_planes_s {
     uint32_t wp_nb;
     int16_t GPS_distanceToMe;
     int16_t GPS_altitudeToMe;
-    int16_t planePoiDirection;
+    int32_t planePoiDirection;
     uint16_t drawn;
     int posX;
     int posY;
@@ -22678,7 +22806,7 @@ extern uint16_t navFlags;
 extern uint16_t navEPH;
 extern uint16_t navEPV;
 extern int16_t navAccNEU[3];
-# 56 "./src/main/io/gps.c" 2
+# 58 "./src/main/io/gps.c" 2
 
 
 
@@ -22908,141 +23036,15 @@ void resetConfigs(void);
 void targetConfiguration(void);
 
 uint32_t getLooptime(void);
-# 60 "./src/main/io/gps.c" 2
-# 1 "./src/main/fc/runtime_config.h" 1
-# 18 "./src/main/fc/runtime_config.h"
-       
+# 62 "./src/main/io/gps.c" 2
 
-
-typedef enum {
-    ARMED = (1 << 2),
-    WAS_EVER_ARMED = (1 << 3),
-
-    ARMING_DISABLED_FAILSAFE_SYSTEM = (1 << 7),
-
-    ARMING_DISABLED_NOT_LEVEL = (1 << 8),
-    ARMING_DISABLED_SENSORS_CALIBRATING = (1 << 9),
-    ARMING_DISABLED_SYSTEM_OVERLOADED = (1 << 10),
-    ARMING_DISABLED_NAVIGATION_UNSAFE = (1 << 11),
-    ARMING_DISABLED_COMPASS_NOT_CALIBRATED = (1 << 12),
-    ARMING_DISABLED_ACCELEROMETER_NOT_CALIBRATED = (1 << 13),
-    ARMING_DISABLED_ARM_SWITCH = (1 << 14),
-    ARMING_DISABLED_HARDWARE_FAILURE = (1 << 15),
-    ARMING_DISABLED_BOXFAILSAFE = (1 << 16),
-    ARMING_DISABLED_BOXKILLSWITCH = (1 << 17),
-    ARMING_DISABLED_RC_LINK = (1 << 18),
-    ARMING_DISABLED_THROTTLE = (1 << 19),
-    ARMING_DISABLED_CLI = (1 << 20),
-    ARMING_DISABLED_CMS_MENU = (1 << 21),
-    ARMING_DISABLED_OSD_MENU = (1 << 22),
-    ARMING_DISABLED_ROLLPITCH_NOT_CENTERED = (1 << 23),
-    ARMING_DISABLED_SERVO_AUTOTRIM = (1 << 24),
-    ARMING_DISABLED_OOM = (1 << 25),
-    ARMING_DISABLED_INVALID_SETTING = (1 << 26),
-
-    ARMING_DISABLED_ALL_FLAGS = (ARMING_DISABLED_FAILSAFE_SYSTEM | ARMING_DISABLED_NOT_LEVEL | ARMING_DISABLED_SENSORS_CALIBRATING | ARMING_DISABLED_SYSTEM_OVERLOADED |
-                                                       ARMING_DISABLED_NAVIGATION_UNSAFE | ARMING_DISABLED_COMPASS_NOT_CALIBRATED | ARMING_DISABLED_ACCELEROMETER_NOT_CALIBRATED |
-                                                       ARMING_DISABLED_ARM_SWITCH | ARMING_DISABLED_HARDWARE_FAILURE | ARMING_DISABLED_BOXFAILSAFE | ARMING_DISABLED_BOXKILLSWITCH |
-                                                       ARMING_DISABLED_RC_LINK | ARMING_DISABLED_THROTTLE | ARMING_DISABLED_CLI | ARMING_DISABLED_CMS_MENU | ARMING_DISABLED_OSD_MENU |
-                                                       ARMING_DISABLED_ROLLPITCH_NOT_CENTERED | ARMING_DISABLED_SERVO_AUTOTRIM | ARMING_DISABLED_OOM | ARMING_DISABLED_INVALID_SETTING)
-} armingFlag_e;
-
-extern uint32_t armingFlags;
-
-extern const char *armingDisableFlagNames[];
-
-#define isArmingDisabled() (armingFlags & (ARMING_DISABLED_ALL_FLAGS))
-#define DISABLE_ARMING_FLAG(mask) (armingFlags &= ~(mask))
-#define ENABLE_ARMING_FLAG(mask) (armingFlags |= (mask))
-#define ARMING_FLAG(mask) (armingFlags & (mask))
-
-
-
-armingFlag_e isArmingDisabledReason(void);
-
-typedef enum {
-    ANGLE_MODE = (1 << 0),
-    HORIZON_MODE = (1 << 1),
-    HEADING_MODE = (1 << 2),
-    NAV_ALTHOLD_MODE= (1 << 3),
-    NAV_RTH_MODE = (1 << 4),
-    NAV_POSHOLD_MODE= (1 << 5),
-    HEADFREE_MODE = (1 << 6),
-    NAV_LAUNCH_MODE = (1 << 7),
-    MANUAL_MODE = (1 << 8),
-    FAILSAFE_MODE = (1 << 9),
-    AUTO_TUNE = (1 << 10),
-    NAV_WP_MODE = (1 << 11),
-    NAV_CRUISE_MODE = (1 << 12),
-    FLAPERON = (1 << 13),
-    TURN_ASSISTANT = (1 << 14),
-} flightModeFlags_e;
-
-extern uint32_t flightModeFlags;
-
-#define DISABLE_FLIGHT_MODE(mask) disableFlightMode(mask)
-#define ENABLE_FLIGHT_MODE(mask) enableFlightMode(mask)
-#define FLIGHT_MODE(mask) (flightModeFlags & (mask))
-
-typedef enum {
-    GPS_FIX_HOME = (1 << 0),
-    GPS_FIX = (1 << 1),
-    CALIBRATE_MAG = (1 << 2),
-    SMALL_ANGLE = (1 << 3),
-    FIXED_WING = (1 << 4),
-    ANTI_WINDUP = (1 << 5),
-    FLAPERON_AVAILABLE = (1 << 6),
-    NAV_MOTOR_STOP_OR_IDLE = (1 << 7),
-    COMPASS_CALIBRATED = (1 << 8),
-    ACCELEROMETER_CALIBRATED= (1 << 9),
-    PWM_DRIVER_AVAILABLE = (1 << 10),
-    HELICOPTER = (1 << 11),
-    NAV_CRUISE_BRAKING = (1 << 12),
-    NAV_CRUISE_BRAKING_BOOST = (1 << 13),
-    NAV_CRUISE_BRAKING_LOCKED = (1 << 14),
-} stateFlags_t;
-
-#define DISABLE_STATE(mask) (stateFlags &= ~(mask))
-#define ENABLE_STATE(mask) (stateFlags |= (mask))
-#define STATE(mask) (stateFlags & (mask))
-
-extern uint32_t stateFlags;
-
-typedef enum {
-    FLM_MANUAL,
-    FLM_ACRO,
-    FLM_ANGLE,
-    FLM_HORIZON,
-    FLM_ALTITUDE_HOLD,
-    FLM_POSITION_HOLD,
-    FLM_RTH,
-    FLM_MISSION,
-    FLM_LAUNCH,
-    FLM_FAILSAFE,
-    FLM_COUNT
-} flightModeForTelemetry_e;
-
-flightModeForTelemetry_e getFlightModeForTelemetry(void);
-
-uint32_t enableFlightMode(flightModeFlags_e mask);
-uint32_t disableFlightMode(flightModeFlags_e mask);
-
-
-# 134 "./src/main/fc/runtime_config.h" 3 4
-_Bool 
-# 134 "./src/main/fc/runtime_config.h"
-    sensors(uint32_t mask);
-void sensorsSet(uint32_t mask);
-void sensorsClear(uint32_t mask);
-uint32_t sensorsMask(void);
-# 61 "./src/main/io/gps.c" 2
 
 typedef struct {
     portMode_t portMode;
     
-# 64 "./src/main/io/gps.c" 3 4
+# 66 "./src/main/io/gps.c" 3 4
    _Bool 
-# 64 "./src/main/io/gps.c"
+# 66 "./src/main/io/gps.c"
                        hasCompass;
     void (*restart)(void);
     void (*protocol)(void);
@@ -23060,9 +23062,9 @@ static gpsProviderDescriptor_t gpsProviders[GPS_PROVIDER_COUNT] = {
 
 
     { MODE_RX, 
-# 80 "./src/main/io/gps.c" 3 4
+# 82 "./src/main/io/gps.c" 3 4
               0
-# 80 "./src/main/io/gps.c"
+# 82 "./src/main/io/gps.c"
                    , &gpsRestartNMEA_MTK, &gpsHandleNMEA },
 
 
@@ -23071,9 +23073,9 @@ static gpsProviderDescriptor_t gpsProviders[GPS_PROVIDER_COUNT] = {
 
 
     { MODE_RXTX, 
-# 87 "./src/main/io/gps.c" 3 4
+# 89 "./src/main/io/gps.c" 3 4
                 0
-# 87 "./src/main/io/gps.c"
+# 89 "./src/main/io/gps.c"
                      , &gpsRestartUBLOX, &gpsHandleUBLOX },
 
 
@@ -23081,25 +23083,25 @@ static gpsProviderDescriptor_t gpsProviders[GPS_PROVIDER_COUNT] = {
 
 
     { 0, 
-# 93 "./src/main/io/gps.c" 3 4
+# 95 "./src/main/io/gps.c" 3 4
         0
-# 93 "./src/main/io/gps.c"
+# 95 "./src/main/io/gps.c"
              , 
-# 93 "./src/main/io/gps.c" 3 4
+# 95 "./src/main/io/gps.c" 3 4
                 ((void *)0)
-# 93 "./src/main/io/gps.c"
+# 95 "./src/main/io/gps.c"
                     , 
-# 93 "./src/main/io/gps.c" 3 4
+# 95 "./src/main/io/gps.c" 3 4
                       ((void *)0) 
-# 93 "./src/main/io/gps.c"
+# 95 "./src/main/io/gps.c"
                            },
 
 
 
     { MODE_RX, 
-# 97 "./src/main/io/gps.c" 3 4
+# 99 "./src/main/io/gps.c" 3 4
               1
-# 97 "./src/main/io/gps.c"
+# 99 "./src/main/io/gps.c"
                   , &gpsRestartNAZA, &gpsHandleNAZA },
 
 
@@ -23108,9 +23110,9 @@ static gpsProviderDescriptor_t gpsProviders[GPS_PROVIDER_COUNT] = {
 
 
     { MODE_RXTX, 
-# 104 "./src/main/io/gps.c" 3 4
+# 106 "./src/main/io/gps.c" 3 4
                 0
-# 104 "./src/main/io/gps.c"
+# 106 "./src/main/io/gps.c"
                      , &gpsRestartUBLOX, &gpsHandleUBLOX },
 
 
@@ -23119,9 +23121,9 @@ static gpsProviderDescriptor_t gpsProviders[GPS_PROVIDER_COUNT] = {
 
 
     { MODE_RXTX, 
-# 111 "./src/main/io/gps.c" 3 4
+# 113 "./src/main/io/gps.c" 3 4
                 0
-# 111 "./src/main/io/gps.c"
+# 113 "./src/main/io/gps.c"
                      , &gpsRestartNMEA_MTK, &gpsHandleMTK },
 
 
@@ -23132,9 +23134,9 @@ static gpsProviderDescriptor_t gpsProviders[GPS_PROVIDER_COUNT] = {
 extern const gpsConfig_t pgResetTemplate_gpsConfig; gpsConfig_t gpsConfig_System; gpsConfig_t gpsConfig_Copy; extern const pgRegistry_t gpsConfig_Registry; const pgRegistry_t gpsConfig_Registry __attribute__ ((section(".pg_registry"), used, aligned(4))) = { .pgn = 30 | (0 << 12), .size = sizeof(gpsConfig_t) | PGR_SIZE_SYSTEM_FLAG, .address = (uint8_t*)&gpsConfig_System, .copy = (uint8_t*)&gpsConfig_Copy, .ptr = 0, .reset = {.ptr = (void*)&pgResetTemplate_gpsConfig}, };
 
 const gpsConfig_t pgResetTemplate_gpsConfig __attribute__ ((section(".pg_resetdata"), used, aligned(2))) = { .provider = GPS_UBLOX, .sbasMode = SBAS_NONE, .autoConfig = GPS_AUTOCONFIG_ON, .autoBaud = GPS_AUTOBAUD_ON, .dynModel = GPS_DYNMODEL_AIR_1G, .gpsMinSats = 6, .ubloxUseGalileo = 
-# 120 "./src/main/io/gps.c" 3 4
+# 122 "./src/main/io/gps.c" 3 4
 0 
-# 120 "./src/main/io/gps.c"
+# 122 "./src/main/io/gps.c"
 }
 
 
@@ -23194,9 +23196,9 @@ void gpsProcessNewSolutionData(void)
 
     gpsStats.lastMessageDt = gpsState.lastMessageMs - gpsState.lastLastMessageMs;
     gpsSol.flags.hasNewData = 
-# 178 "./src/main/io/gps.c" 3 4
+# 180 "./src/main/io/gps.c" 3 4
                              1
-# 178 "./src/main/io/gps.c"
+# 180 "./src/main/io/gps.c"
                                  ;
 
 
@@ -23263,13 +23265,13 @@ void gpsInit(void)
 
     portMode_t mode = gpsProviders[gpsState.gpsConfig->provider].portMode;
     gpsState.gpsPort = openSerialPort(gpsPortConfig->identifier, FUNCTION_GPS, 
-# 243 "./src/main/io/gps.c" 3 4
+# 245 "./src/main/io/gps.c" 3 4
                                                                               ((void *)0)
-# 243 "./src/main/io/gps.c"
+# 245 "./src/main/io/gps.c"
                                                                                   , 
-# 243 "./src/main/io/gps.c" 3 4
+# 245 "./src/main/io/gps.c" 3 4
                                                                                     ((void *)0)
-# 243 "./src/main/io/gps.c"
+# 245 "./src/main/io/gps.c"
                                                                                         , baudRates[gpsToSerialBaudRate[gpsState.baudrateIndex]], mode, SERIAL_NOT_INVERTED);
 
 
@@ -23280,7 +23282,91 @@ void gpsInit(void)
 
     gpsSetState(GPS_INITIALIZING);
 }
-# 322 "./src/main/io/gps.c"
+
+
+static 
+# 257 "./src/main/io/gps.c" 3 4
+      _Bool 
+# 257 "./src/main/io/gps.c"
+           gpsFakeGPSUpdate(void)
+{
+#define FAKE_GPS_INITIAL_LAT 47345383
+#define FAKE_GPS_INITIAL_LON -1545089
+#define FAKE_GPS_GROUND_ARMED_SPEED 350
+#define FAKE_GPS_GROUND_UNARMED_SPEED 0
+#define FAKE_GPS_GROUND_COURSE_DECIDEGREES 900
+
+
+
+
+
+
+    static int32_t lat = 47345383;
+    static int32_t lon = -1545089;
+
+    timeMs_t now = millis();
+    uint32_t delta = now - gpsState.lastMessageMs;
+    if (delta > 100) {
+        int32_t speed = (armingFlags & (ARMED)) ? 350 : 0;
+        int32_t cmDelta = speed * (delta / 1000.0f);
+        int32_t latCmDelta = cmDelta * cos_approx((((900) / 10.0f) * (3.14159265358979323846f / 180.0f)));
+        int32_t lonCmDelta = cmDelta * sin_approx((((900) / 10.0f) * (3.14159265358979323846f / 180.0f)));
+        int32_t latDelta = ceilf((float)latCmDelta / (111 * 1000 * 100 / 1e7));
+        int32_t lonDelta = ceilf((float)lonCmDelta / (111 * 1000 * 100 / 1e7));
+        if (speed > 0 && latDelta == 0 && lonDelta == 0) {
+            return 
+# 283 "./src/main/io/gps.c" 3 4
+                  0
+# 283 "./src/main/io/gps.c"
+                       ;
+        }
+        lat += latDelta;
+        lon += lonDelta;
+        gpsSol.fixType = GPS_FIX_3D;
+        gpsSol.numSat = 6;
+        gpsSol.llh.lat = lat;
+        gpsSol.llh.lon = lon;
+        gpsSol.llh.alt = 0;
+        gpsSol.groundSpeed = speed;
+        gpsSol.groundCourse = 900;
+        gpsSol.velNED[X] = speed * cos_approx((((900) / 10.0f) * (3.14159265358979323846f / 180.0f)));
+        gpsSol.velNED[Y] = speed * sin_approx((((900) / 10.0f) * (3.14159265358979323846f / 180.0f)));
+        gpsSol.velNED[Z] = 0;
+        gpsSol.flags.validVelNE = 1;
+        gpsSol.flags.validVelD = 1;
+        gpsSol.flags.validEPE = 1;
+        gpsSol.flags.validTime = 1;
+        gpsSol.eph = 100;
+        gpsSol.epv = 100;
+        gpsSol.time.year = 1983;
+        gpsSol.time.month = 1;
+        gpsSol.time.day = 1;
+        gpsSol.time.hours = 3;
+        gpsSol.time.minutes = 15;
+        gpsSol.time.seconds = 42;
+
+        (stateFlags |= (GPS_FIX));
+        sensorsSet(SENSOR_GPS);
+        gpsUpdateTime();
+        onNewGPSData();
+
+        gpsSetProtocolTimeout((1000));
+
+        gpsSetState(GPS_RUNNING);
+        return 
+# 318 "./src/main/io/gps.c" 3 4
+              1
+# 318 "./src/main/io/gps.c"
+                  ;
+    }
+    return 
+# 320 "./src/main/io/gps.c" 3 4
+          0
+# 320 "./src/main/io/gps.c"
+               ;
+}
+
+
 uint16_t gpsConstrainEPE(uint32_t epe)
 {
     return (epe > 9999) ? 9999 : epe;
@@ -23292,9 +23378,9 @@ uint16_t gpsConstrainHDOP(uint32_t hdop)
 }
 
 
-# 332 "./src/main/io/gps.c" 3 4
+# 334 "./src/main/io/gps.c" 3 4
 _Bool 
-# 332 "./src/main/io/gps.c"
+# 334 "./src/main/io/gps.c"
     gpsUpdate(void)
 {
 
@@ -23302,9 +23388,9 @@ _Bool
         sensorsClear(SENSOR_GPS);
         (stateFlags &= ~(GPS_FIX));
         return 
-# 338 "./src/main/io/gps.c" 3 4
+# 340 "./src/main/io/gps.c" 3 4
               0
-# 338 "./src/main/io/gps.c"
+# 340 "./src/main/io/gps.c"
                    ;
     }
 
@@ -23313,65 +23399,15 @@ _Bool
         sensorsClear(SENSOR_GPS);
         (stateFlags &= ~(GPS_FIX));
         return 
-# 345 "./src/main/io/gps.c" 3 4
+# 347 "./src/main/io/gps.c" 3 4
               0
-# 345 "./src/main/io/gps.c"
+# 347 "./src/main/io/gps.c"
                    ;
     }
 
 
-
-
-
-
-    gpsSol.flags.hasNewData = 
-# 353 "./src/main/io/gps.c" 3 4
-                             0
-# 353 "./src/main/io/gps.c"
-                                  ;
-
-    switch (gpsState.state) {
-    default:
-    case GPS_INITIALIZING:
-
-        if ((millis() - gpsState.lastStateSwitchMs) >= (500)) {
-
-            (stateFlags &= ~(GPS_FIX));
-            gpsSol.fixType = GPS_NO_FIX;
-
-
-            gpsResetSolution();
-
-
-            gpsProviders[gpsState.gpsConfig->provider].restart();
-
-
-            gpsSetProtocolTimeout((1000));
-            gpsSetState(GPS_RUNNING);
-        }
-        break;
-
-    case GPS_RUNNING:
-
-        gpsProviders[gpsState.gpsConfig->provider].protocol();
-
-
-        if ((millis() - gpsState.lastMessageMs) > (1000)) {
-            sensorsClear(SENSOR_GPS);
-            (stateFlags &= ~(GPS_FIX));
-            gpsSol.fixType = GPS_NO_FIX;
-            gpsSetState(GPS_LOST_COMMUNICATION);
-        }
-        break;
-
-    case GPS_LOST_COMMUNICATION:
-        gpsStats.timeouts++;
-        gpsSetState(GPS_INITIALIZING);
-        break;
-    }
-
-    return gpsSol.flags.hasNewData;
-
+    return gpsFakeGPSUpdate();
+# 399 "./src/main/io/gps.c"
 }
 
 void gpsEnablePassthrough(serialPort_t *gpsPassthroughPort)
@@ -23383,44 +23419,44 @@ void gpsEnablePassthrough(serialPort_t *gpsPassthroughPort)
     serialSetMode(gpsState.gpsPort, gpsState.gpsPort->mode | MODE_TX);
 
     ledSet(0, 
-# 407 "./src/main/io/gps.c" 3 4
+# 409 "./src/main/io/gps.c" 3 4
    0
-# 407 "./src/main/io/gps.c"
+# 409 "./src/main/io/gps.c"
    );
     ledSet(1, 
-# 408 "./src/main/io/gps.c" 3 4
+# 410 "./src/main/io/gps.c" 3 4
    0
-# 408 "./src/main/io/gps.c"
+# 410 "./src/main/io/gps.c"
    );
 
     char c;
     while (1) {
         if (serialRxBytesWaiting(gpsState.gpsPort)) {
             ledSet(0, 
-# 413 "./src/main/io/gps.c" 3 4
+# 415 "./src/main/io/gps.c" 3 4
            1
-# 413 "./src/main/io/gps.c"
+# 415 "./src/main/io/gps.c"
            );
             c = serialRead(gpsState.gpsPort);
             serialWrite(gpsPassthroughPort, c);
             ledSet(0, 
-# 416 "./src/main/io/gps.c" 3 4
+# 418 "./src/main/io/gps.c" 3 4
            0
-# 416 "./src/main/io/gps.c"
+# 418 "./src/main/io/gps.c"
            );
         }
         if (serialRxBytesWaiting(gpsPassthroughPort)) {
             ledSet(1, 
-# 419 "./src/main/io/gps.c" 3 4
+# 421 "./src/main/io/gps.c" 3 4
            1
-# 419 "./src/main/io/gps.c"
+# 421 "./src/main/io/gps.c"
            );
             c = serialRead(gpsPassthroughPort);
             serialWrite(gpsState.gpsPort, c);
             ledSet(1, 
-# 422 "./src/main/io/gps.c" 3 4
+# 424 "./src/main/io/gps.c" 3 4
            0
-# 422 "./src/main/io/gps.c"
+# 424 "./src/main/io/gps.c"
            );
         }
     }
@@ -23437,23 +23473,23 @@ void updateGpsIndicator(timeUs_t currentTimeUs)
 
 
 
-# 437 "./src/main/io/gps.c" 3 4
+# 439 "./src/main/io/gps.c" 3 4
 _Bool 
-# 437 "./src/main/io/gps.c"
+# 439 "./src/main/io/gps.c"
     gpsMagInit(magDev_t *magDev)
 {
     (void)(magDev);
     return 
-# 440 "./src/main/io/gps.c" 3 4
+# 442 "./src/main/io/gps.c" 3 4
           1
-# 440 "./src/main/io/gps.c"
+# 442 "./src/main/io/gps.c"
               ;
 }
 
 
-# 443 "./src/main/io/gps.c" 3 4
+# 445 "./src/main/io/gps.c" 3 4
 _Bool 
-# 443 "./src/main/io/gps.c"
+# 445 "./src/main/io/gps.c"
     gpsMagRead(magDev_t *magDev)
 {
     magDev->magADCRaw[X] = gpsSol.magData[0];
@@ -23463,53 +23499,53 @@ _Bool
 }
 
 
-# 451 "./src/main/io/gps.c" 3 4
+# 453 "./src/main/io/gps.c" 3 4
 _Bool 
-# 451 "./src/main/io/gps.c"
+# 453 "./src/main/io/gps.c"
     gpsMagDetect(magDev_t *mag)
 {
     if (!(feature(FEATURE_GPS) && gpsProviders[gpsState.gpsConfig->provider].hasCompass)) {
         return 
-# 454 "./src/main/io/gps.c" 3 4
+# 456 "./src/main/io/gps.c" 3 4
               0
-# 454 "./src/main/io/gps.c"
+# 456 "./src/main/io/gps.c"
                    ;
     }
 
     if (!gpsProviders[gpsState.gpsConfig->provider].protocol || !findSerialPortConfig(FUNCTION_GPS)) {
         return 
-# 458 "./src/main/io/gps.c" 3 4
+# 460 "./src/main/io/gps.c" 3 4
               0
-# 458 "./src/main/io/gps.c"
+# 460 "./src/main/io/gps.c"
                    ;
     }
 
     mag->init = gpsMagInit;
     mag->read = gpsMagRead;
     return 
-# 463 "./src/main/io/gps.c" 3 4
+# 465 "./src/main/io/gps.c" 3 4
           1
-# 463 "./src/main/io/gps.c"
+# 465 "./src/main/io/gps.c"
               ;
 }
 
 
-# 466 "./src/main/io/gps.c" 3 4
+# 468 "./src/main/io/gps.c" 3 4
 _Bool 
-# 466 "./src/main/io/gps.c"
+# 468 "./src/main/io/gps.c"
     isGPSHealthy(void)
 {
     return 
-# 468 "./src/main/io/gps.c" 3 4
+# 470 "./src/main/io/gps.c" 3 4
           1
-# 468 "./src/main/io/gps.c"
+# 470 "./src/main/io/gps.c"
               ;
 }
 
 
-# 471 "./src/main/io/gps.c" 3 4
+# 473 "./src/main/io/gps.c" 3 4
 _Bool 
-# 471 "./src/main/io/gps.c"
+# 473 "./src/main/io/gps.c"
     isGPSHeadingValid(void)
 {
     return sensors(SENSOR_GPS) && (stateFlags & (GPS_FIX)) && gpsSol.numSat >= 6 && gpsSol.groundSpeed >= 300;
