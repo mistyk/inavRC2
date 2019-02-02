@@ -1307,7 +1307,7 @@ int32_t myAlt = 0;
         float poiAngle = DEGREES_TO_RADIANS(directionToPoi);
         float poiSin = sin_approx(poiAngle);
         float poiCos = cos_approx(poiAngle);
-
+/*
         // Now start looking for a valid scale that lets us draw everything
 
             // Calculate location of the aircraft in map
@@ -1327,8 +1327,167 @@ int32_t myAlt = 0;
             // Update saved location
             myDrawn[plane_id]=OSD_POS(poiX, poiY) | OSD_VISIBLE_FLAG;
            // *drawn = OSD_POS(poiX, poiY) | OSD_VISIBLE_FLAG;
+*/
+int ii;
+       for (ii = 0; ii < 50; ii++) {
+           // Calculate location of the aircraft in map
+           int points = poiDistance / ((float)scale / charHeight);
 
-    }
+           float pointsX = points * poiSin;
+           int poiX = midX - roundf(pointsX / charWidth);
+           if (poiX < minX || poiX > maxX) {
+               scale *= scaleMultiplier;
+               continue;
+           }
+
+           float pointsY = points * poiCos;
+           int poiY = midY + roundf(pointsY / charHeight);
+           if (poiY < minY || poiY > maxY) {
+               scale *= scaleMultiplier;
+               continue;
+           }
+
+           if (poiX == midX && poiY == midY) {
+               // We're over the map center symbol, so we would be drawing
+               // over it even if we increased the scale. Alternate between
+               // drawing the center symbol or drawing the POI.
+               if (centerSym != SYM_BLANK && OSD_ALTERNATING_CHOICES(1000, 2) == 0) {
+                   break;
+               }
+           } else {
+
+               uint8_t c;
+               if (displayReadCharWithAttr(osdDisplayPort, poiX, poiY, &c, NULL) && c != SYM_BLANK) {
+                   // Something else written here, increase scale. If the display doesn't support reading
+                   // back characters, we assume there's nothing.
+                   //
+                   // If we're close to the center, decrease scale. Otherwise increase it.
+                   uint8_t centerDeltaX = (maxX - minX) / (scaleMultiplier * 2);
+                   uint8_t centerDeltaY = (maxY - minY) / (scaleMultiplier * 2);
+                   if (poiX >= midX - centerDeltaX && poiX <= midX + centerDeltaX &&
+                       poiY >= midY - centerDeltaY && poiY <= midY + centerDeltaY &&
+                       scale > scaleMultiplier) {
+
+                       scale /= scaleMultiplier;
+                   } else {
+                       scale *= scaleMultiplier;
+                   }
+                   continue;
+               }
+           }
+
+
+     wp_planes_t currentPlane=planesInfos[plane_id];
+
+
+if (frontview){
+
+
+ float pitchAngle = constrain(attitude.values.pitch,  -AH_MAX_PITCH_FV, AH_MAX_PITCH_FV); //-45° to +45° FOV Lens
+ pitchAngle=pitchAngle/10; //centidegree to degree
+
+ float myAlt = (osdGetAltitude()/100);
+ float relativAlt=(currentPlane.planeWP.alt/100)-myAlt;
+ float distanceFromMe=currentPlane.GPS_distanceToMe/100;
+ float anglePoiY=0;
+
+ //Calculate Height of waypoint angle=atan(h/d)
+ if (distanceFromMe>relativAlt){
+   anglePoiY=atan(relativAlt/distanceFromMe); // calculate angle base on floor original is asin_approx(relativAlt/distanceFromMe)
+ }else{
+   anglePoiY=atan(distanceFromMe/relativAlt); // calculate angle base on floor original is asin_approx(relativAlt/distanceFromMe)
+ }
+
+ float anglePoiYDeg=anglePoiY*180/M_PIf; //CONVERT RAD TO DEGREES
+
+
+ float finalpoiY=anglePoiYDeg-pitchAngle;
+   if( finalpoiY>0){
+       finalpoiY=map(finalpoiY,0,45,midY,maxY-1); //map deg to 0 +45°
+   }else{
+            finalpoiY=map(finalpoiY,-45,0,minY+1,midY); // map deg to -45 to 0°
+   }
+ int poiYFV=(int)finalpoiY; //Difference angle between plane and you and convert angle to ° (not centidegree)
+  // poiYFV=constrain(poiYFV,minY+2,maxY-2);
+
+
+if (near_plane_id==plane_id){
+    memset(buf, 0, sizeof(buf));
+    tfp_sprintf(buf, "%f", distanceFromMe);
+  displayWrite(osdDisplayPort, minX+6, maxY-1, buf);
+
+
+    memset(buf, 0, sizeof(buf));
+    tfp_sprintf(buf, "%f", anglePoiY);
+    displayWrite(osdDisplayPort, minX+10, maxY-1, buf);
+
+    memset(buf, 0, sizeof(buf));
+    tfp_sprintf(buf, "%f", getPointFromHa(0));
+    displayWrite(osdDisplayPort, minX+10, maxY-2, buf);
+
+
+    memset(buf, 0, sizeof(buf));
+    tfp_sprintf(buf, "%f", getPointFromHa(poiY));
+    displayWrite(osdDisplayPort, minX+10, maxY-3, buf);
+
+
+    memset(buf, 0, sizeof(buf));
+    tfp_sprintf(buf, "%f", relativAlt);
+    displayWrite(osdDisplayPort, minX+18, maxY-1, buf);
+
+    memset(buf, 0, sizeof(buf));
+    tfp_sprintf(buf, "%d", poiYFV);
+    displayWrite(osdDisplayPort, minX+22, maxY-1, buf);
+
+
+}
+
+               //if plane is behind you draw it on the middle right or left edge
+
+               if (poiY<midY){
+                   poiYFV=midY;
+                   if (poiX>midX){
+                       poiX=maxX-1;
+                   }else{
+                       poiX=minX+1;
+                   }
+               }
+               poiY=poiYFV;
+     }
+       //CHANGE SYMBOL IF HIGHER OR LOWER
+                   myAlt = CENTIMETERS_TO_METERS(osdGetAltitude());
+       int currentPlaneAlt=CENTIMETERS_TO_METERS(currentPlane.planeWP.alt);
+                if (near_plane_id==plane_id){
+                    poiSymbol=SYM_HEADING;//SYM_AH_CENTER
+                }else{
+                    if (currentPlaneAlt>myAlt){
+                        if(currentPlaneAlt-myAlt>20)
+                        {
+                            poiSymbol=SYM_PLANE_VERY_HIGH;
+                        }else{
+                            poiSymbol=SYM_PLANE_HIGH;
+                        }
+                    }else{
+                        if(myAlt-currentPlaneAlt>20)
+                        {
+                            poiSymbol=SYM_PLANE_VERY_LOW;
+                        }else{
+                            poiSymbol=SYM_PLANE_LOW;
+                        }
+                    }
+                }
+
+           displayWriteChar(osdDisplayPort, poiX, poiY, poiSymbol);
+
+
+           // Update saved location
+           myDrawn[plane_id]=OSD_POS(poiX, poiY) | OSD_VISIBLE_FLAG;
+          // *drawn = OSD_POS(poiX, poiY) | OSD_VISIBLE_FLAG;
+           break;
+       }
+   }
+
+
 
     // Draw the used scale
     bool scaled = osdFormatCentiNumber(buf, scale * scaleToUnit, scaleUnitDivisor, maxDecimals, 2, 3);
