@@ -1244,7 +1244,7 @@ static void osdSimpleMap(int referenceHeading, uint8_t referenceSym, uint8_t cen
 {
     // TODO: These need to be tested with several setups. We might
     // need to make them configurable.
-    const int hMargin = 7;
+    const int hMargin = 5;
     const int vMargin = 2;
 
     // TODO: Get this from the display driver?
