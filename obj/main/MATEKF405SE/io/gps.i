@@ -468,7 +468,7 @@
 #define MATEKF405SE 1
 #define __FORKNAME__ "inav"
 #define __TARGET__ "MATEKF405SE"
-#define __REVISION__ "a441c97"
+#define __REVISION__ "355777c"
 # 1 "./src/main/io/gps.c"
 # 18 "./src/main/io/gps.c"
 # 1 "/usr/lib/gcc/arm-none-eabi/7.3.1/include/stdbool.h" 1 3 4
@@ -21259,136 +21259,10 @@ uint32_t ticks(void);
 timeDelta_t ticks_diff_us(uint32_t begin, uint32_t end);
 # 43 "./src/main/io/gps.c" 2
 
-#define USE_FAKE_GPS 
-
-
-# 1 "./src/main/fc/runtime_config.h" 1
-# 18 "./src/main/fc/runtime_config.h"
-       
-
-
-typedef enum {
-    ARMED = (1 << 2),
-    WAS_EVER_ARMED = (1 << 3),
-
-    ARMING_DISABLED_FAILSAFE_SYSTEM = (1 << 7),
-
-    ARMING_DISABLED_NOT_LEVEL = (1 << 8),
-    ARMING_DISABLED_SENSORS_CALIBRATING = (1 << 9),
-    ARMING_DISABLED_SYSTEM_OVERLOADED = (1 << 10),
-    ARMING_DISABLED_NAVIGATION_UNSAFE = (1 << 11),
-    ARMING_DISABLED_COMPASS_NOT_CALIBRATED = (1 << 12),
-    ARMING_DISABLED_ACCELEROMETER_NOT_CALIBRATED = (1 << 13),
-    ARMING_DISABLED_ARM_SWITCH = (1 << 14),
-    ARMING_DISABLED_HARDWARE_FAILURE = (1 << 15),
-    ARMING_DISABLED_BOXFAILSAFE = (1 << 16),
-    ARMING_DISABLED_BOXKILLSWITCH = (1 << 17),
-    ARMING_DISABLED_RC_LINK = (1 << 18),
-    ARMING_DISABLED_THROTTLE = (1 << 19),
-    ARMING_DISABLED_CLI = (1 << 20),
-    ARMING_DISABLED_CMS_MENU = (1 << 21),
-    ARMING_DISABLED_OSD_MENU = (1 << 22),
-    ARMING_DISABLED_ROLLPITCH_NOT_CENTERED = (1 << 23),
-    ARMING_DISABLED_SERVO_AUTOTRIM = (1 << 24),
-    ARMING_DISABLED_OOM = (1 << 25),
-    ARMING_DISABLED_INVALID_SETTING = (1 << 26),
-
-    ARMING_DISABLED_ALL_FLAGS = (ARMING_DISABLED_FAILSAFE_SYSTEM | ARMING_DISABLED_NOT_LEVEL | ARMING_DISABLED_SENSORS_CALIBRATING | ARMING_DISABLED_SYSTEM_OVERLOADED |
-                                                       ARMING_DISABLED_NAVIGATION_UNSAFE | ARMING_DISABLED_COMPASS_NOT_CALIBRATED | ARMING_DISABLED_ACCELEROMETER_NOT_CALIBRATED |
-                                                       ARMING_DISABLED_ARM_SWITCH | ARMING_DISABLED_HARDWARE_FAILURE | ARMING_DISABLED_BOXFAILSAFE | ARMING_DISABLED_BOXKILLSWITCH |
-                                                       ARMING_DISABLED_RC_LINK | ARMING_DISABLED_THROTTLE | ARMING_DISABLED_CLI | ARMING_DISABLED_CMS_MENU | ARMING_DISABLED_OSD_MENU |
-                                                       ARMING_DISABLED_ROLLPITCH_NOT_CENTERED | ARMING_DISABLED_SERVO_AUTOTRIM | ARMING_DISABLED_OOM | ARMING_DISABLED_INVALID_SETTING)
-} armingFlag_e;
-
-extern uint32_t armingFlags;
-
-extern const char *armingDisableFlagNames[];
-
-#define isArmingDisabled() (armingFlags & (ARMING_DISABLED_ALL_FLAGS))
-#define DISABLE_ARMING_FLAG(mask) (armingFlags &= ~(mask))
-#define ENABLE_ARMING_FLAG(mask) (armingFlags |= (mask))
-#define ARMING_FLAG(mask) (armingFlags & (mask))
 
 
 
-armingFlag_e isArmingDisabledReason(void);
 
-typedef enum {
-    ANGLE_MODE = (1 << 0),
-    HORIZON_MODE = (1 << 1),
-    HEADING_MODE = (1 << 2),
-    NAV_ALTHOLD_MODE= (1 << 3),
-    NAV_RTH_MODE = (1 << 4),
-    NAV_POSHOLD_MODE= (1 << 5),
-    HEADFREE_MODE = (1 << 6),
-    NAV_LAUNCH_MODE = (1 << 7),
-    MANUAL_MODE = (1 << 8),
-    FAILSAFE_MODE = (1 << 9),
-    AUTO_TUNE = (1 << 10),
-    NAV_WP_MODE = (1 << 11),
-    NAV_CRUISE_MODE = (1 << 12),
-    FLAPERON = (1 << 13),
-    TURN_ASSISTANT = (1 << 14),
-} flightModeFlags_e;
-
-extern uint32_t flightModeFlags;
-
-#define DISABLE_FLIGHT_MODE(mask) disableFlightMode(mask)
-#define ENABLE_FLIGHT_MODE(mask) enableFlightMode(mask)
-#define FLIGHT_MODE(mask) (flightModeFlags & (mask))
-
-typedef enum {
-    GPS_FIX_HOME = (1 << 0),
-    GPS_FIX = (1 << 1),
-    CALIBRATE_MAG = (1 << 2),
-    SMALL_ANGLE = (1 << 3),
-    FIXED_WING = (1 << 4),
-    ANTI_WINDUP = (1 << 5),
-    FLAPERON_AVAILABLE = (1 << 6),
-    NAV_MOTOR_STOP_OR_IDLE = (1 << 7),
-    COMPASS_CALIBRATED = (1 << 8),
-    ACCELEROMETER_CALIBRATED= (1 << 9),
-    PWM_DRIVER_AVAILABLE = (1 << 10),
-    HELICOPTER = (1 << 11),
-    NAV_CRUISE_BRAKING = (1 << 12),
-    NAV_CRUISE_BRAKING_BOOST = (1 << 13),
-    NAV_CRUISE_BRAKING_LOCKED = (1 << 14),
-} stateFlags_t;
-
-#define DISABLE_STATE(mask) (stateFlags &= ~(mask))
-#define ENABLE_STATE(mask) (stateFlags |= (mask))
-#define STATE(mask) (stateFlags & (mask))
-
-extern uint32_t stateFlags;
-
-typedef enum {
-    FLM_MANUAL,
-    FLM_ACRO,
-    FLM_ANGLE,
-    FLM_HORIZON,
-    FLM_ALTITUDE_HOLD,
-    FLM_POSITION_HOLD,
-    FLM_RTH,
-    FLM_MISSION,
-    FLM_LAUNCH,
-    FLM_FAILSAFE,
-    FLM_COUNT
-} flightModeForTelemetry_e;
-
-flightModeForTelemetry_e getFlightModeForTelemetry(void);
-
-uint32_t enableFlightMode(flightModeFlags_e mask);
-uint32_t disableFlightMode(flightModeFlags_e mask);
-
-
-# 134 "./src/main/fc/runtime_config.h" 3 4
-_Bool 
-# 134 "./src/main/fc/runtime_config.h"
-    sensors(uint32_t mask);
-void sensorsSet(uint32_t mask);
-void sensorsClear(uint32_t mask);
-uint32_t sensorsMask(void);
-# 48 "./src/main/io/gps.c" 2
 
 
 # 1 "./src/main/sensors/sensors.h" 1
@@ -23037,7 +22911,133 @@ void targetConfiguration(void);
 
 uint32_t getLooptime(void);
 # 62 "./src/main/io/gps.c" 2
+# 1 "./src/main/fc/runtime_config.h" 1
+# 18 "./src/main/fc/runtime_config.h"
+       
 
+
+typedef enum {
+    ARMED = (1 << 2),
+    WAS_EVER_ARMED = (1 << 3),
+
+    ARMING_DISABLED_FAILSAFE_SYSTEM = (1 << 7),
+
+    ARMING_DISABLED_NOT_LEVEL = (1 << 8),
+    ARMING_DISABLED_SENSORS_CALIBRATING = (1 << 9),
+    ARMING_DISABLED_SYSTEM_OVERLOADED = (1 << 10),
+    ARMING_DISABLED_NAVIGATION_UNSAFE = (1 << 11),
+    ARMING_DISABLED_COMPASS_NOT_CALIBRATED = (1 << 12),
+    ARMING_DISABLED_ACCELEROMETER_NOT_CALIBRATED = (1 << 13),
+    ARMING_DISABLED_ARM_SWITCH = (1 << 14),
+    ARMING_DISABLED_HARDWARE_FAILURE = (1 << 15),
+    ARMING_DISABLED_BOXFAILSAFE = (1 << 16),
+    ARMING_DISABLED_BOXKILLSWITCH = (1 << 17),
+    ARMING_DISABLED_RC_LINK = (1 << 18),
+    ARMING_DISABLED_THROTTLE = (1 << 19),
+    ARMING_DISABLED_CLI = (1 << 20),
+    ARMING_DISABLED_CMS_MENU = (1 << 21),
+    ARMING_DISABLED_OSD_MENU = (1 << 22),
+    ARMING_DISABLED_ROLLPITCH_NOT_CENTERED = (1 << 23),
+    ARMING_DISABLED_SERVO_AUTOTRIM = (1 << 24),
+    ARMING_DISABLED_OOM = (1 << 25),
+    ARMING_DISABLED_INVALID_SETTING = (1 << 26),
+
+    ARMING_DISABLED_ALL_FLAGS = (ARMING_DISABLED_FAILSAFE_SYSTEM | ARMING_DISABLED_NOT_LEVEL | ARMING_DISABLED_SENSORS_CALIBRATING | ARMING_DISABLED_SYSTEM_OVERLOADED |
+                                                       ARMING_DISABLED_NAVIGATION_UNSAFE | ARMING_DISABLED_COMPASS_NOT_CALIBRATED | ARMING_DISABLED_ACCELEROMETER_NOT_CALIBRATED |
+                                                       ARMING_DISABLED_ARM_SWITCH | ARMING_DISABLED_HARDWARE_FAILURE | ARMING_DISABLED_BOXFAILSAFE | ARMING_DISABLED_BOXKILLSWITCH |
+                                                       ARMING_DISABLED_RC_LINK | ARMING_DISABLED_THROTTLE | ARMING_DISABLED_CLI | ARMING_DISABLED_CMS_MENU | ARMING_DISABLED_OSD_MENU |
+                                                       ARMING_DISABLED_ROLLPITCH_NOT_CENTERED | ARMING_DISABLED_SERVO_AUTOTRIM | ARMING_DISABLED_OOM | ARMING_DISABLED_INVALID_SETTING)
+} armingFlag_e;
+
+extern uint32_t armingFlags;
+
+extern const char *armingDisableFlagNames[];
+
+#define isArmingDisabled() (armingFlags & (ARMING_DISABLED_ALL_FLAGS))
+#define DISABLE_ARMING_FLAG(mask) (armingFlags &= ~(mask))
+#define ENABLE_ARMING_FLAG(mask) (armingFlags |= (mask))
+#define ARMING_FLAG(mask) (armingFlags & (mask))
+
+
+
+armingFlag_e isArmingDisabledReason(void);
+
+typedef enum {
+    ANGLE_MODE = (1 << 0),
+    HORIZON_MODE = (1 << 1),
+    HEADING_MODE = (1 << 2),
+    NAV_ALTHOLD_MODE= (1 << 3),
+    NAV_RTH_MODE = (1 << 4),
+    NAV_POSHOLD_MODE= (1 << 5),
+    HEADFREE_MODE = (1 << 6),
+    NAV_LAUNCH_MODE = (1 << 7),
+    MANUAL_MODE = (1 << 8),
+    FAILSAFE_MODE = (1 << 9),
+    AUTO_TUNE = (1 << 10),
+    NAV_WP_MODE = (1 << 11),
+    NAV_CRUISE_MODE = (1 << 12),
+    FLAPERON = (1 << 13),
+    TURN_ASSISTANT = (1 << 14),
+} flightModeFlags_e;
+
+extern uint32_t flightModeFlags;
+
+#define DISABLE_FLIGHT_MODE(mask) disableFlightMode(mask)
+#define ENABLE_FLIGHT_MODE(mask) enableFlightMode(mask)
+#define FLIGHT_MODE(mask) (flightModeFlags & (mask))
+
+typedef enum {
+    GPS_FIX_HOME = (1 << 0),
+    GPS_FIX = (1 << 1),
+    CALIBRATE_MAG = (1 << 2),
+    SMALL_ANGLE = (1 << 3),
+    FIXED_WING = (1 << 4),
+    ANTI_WINDUP = (1 << 5),
+    FLAPERON_AVAILABLE = (1 << 6),
+    NAV_MOTOR_STOP_OR_IDLE = (1 << 7),
+    COMPASS_CALIBRATED = (1 << 8),
+    ACCELEROMETER_CALIBRATED= (1 << 9),
+    PWM_DRIVER_AVAILABLE = (1 << 10),
+    HELICOPTER = (1 << 11),
+    NAV_CRUISE_BRAKING = (1 << 12),
+    NAV_CRUISE_BRAKING_BOOST = (1 << 13),
+    NAV_CRUISE_BRAKING_LOCKED = (1 << 14),
+} stateFlags_t;
+
+#define DISABLE_STATE(mask) (stateFlags &= ~(mask))
+#define ENABLE_STATE(mask) (stateFlags |= (mask))
+#define STATE(mask) (stateFlags & (mask))
+
+extern uint32_t stateFlags;
+
+typedef enum {
+    FLM_MANUAL,
+    FLM_ACRO,
+    FLM_ANGLE,
+    FLM_HORIZON,
+    FLM_ALTITUDE_HOLD,
+    FLM_POSITION_HOLD,
+    FLM_RTH,
+    FLM_MISSION,
+    FLM_LAUNCH,
+    FLM_FAILSAFE,
+    FLM_COUNT
+} flightModeForTelemetry_e;
+
+flightModeForTelemetry_e getFlightModeForTelemetry(void);
+
+uint32_t enableFlightMode(flightModeFlags_e mask);
+uint32_t disableFlightMode(flightModeFlags_e mask);
+
+
+# 134 "./src/main/fc/runtime_config.h" 3 4
+_Bool 
+# 134 "./src/main/fc/runtime_config.h"
+    sensors(uint32_t mask);
+void sensorsSet(uint32_t mask);
+void sensorsClear(uint32_t mask);
+uint32_t sensorsMask(void);
+# 63 "./src/main/io/gps.c" 2
 
 typedef struct {
     portMode_t portMode;
@@ -23282,91 +23282,7 @@ void gpsInit(void)
 
     gpsSetState(GPS_INITIALIZING);
 }
-
-
-static 
-# 257 "./src/main/io/gps.c" 3 4
-      _Bool 
-# 257 "./src/main/io/gps.c"
-           gpsFakeGPSUpdate(void)
-{
-#define FAKE_GPS_INITIAL_LAT 47345383
-#define FAKE_GPS_INITIAL_LON -1545089
-#define FAKE_GPS_GROUND_ARMED_SPEED 350
-#define FAKE_GPS_GROUND_UNARMED_SPEED 0
-#define FAKE_GPS_GROUND_COURSE_DECIDEGREES 900
-
-
-
-
-
-
-    static int32_t lat = 47345383;
-    static int32_t lon = -1545089;
-
-    timeMs_t now = millis();
-    uint32_t delta = now - gpsState.lastMessageMs;
-    if (delta > 100) {
-        int32_t speed = (armingFlags & (ARMED)) ? 350 : 0;
-        int32_t cmDelta = speed * (delta / 1000.0f);
-        int32_t latCmDelta = cmDelta * cos_approx((((900) / 10.0f) * (3.14159265358979323846f / 180.0f)));
-        int32_t lonCmDelta = cmDelta * sin_approx((((900) / 10.0f) * (3.14159265358979323846f / 180.0f)));
-        int32_t latDelta = ceilf((float)latCmDelta / (111 * 1000 * 100 / 1e7));
-        int32_t lonDelta = ceilf((float)lonCmDelta / (111 * 1000 * 100 / 1e7));
-        if (speed > 0 && latDelta == 0 && lonDelta == 0) {
-            return 
-# 283 "./src/main/io/gps.c" 3 4
-                  0
-# 283 "./src/main/io/gps.c"
-                       ;
-        }
-        lat += latDelta;
-        lon += lonDelta;
-        gpsSol.fixType = GPS_FIX_3D;
-        gpsSol.numSat = 6;
-        gpsSol.llh.lat = lat;
-        gpsSol.llh.lon = lon;
-        gpsSol.llh.alt = 0;
-        gpsSol.groundSpeed = speed;
-        gpsSol.groundCourse = 900;
-        gpsSol.velNED[X] = speed * cos_approx((((900) / 10.0f) * (3.14159265358979323846f / 180.0f)));
-        gpsSol.velNED[Y] = speed * sin_approx((((900) / 10.0f) * (3.14159265358979323846f / 180.0f)));
-        gpsSol.velNED[Z] = 0;
-        gpsSol.flags.validVelNE = 1;
-        gpsSol.flags.validVelD = 1;
-        gpsSol.flags.validEPE = 1;
-        gpsSol.flags.validTime = 1;
-        gpsSol.eph = 100;
-        gpsSol.epv = 100;
-        gpsSol.time.year = 1983;
-        gpsSol.time.month = 1;
-        gpsSol.time.day = 1;
-        gpsSol.time.hours = 3;
-        gpsSol.time.minutes = 15;
-        gpsSol.time.seconds = 42;
-
-        (stateFlags |= (GPS_FIX));
-        sensorsSet(SENSOR_GPS);
-        gpsUpdateTime();
-        onNewGPSData();
-
-        gpsSetProtocolTimeout((1000));
-
-        gpsSetState(GPS_RUNNING);
-        return 
-# 318 "./src/main/io/gps.c" 3 4
-              1
-# 318 "./src/main/io/gps.c"
-                  ;
-    }
-    return 
-# 320 "./src/main/io/gps.c" 3 4
-          0
-# 320 "./src/main/io/gps.c"
-               ;
-}
-
-
+# 324 "./src/main/io/gps.c"
 uint16_t gpsConstrainEPE(uint32_t epe)
 {
     return (epe > 9999) ? 9999 : epe;
@@ -23406,8 +23322,58 @@ _Bool
     }
 
 
-    return gpsFakeGPSUpdate();
-# 399 "./src/main/io/gps.c"
+
+
+
+
+    gpsSol.flags.hasNewData = 
+# 355 "./src/main/io/gps.c" 3 4
+                             0
+# 355 "./src/main/io/gps.c"
+                                  ;
+
+    switch (gpsState.state) {
+    default:
+    case GPS_INITIALIZING:
+
+        if ((millis() - gpsState.lastStateSwitchMs) >= (500)) {
+
+            (stateFlags &= ~(GPS_FIX));
+            gpsSol.fixType = GPS_NO_FIX;
+
+
+            gpsResetSolution();
+
+
+            gpsProviders[gpsState.gpsConfig->provider].restart();
+
+
+            gpsSetProtocolTimeout((1000));
+            gpsSetState(GPS_RUNNING);
+        }
+        break;
+
+    case GPS_RUNNING:
+
+        gpsProviders[gpsState.gpsConfig->provider].protocol();
+
+
+        if ((millis() - gpsState.lastMessageMs) > (1000)) {
+            sensorsClear(SENSOR_GPS);
+            (stateFlags &= ~(GPS_FIX));
+            gpsSol.fixType = GPS_NO_FIX;
+            gpsSetState(GPS_LOST_COMMUNICATION);
+        }
+        break;
+
+    case GPS_LOST_COMMUNICATION:
+        gpsStats.timeouts++;
+        gpsSetState(GPS_INITIALIZING);
+        break;
+    }
+
+    return gpsSol.flags.hasNewData;
+
 }
 
 void gpsEnablePassthrough(serialPort_t *gpsPassthroughPort)

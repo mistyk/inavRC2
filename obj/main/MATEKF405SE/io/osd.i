@@ -468,7 +468,7 @@
 #define MATEKF405SE 1
 #define __FORKNAME__ "inav"
 #define __TARGET__ "MATEKF405SE"
-#define __REVISION__ "a441c97"
+#define __REVISION__ "2b643eb"
 # 1 "./src/main/io/osd.c"
 # 24 "./src/main/io/osd.c"
 # 1 "/usr/lib/gcc/arm-none-eabi/7.3.1/include/stdbool.h" 1 3 4
@@ -28705,45 +28705,7 @@ static int8_t getPointFromHa(int8_t haPoiX){
 
         return dy;
 }
-
-static void squareRadarDraw(){
-    uint8_t midX = osdDisplayPort->cols / 2;
-    uint8_t midY = osdDisplayPort->rows / 2;
-
-    uint8_t gridSize= 7;
-    uint8_t gridY=7/2+1;
-
-     for (int c = midX-7 +1; c <= midX+7 -1; c++)
-  {
-        displayWriteChar(osdDisplayPort, c, midY+gridY, 0x7F);
-     }
-
-
-     for (int c = midX-7 +1; c <= midX+7 -1; c++)
-  {
-        displayWriteChar(osdDisplayPort, c, midY-gridY, 0x7F);
-     }
-
-
-     for (int c = midY-gridY+1; c <= midY+gridY-1; c++)
-  {
-        displayWriteChar(osdDisplayPort, midX+7,c, 0x8B);
-     }
-
-
-     for (int c = midY-gridY+1; c <= midY+gridY-1; c++)
-  {
-        displayWriteChar(osdDisplayPort, midX-7,c, 0x8B);
-     }
-
-
-    displayWriteChar(osdDisplayPort, midX-7,midY-gridY, 0x8C);
-    displayWriteChar(osdDisplayPort, midX-7,midY+gridY, 0x8E);
-    displayWriteChar(osdDisplayPort, midX+7,midY-gridY, 0x8D);
-    displayWriteChar(osdDisplayPort, midX+7,midY+gridY, 0x8F);
-
-}
-
+# 1241 "./src/main/io/osd.c"
 static void osdSimpleMap(int referenceHeading, uint8_t referenceSym, uint8_t centerSym,
                        uint32_t poiDistance, int32_t poiDirection, uint8_t poiSymbol,
                        uint16_t *drawn, uint32_t *usedScale,int plane_id,
@@ -28754,8 +28716,8 @@ static void osdSimpleMap(int referenceHeading, uint8_t referenceSym, uint8_t cen
 {
 
 
-    const int hMargin = 9;
-    const int vMargin = 3;
+    const int hMargin = 7;
+    const int vMargin = 2;
 
 
     const int charWidth = 12;
@@ -28817,37 +28779,103 @@ int32_t myAlt = 0;
         float poiAngle = ((directionToPoi) * (3.14159265358979323846f / 180.0f));
         float poiSin = sin_approx(poiAngle);
         float poiCos = cos_approx(poiAngle);
+# 1331 "./src/main/io/osd.c"
+int ii;
+       for (ii = 0; ii < 50; ii++) {
+
+           int points = poiDistance / ((float)scale / charHeight);
+
+           float pointsX = points * poiSin;
+           int poiX = midX - roundf(pointsX / charWidth);
+           if (poiX < minX || poiX > maxX) {
+               scale *= scaleMultiplier;
+               continue;
+           }
+
+           float pointsY = points * poiCos;
+           int poiY = midY + roundf(pointsY / charHeight);
+           if (poiY < minY || poiY > maxY) {
+               scale *= scaleMultiplier;
+               continue;
+           }
+
+           if (poiX == midX && poiY == midY) {
+
+
+
+               if (centerSym != 0x20 && ((millis() / 1000) % 2) == 0) {
+                   break;
+               }
+           } else {
+
+               uint8_t c;
+               if (displayReadCharWithAttr(osdDisplayPort, poiX, poiY, &c, 
+# 1360 "./src/main/io/osd.c" 3 4
+                                                                          ((void *)0)
+# 1360 "./src/main/io/osd.c"
+                                                                              ) && c != 0x20) {
 
 
 
 
-            int points = poiDistance / ((float)scale / charHeight);
+                   uint8_t centerDeltaX = (maxX - minX) / (scaleMultiplier * 2);
+                   uint8_t centerDeltaY = (maxY - minY) / (scaleMultiplier * 2);
+                   if (poiX >= midX - centerDeltaX && poiX <= midX + centerDeltaX &&
+                       poiY >= midY - centerDeltaY && poiY <= midY + centerDeltaY &&
+                       scale > scaleMultiplier) {
 
-            float pointsX = points * poiSin;
-            int poiX = midX - roundf(pointsX / charWidth);
+                       scale /= scaleMultiplier;
+                   } else {
+                       scale *= scaleMultiplier;
+                   }
+                   continue;
+               }
+           }
 
 
-            float pointsY = points * poiCos;
-            int poiY = midY + roundf(pointsY / charHeight);
+     wp_planes_t currentPlane=planesInfos[plane_id];
+# 1458 "./src/main/io/osd.c"
+        myAlt = (osdGetAltitude() / 100);
+       int currentPlaneAlt=(currentPlane.planeWP.alt / 100);
 
-            displayWriteChar(osdDisplayPort, poiX, poiY, poiSymbol);
+                    if (currentPlaneAlt>myAlt){
+                        if(currentPlaneAlt-myAlt>10)
+                        {
+                            poiSymbol=0xA2;
+                        }else{
+                            poiSymbol=0xA3;
+                        }
+                    }else{
+                        if(myAlt-currentPlaneAlt>10)
+                        {
+                            poiSymbol=0xA5;
+                        }else{
+                            poiSymbol=0xA4;
+                        }
+                    }
+
+
+           displayWriteChar(osdDisplayPort, poiX, poiY, poiSymbol);
 
 
 
-            myDrawn[plane_id]=((poiX) | ((poiY) << 5)) | 0x0800;
+           myDrawn[plane_id]=((poiX) | ((poiY) << 5)) | 0x0800;
+
+           break;
+       }
+   }
 
 
-    }
 
 
     
-# 1333 "./src/main/io/osd.c" 3 4
+# 1491 "./src/main/io/osd.c" 3 4
    _Bool 
-# 1333 "./src/main/io/osd.c"
+# 1491 "./src/main/io/osd.c"
         scaled = osdFormatCentiNumber(buf, scale * scaleToUnit, scaleUnitDivisor, maxDecimals, 2, 3);
     buf[3] = scaled ? symScaled : symUnscaled;
     buf[4] = '\0';
-    displayWrite(osdDisplayPort, minX, maxY, buf);
+    displayWrite(osdDisplayPort, minX, maxY-2, buf);
 
     *usedScale = scale;
 }
@@ -28888,12 +28916,12 @@ static int getNearestPlaneId()
 }
 
 static void osdSimpleRadar(uint16_t *drawn, uint32_t *usedScale,
-# 1376 "./src/main/io/osd.c" 3 4
+# 1534 "./src/main/io/osd.c" 3 4
                                                                _Bool 
-# 1376 "./src/main/io/osd.c"
+# 1534 "./src/main/io/osd.c"
                                                                     frontview)
 {
-    int16_t reference = ((osdGetHeading()) / 10);
+    int16_t reference = ((osdGetHeading()+180) / 10);
     wp_planes_t currentPlane;
     int plane_id=0;
 
@@ -28952,9 +28980,9 @@ static int16_t osdGet3DSpeed(void)
 
 
 static void osdFormatPidControllerOutput(char *buff, const char *label, const pidController_t *pidController, uint8_t scale, 
-# 1436 "./src/main/io/osd.c" 3 4
+# 1594 "./src/main/io/osd.c" 3 4
                                                                                                                             _Bool 
-# 1436 "./src/main/io/osd.c"
+# 1594 "./src/main/io/osd.c"
                                                                                                                                  showDecimal) {
     strcpy(buff, label);
     for (uint8_t i = strlen(label); i < 5; ++i) buff[i] = ' ';
@@ -29026,17 +29054,17 @@ static void osdDisplayAdjustableDecimalValue(uint8_t elemPosX, uint8_t elemPosY,
 }
 
 static 
-# 1506 "./src/main/io/osd.c" 3 4
+# 1664 "./src/main/io/osd.c" 3 4
       _Bool 
-# 1506 "./src/main/io/osd.c"
+# 1664 "./src/main/io/osd.c"
            osdDrawSingleElement(uint8_t item)
 {
     uint16_t pos = osdConfig()->item_pos[currentLayout][item];
     if (!((pos) & 0x0800)) {
         return 
-# 1510 "./src/main/io/osd.c" 3 4
+# 1668 "./src/main/io/osd.c" 3 4
               0
-# 1510 "./src/main/io/osd.c"
+# 1668 "./src/main/io/osd.c"
                    ;
     }
 
@@ -29060,17 +29088,17 @@ static
     case OSD_MAIN_BATT_VOLTAGE:
         osdDisplayBatteryVoltage(elemPosX, elemPosY, getBatteryRawVoltage(), 2 + osdConfig()->main_voltage_decimals, osdConfig()->main_voltage_decimals);
         return 
-# 1532 "./src/main/io/osd.c" 3 4
+# 1690 "./src/main/io/osd.c" 3 4
               1
-# 1532 "./src/main/io/osd.c"
+# 1690 "./src/main/io/osd.c"
                   ;
 
     case OSD_SAG_COMPENSATED_MAIN_BATT_VOLTAGE:
         osdDisplayBatteryVoltage(elemPosX, elemPosY, getBatterySagCompensatedVoltage(), 2 + osdConfig()->main_voltage_decimals, osdConfig()->main_voltage_decimals);
         return 
-# 1536 "./src/main/io/osd.c" 3 4
+# 1694 "./src/main/io/osd.c" 3 4
               1
-# 1536 "./src/main/io/osd.c"
+# 1694 "./src/main/io/osd.c"
                   ;
 
     case OSD_CURRENT_DRAW:
@@ -29133,18 +29161,18 @@ static
 
     case OSD_GPS_SPEED:
         osdFormatVelocityStr(buff, gpsSol.groundSpeed, 
-# 1597 "./src/main/io/osd.c" 3 4
+# 1755 "./src/main/io/osd.c" 3 4
                                                       0
-# 1597 "./src/main/io/osd.c"
+# 1755 "./src/main/io/osd.c"
                                                            );
         break;
 
     case OSD_3D_SPEED:
         {
             osdFormatVelocityStr(buff, osdGet3DSpeed(), 
-# 1602 "./src/main/io/osd.c" 3 4
+# 1760 "./src/main/io/osd.c" 3 4
                                                        1
-# 1602 "./src/main/io/osd.c"
+# 1760 "./src/main/io/osd.c"
                                                            );
             break;
         }
@@ -29235,9 +29263,9 @@ static
             if ((armingFlags & (ARMED)) && !(flightModeFlags & (NAV_CRUISE_MODE))) {
                 displayWrite(osdDisplayPort, elemPosX, elemPosY, "     ");
                 return 
-# 1691 "./src/main/io/osd.c" 3 4
+# 1849 "./src/main/io/osd.c" 3 4
                       1
-# 1691 "./src/main/io/osd.c"
+# 1849 "./src/main/io/osd.c"
                           ;
             }
 
@@ -29265,9 +29293,9 @@ static
             if ((armingFlags & (ARMED)) && ((!(flightModeFlags & (NAV_CRUISE_MODE))) || !(isAdjustingPosition() || isAdjustingHeading() || (heading_adjust != 0)))) {
                 displayWrite(osdDisplayPort, elemPosX, elemPosY, "      ");
                 return 
-# 1717 "./src/main/io/osd.c" 3 4
+# 1875 "./src/main/io/osd.c" 3 4
                       1
-# 1717 "./src/main/io/osd.c"
+# 1875 "./src/main/io/osd.c"
                           ;
             }
 
@@ -29299,32 +29327,24 @@ static
             static uint32_t scale = 0;
             osdDrawHomeMap(0, 'N', &drawn, &scale);
             return 
-# 1747 "./src/main/io/osd.c" 3 4
+# 1905 "./src/main/io/osd.c" 3 4
                   1
-# 1747 "./src/main/io/osd.c"
+# 1905 "./src/main/io/osd.c"
                       ;
         }
     case OSD_MAP_TAKEOFF:
         {
             static uint16_t drawn = 0;
             static uint32_t scale = 0;
-
+            osdDrawHomeMap(((navigationGetHomeHeading()) / 100), 'T', &drawn, &scale);
             static uint16_t drawnPlanes = 0;
-            
-# 1755 "./src/main/io/osd.c" 3 4
-           _Bool 
-# 1755 "./src/main/io/osd.c"
-                frontview=
-# 1755 "./src/main/io/osd.c" 3 4
-                          1
-# 1755 "./src/main/io/osd.c"
-                              ;
-            osdSimpleRadar(&drawn, &scale,frontview);
+
+
 
             return 
-# 1758 "./src/main/io/osd.c" 3 4
+# 1916 "./src/main/io/osd.c" 3 4
                   1
-# 1758 "./src/main/io/osd.c"
+# 1916 "./src/main/io/osd.c"
                       ;
         }
     case OSD_RADAR:
@@ -29335,24 +29355,24 @@ static
 
             static uint16_t drawnPlanes = 0;
             
-# 1767 "./src/main/io/osd.c" 3 4
+# 1925 "./src/main/io/osd.c" 3 4
            _Bool 
-# 1767 "./src/main/io/osd.c"
+# 1925 "./src/main/io/osd.c"
                 frontview=
-# 1767 "./src/main/io/osd.c" 3 4
+# 1925 "./src/main/io/osd.c" 3 4
                           0
-# 1767 "./src/main/io/osd.c"
+# 1925 "./src/main/io/osd.c"
                                ;
             osdSimpleRadar(&drawn, &scale,frontview);
 
-            squareRadarDraw();
+
 
 
 
             return 
-# 1774 "./src/main/io/osd.c" 3 4
+# 1932 "./src/main/io/osd.c" 3 4
                   1
-# 1774 "./src/main/io/osd.c"
+# 1932 "./src/main/io/osd.c"
                       ;
         }
 
@@ -29486,9 +29506,9 @@ static
 
             displayWrite(osdDisplayPort, elemPosX, elemPosY, p);
             return 
-# 1906 "./src/main/io/osd.c" 3 4
+# 2064 "./src/main/io/osd.c" 3 4
                   1
-# 1906 "./src/main/io/osd.c"
+# 2064 "./src/main/io/osd.c"
                       ;
         }
 
@@ -29507,13 +29527,13 @@ static
     case OSD_THROTTLE_POS:
     {
         osdFormatThrottlePosition(buff, 
-# 1923 "./src/main/io/osd.c" 3 4
+# 2081 "./src/main/io/osd.c" 3 4
                                        0
-# 1923 "./src/main/io/osd.c"
+# 2081 "./src/main/io/osd.c"
                                             , 
-# 1923 "./src/main/io/osd.c" 3 4
+# 2081 "./src/main/io/osd.c" 3 4
                                               ((void *)0)
-# 1923 "./src/main/io/osd.c"
+# 2081 "./src/main/io/osd.c"
                                                   );
         break;
     }
@@ -29548,9 +29568,9 @@ static
 
     case OSD_CROSSHAIRS:
         osdCrosshairsBounds(&elemPosX, &elemPosY, 
-# 1956 "./src/main/io/osd.c" 3 4
+# 2114 "./src/main/io/osd.c" 3 4
                                                  ((void *)0)
-# 1956 "./src/main/io/osd.c"
+# 2114 "./src/main/io/osd.c"
                                                      );
         switch ((osd_crosshairs_style_e)osdConfig()->crosshairs_style) {
             case OSD_CROSSHAIRS_STYLE_DEFAULT:
@@ -29635,9 +29655,9 @@ static
                     uint16_t c;
 
                     if ((dy >= -9 / 2) && (dy <= 9 / 2) && displayReadCharWithAttr(osdDisplayPort, chX, chY, &c, 
-# 2039 "./src/main/io/osd.c" 3 4
+# 2197 "./src/main/io/osd.c" 3 4
                                                                                                                                 ((void *)0)
-# 2039 "./src/main/io/osd.c"
+# 2197 "./src/main/io/osd.c"
                                                                                                                                     ) && (c == 0x20)) {
                         c = 0x80 + ((9 - 1) - (uint8_t)((fy - dy) * 9));
                         displayWriteChar(osdDisplayPort, elemPosX + dx, elemPosY - dy, c);
@@ -29656,9 +29676,9 @@ static
                     uint16_t c;
 
                     if ((dx >= -11 / 2) && (dx <= 11 / 2) && displayReadCharWithAttr(osdDisplayPort, chX, chY, &c, 
-# 2056 "./src/main/io/osd.c" 3 4
+# 2214 "./src/main/io/osd.c" 3 4
                                                                                                                               ((void *)0)
-# 2056 "./src/main/io/osd.c"
+# 2214 "./src/main/io/osd.c"
                                                                                                                                   ) && (c == 0x20)) {
                         c = 0xE0 + (fx - dx) * 6;
                         displayWriteChar(osdDisplayPort, chX, chY, c);
@@ -29672,9 +29692,9 @@ static
             osdDrawSingleElement(OSD_CROSSHAIRS);
 
             return 
-# 2068 "./src/main/io/osd.c" 3 4
+# 2226 "./src/main/io/osd.c" 3 4
                   1
-# 2068 "./src/main/io/osd.c"
+# 2226 "./src/main/io/osd.c"
                       ;
         }
 
@@ -29723,9 +29743,9 @@ static
             displayWriteChar(osdDisplayPort, elemPosX + hudwidth - 1, elemPosY, 0x02);
 
             return 
-# 2115 "./src/main/io/osd.c" 3 4
+# 2273 "./src/main/io/osd.c" 3 4
                   1
-# 2115 "./src/main/io/osd.c"
+# 2273 "./src/main/io/osd.c"
                       ;
         }
 
@@ -29766,9 +29786,9 @@ static
             displayWriteChar(osdDisplayPort, elemPosX, elemPosY+3, vchars[3]);
             displayWriteChar(osdDisplayPort, elemPosX, elemPosY+4, vchars[4]);
             return 
-# 2154 "./src/main/io/osd.c" 3 4
+# 2312 "./src/main/io/osd.c" 3 4
                   1
-# 2154 "./src/main/io/osd.c"
+# 2312 "./src/main/io/osd.c"
                       ;
         }
 
@@ -29800,115 +29820,115 @@ static
     case OSD_ROLL_PIDS:
         osdDisplayPIDValues(elemPosX, elemPosY, "ROL", &pidBank()->pid[PID_ROLL], ADJUSTMENT_ROLL_P, ADJUSTMENT_ROLL_I, ADJUSTMENT_ROLL_D);
         return 
-# 2184 "./src/main/io/osd.c" 3 4
+# 2342 "./src/main/io/osd.c" 3 4
               1
-# 2184 "./src/main/io/osd.c"
+# 2342 "./src/main/io/osd.c"
                   ;
 
     case OSD_PITCH_PIDS:
         osdDisplayPIDValues(elemPosX, elemPosY, "PIT", &pidBank()->pid[PID_PITCH], ADJUSTMENT_PITCH_P, ADJUSTMENT_PITCH_I, ADJUSTMENT_PITCH_D);
         return 
-# 2188 "./src/main/io/osd.c" 3 4
+# 2346 "./src/main/io/osd.c" 3 4
               1
-# 2188 "./src/main/io/osd.c"
+# 2346 "./src/main/io/osd.c"
                   ;
 
     case OSD_YAW_PIDS:
         osdDisplayPIDValues(elemPosX, elemPosY, "YAW", &pidBank()->pid[PID_YAW], ADJUSTMENT_YAW_P, ADJUSTMENT_YAW_I, ADJUSTMENT_YAW_D);
         return 
-# 2192 "./src/main/io/osd.c" 3 4
+# 2350 "./src/main/io/osd.c" 3 4
               1
-# 2192 "./src/main/io/osd.c"
+# 2350 "./src/main/io/osd.c"
                   ;
 
     case OSD_LEVEL_PIDS:
         osdDisplayPIDValues(elemPosX, elemPosY, "LEV", &pidBank()->pid[PID_LEVEL], ADJUSTMENT_LEVEL_P, ADJUSTMENT_LEVEL_I, ADJUSTMENT_LEVEL_D);
         return 
-# 2196 "./src/main/io/osd.c" 3 4
+# 2354 "./src/main/io/osd.c" 3 4
               1
-# 2196 "./src/main/io/osd.c"
+# 2354 "./src/main/io/osd.c"
                   ;
 
     case OSD_POS_XY_PIDS:
         osdDisplayPIDValues(elemPosX, elemPosY, "PXY", &pidBank()->pid[PID_POS_XY], ADJUSTMENT_POS_XY_P, ADJUSTMENT_POS_XY_I, ADJUSTMENT_POS_XY_D);
         return 
-# 2200 "./src/main/io/osd.c" 3 4
+# 2358 "./src/main/io/osd.c" 3 4
               1
-# 2200 "./src/main/io/osd.c"
+# 2358 "./src/main/io/osd.c"
                   ;
 
     case OSD_POS_Z_PIDS:
         osdDisplayPIDValues(elemPosX, elemPosY, "PZ", &pidBank()->pid[PID_POS_Z], ADJUSTMENT_POS_Z_P, ADJUSTMENT_POS_Z_I, ADJUSTMENT_POS_Z_D);
         return 
-# 2204 "./src/main/io/osd.c" 3 4
+# 2362 "./src/main/io/osd.c" 3 4
               1
-# 2204 "./src/main/io/osd.c"
+# 2362 "./src/main/io/osd.c"
                   ;
 
     case OSD_VEL_XY_PIDS:
         if ((stateFlags & (FIXED_WING)))
             osdDisplayPIDValues(elemPosX, elemPosY, "VXY", &pidBank()->pid[PID_VEL_XY], ADJUSTMENT_VEL_XY_P, ADJUSTMENT_VEL_XY_I, ADJUSTMENT_VEL_XY_D);
         return 
-# 2209 "./src/main/io/osd.c" 3 4
+# 2367 "./src/main/io/osd.c" 3 4
               1
-# 2209 "./src/main/io/osd.c"
+# 2367 "./src/main/io/osd.c"
                   ;
 
     case OSD_VEL_Z_PIDS:
         if ((stateFlags & (FIXED_WING)))
             osdDisplayPIDValues(elemPosX, elemPosY, "VZ", &pidBank()->pid[PID_VEL_Z], ADJUSTMENT_VEL_Z_P, ADJUSTMENT_VEL_Z_I, ADJUSTMENT_VEL_Z_D);
         return 
-# 2214 "./src/main/io/osd.c" 3 4
+# 2372 "./src/main/io/osd.c" 3 4
               1
-# 2214 "./src/main/io/osd.c"
+# 2372 "./src/main/io/osd.c"
                   ;
 
     case OSD_HEADING_P:
         osdDisplayAdjustableDecimalValue(elemPosX, elemPosY, "HP", 0, pidBank()->pid[PID_HEADING].P, 3, 0, ADJUSTMENT_HEADING_P);
         return 
-# 2218 "./src/main/io/osd.c" 3 4
+# 2376 "./src/main/io/osd.c" 3 4
               1
-# 2218 "./src/main/io/osd.c"
+# 2376 "./src/main/io/osd.c"
                   ;
 
     case OSD_BOARD_ALIGN_ROLL:
         osdDisplayAdjustableDecimalValue(elemPosX, elemPosY, "AR", 0, (((float)boardAlignment()->rollDeciDegrees) / 10), 4, 1, ADJUSTMENT_ROLL_BOARD_ALIGNMENT);
         return 
-# 2222 "./src/main/io/osd.c" 3 4
+# 2380 "./src/main/io/osd.c" 3 4
               1
-# 2222 "./src/main/io/osd.c"
+# 2380 "./src/main/io/osd.c"
                   ;
 
     case OSD_BOARD_ALIGN_PITCH:
         osdDisplayAdjustableDecimalValue(elemPosX, elemPosY, "AP", 0, (((float)boardAlignment()->pitchDeciDegrees) / 10), 4, 1, ADJUSTMENT_PITCH_BOARD_ALIGNMENT);
         return 
-# 2226 "./src/main/io/osd.c" 3 4
+# 2384 "./src/main/io/osd.c" 3 4
               1
-# 2226 "./src/main/io/osd.c"
+# 2384 "./src/main/io/osd.c"
                   ;
 
     case OSD_RC_EXPO:
         osdDisplayAdjustableDecimalValue(elemPosX, elemPosY, "EXP", 0, currentControlRateProfile->stabilized.rcExpo8, 3, 0, ADJUSTMENT_RC_EXPO);
         return 
-# 2230 "./src/main/io/osd.c" 3 4
+# 2388 "./src/main/io/osd.c" 3 4
               1
-# 2230 "./src/main/io/osd.c"
+# 2388 "./src/main/io/osd.c"
                   ;
 
     case OSD_RC_YAW_EXPO:
         osdDisplayAdjustableDecimalValue(elemPosX, elemPosY, "YEX", 0, currentControlRateProfile->stabilized.rcYawExpo8, 3, 0, ADJUSTMENT_RC_YAW_EXPO);
         return 
-# 2234 "./src/main/io/osd.c" 3 4
+# 2392 "./src/main/io/osd.c" 3 4
               1
-# 2234 "./src/main/io/osd.c"
+# 2392 "./src/main/io/osd.c"
                   ;
 
     case OSD_THROTTLE_EXPO:
         osdDisplayAdjustableDecimalValue(elemPosX, elemPosY, "TEX", 0, currentControlRateProfile->throttle.rcExpo8, 3, 0, ADJUSTMENT_THROTTLE_EXPO);
         return 
-# 2238 "./src/main/io/osd.c" 3 4
+# 2396 "./src/main/io/osd.c" 3 4
               1
-# 2238 "./src/main/io/osd.c"
+# 2396 "./src/main/io/osd.c"
                   ;
 
     case OSD_PITCH_RATE:
@@ -29920,9 +29940,9 @@ static
             ((elemAttr) |= (1 << 0));
         displayWriteWithAttr(osdDisplayPort, elemPosX + 4, elemPosY, buff, elemAttr);
         return 
-# 2248 "./src/main/io/osd.c" 3 4
+# 2406 "./src/main/io/osd.c" 3 4
               1
-# 2248 "./src/main/io/osd.c"
+# 2406 "./src/main/io/osd.c"
                   ;
 
     case OSD_ROLL_RATE:
@@ -29934,33 +29954,33 @@ static
             ((elemAttr) |= (1 << 0));
         displayWriteWithAttr(osdDisplayPort, elemPosX + 4, elemPosY, buff, elemAttr);
         return 
-# 2258 "./src/main/io/osd.c" 3 4
+# 2416 "./src/main/io/osd.c" 3 4
               1
-# 2258 "./src/main/io/osd.c"
+# 2416 "./src/main/io/osd.c"
                   ;
 
     case OSD_YAW_RATE:
         osdDisplayAdjustableDecimalValue(elemPosX, elemPosY, "SYR", 0, currentControlRateProfile->stabilized.rates[FD_YAW], 3, 0, ADJUSTMENT_YAW_RATE);
         return 
-# 2262 "./src/main/io/osd.c" 3 4
+# 2420 "./src/main/io/osd.c" 3 4
               1
-# 2262 "./src/main/io/osd.c"
+# 2420 "./src/main/io/osd.c"
                   ;
 
     case OSD_MANUAL_RC_EXPO:
         osdDisplayAdjustableDecimalValue(elemPosX, elemPosY, "MEX", 0, currentControlRateProfile->manual.rcExpo8, 3, 0, ADJUSTMENT_MANUAL_RC_EXPO);
         return 
-# 2266 "./src/main/io/osd.c" 3 4
+# 2424 "./src/main/io/osd.c" 3 4
               1
-# 2266 "./src/main/io/osd.c"
+# 2424 "./src/main/io/osd.c"
                   ;
 
     case OSD_MANUAL_RC_YAW_EXPO:
         osdDisplayAdjustableDecimalValue(elemPosX, elemPosY, "MYX", 0, currentControlRateProfile->manual.rcYawExpo8, 3, 0, ADJUSTMENT_MANUAL_RC_YAW_EXPO);
         return 
-# 2270 "./src/main/io/osd.c" 3 4
+# 2428 "./src/main/io/osd.c" 3 4
               1
-# 2270 "./src/main/io/osd.c"
+# 2428 "./src/main/io/osd.c"
                   ;
 
     case OSD_MANUAL_PITCH_RATE:
@@ -29972,9 +29992,9 @@ static
             ((elemAttr) |= (1 << 0));
         displayWriteWithAttr(osdDisplayPort, elemPosX + 4, elemPosY, buff, elemAttr);
         return 
-# 2280 "./src/main/io/osd.c" 3 4
+# 2438 "./src/main/io/osd.c" 3 4
               1
-# 2280 "./src/main/io/osd.c"
+# 2438 "./src/main/io/osd.c"
                   ;
 
     case OSD_MANUAL_ROLL_RATE:
@@ -29986,50 +30006,50 @@ static
             ((elemAttr) |= (1 << 0));
         displayWriteWithAttr(osdDisplayPort, elemPosX + 4, elemPosY, buff, elemAttr);
         return 
-# 2290 "./src/main/io/osd.c" 3 4
+# 2448 "./src/main/io/osd.c" 3 4
               1
-# 2290 "./src/main/io/osd.c"
+# 2448 "./src/main/io/osd.c"
                   ;
 
     case OSD_MANUAL_YAW_RATE:
         osdDisplayAdjustableDecimalValue(elemPosX, elemPosY, "MYR", 0, currentControlRateProfile->stabilized.rates[FD_YAW], 3, 0, ADJUSTMENT_YAW_RATE);
         return 
-# 2294 "./src/main/io/osd.c" 3 4
+# 2452 "./src/main/io/osd.c" 3 4
               1
-# 2294 "./src/main/io/osd.c"
+# 2452 "./src/main/io/osd.c"
                   ;
 
     case OSD_NAV_FW_CRUISE_THR:
         osdDisplayAdjustableDecimalValue(elemPosX, elemPosY, "CRS", 0, navConfig()->fw.cruise_throttle, 4, 0, ADJUSTMENT_NAV_FW_CRUISE_THR);
         return 
-# 2298 "./src/main/io/osd.c" 3 4
+# 2456 "./src/main/io/osd.c" 3 4
               1
-# 2298 "./src/main/io/osd.c"
+# 2456 "./src/main/io/osd.c"
                   ;
 
     case OSD_NAV_FW_PITCH2THR:
         osdDisplayAdjustableDecimalValue(elemPosX, elemPosY, "P2T", 0, navConfig()->fw.pitch_to_throttle, 3, 0, ADJUSTMENT_NAV_FW_PITCH2THR);
         return 
-# 2302 "./src/main/io/osd.c" 3 4
+# 2460 "./src/main/io/osd.c" 3 4
               1
-# 2302 "./src/main/io/osd.c"
+# 2460 "./src/main/io/osd.c"
                   ;
 
     case OSD_FW_MIN_THROTTLE_DOWN_PITCH_ANGLE:
         osdDisplayAdjustableDecimalValue(elemPosX, elemPosY, "0TP", 0, (float)mixerConfig()->fwMinThrottleDownPitchAngle / 10, 3, 1, ADJUSTMENT_FW_MIN_THROTTLE_DOWN_PITCH_ANGLE);
         return 
-# 2306 "./src/main/io/osd.c" 3 4
+# 2464 "./src/main/io/osd.c" 3 4
               1
-# 2306 "./src/main/io/osd.c"
+# 2464 "./src/main/io/osd.c"
                   ;
 
     case OSD_FW_ALT_PID_OUTPUTS:
         {
             const navigationPIDControllers_t *nav_pids = getNavigationPIDControllers();
             osdFormatPidControllerOutput(buff, "PZO", &nav_pids->fw_alt, 10, 
-# 2311 "./src/main/io/osd.c" 3 4
+# 2469 "./src/main/io/osd.c" 3 4
                                                                             1
-# 2311 "./src/main/io/osd.c"
+# 2469 "./src/main/io/osd.c"
                                                                                 );
             break;
         }
@@ -30038,9 +30058,9 @@ static
         {
             const navigationPIDControllers_t *nav_pids = getNavigationPIDControllers();
             osdFormatPidControllerOutput(buff, "PXYO", &nav_pids->fw_nav, 1, 
-# 2318 "./src/main/io/osd.c" 3 4
+# 2476 "./src/main/io/osd.c" 3 4
                                                                             1
-# 2318 "./src/main/io/osd.c"
+# 2476 "./src/main/io/osd.c"
                                                                                 );
             break;
         }
@@ -30049,9 +30069,9 @@ static
         {
             const navigationPIDControllers_t *nav_pids = getNavigationPIDControllers();
             osdFormatPidControllerOutput(buff, "VZO", &nav_pids->vel[Z], 100, 
-# 2325 "./src/main/io/osd.c" 3 4
+# 2483 "./src/main/io/osd.c" 3 4
                                                                              0
-# 2325 "./src/main/io/osd.c"
+# 2483 "./src/main/io/osd.c"
                                                                                   );
             break;
         }
@@ -30060,9 +30080,9 @@ static
         {
             const navigationPIDControllers_t *nav_pids = getNavigationPIDControllers();
             osdFormatPidControllerOutput(buff, "VXO", &nav_pids->vel[X], 100, 
-# 2332 "./src/main/io/osd.c" 3 4
+# 2490 "./src/main/io/osd.c" 3 4
                                                                              0
-# 2332 "./src/main/io/osd.c"
+# 2490 "./src/main/io/osd.c"
                                                                                   );
             break;
         }
@@ -30071,9 +30091,9 @@ static
         {
             const navigationPIDControllers_t *nav_pids = getNavigationPIDControllers();
             osdFormatPidControllerOutput(buff, "VYO", &nav_pids->vel[Y], 100, 
-# 2339 "./src/main/io/osd.c" 3 4
+# 2497 "./src/main/io/osd.c" 3 4
                                                                              0
-# 2339 "./src/main/io/osd.c"
+# 2497 "./src/main/io/osd.c"
                                                                                   );
             break;
         }
@@ -30104,9 +30124,9 @@ static
 
             buff[0] = 0x97;
             osdFormatVelocityStr(buff + 1, pitot.airSpeed, 
-# 2368 "./src/main/io/osd.c" 3 4
+# 2526 "./src/main/io/osd.c" 3 4
                                                           0
-# 2368 "./src/main/io/osd.c"
+# 2526 "./src/main/io/osd.c"
                                                                );
 
 
@@ -30127,9 +30147,9 @@ static
     case OSD_MESSAGES:
         {
             const char *message = 
-# 2387 "./src/main/io/osd.c" 3 4
+# 2545 "./src/main/io/osd.c" 3 4
                                  ((void *)0)
-# 2387 "./src/main/io/osd.c"
+# 2545 "./src/main/io/osd.c"
                                      ;
             char messageBuf[( __extension__ ({ __typeof__(37) _left21 = (37); __typeof__(28 +1) _right22 = (28 +1); _left21 > _right22 ? _left21 : _right22; }))];
             if ((armingFlags & (ARMED))) {
@@ -30230,9 +30250,9 @@ static
         {
             osdDisplayBatteryVoltage(elemPosX, elemPosY, getBatteryRawAverageCellVoltage(), 3, 2);
             return 
-# 2486 "./src/main/io/osd.c" 3 4
+# 2644 "./src/main/io/osd.c" 3 4
                   1
-# 2486 "./src/main/io/osd.c"
+# 2644 "./src/main/io/osd.c"
                       ;
         }
 
@@ -30240,18 +30260,18 @@ static
         {
             osdDisplayBatteryVoltage(elemPosX, elemPosY, getBatterySagCompensatedAverageCellVoltage(), 3, 2);
             return 
-# 2492 "./src/main/io/osd.c" 3 4
+# 2650 "./src/main/io/osd.c" 3 4
                   1
-# 2492 "./src/main/io/osd.c"
+# 2650 "./src/main/io/osd.c"
                       ;
         }
 
     case OSD_THROTTLE_POS_AUTO_THR:
         {
             osdFormatThrottlePosition(buff, 
-# 2497 "./src/main/io/osd.c" 3 4
+# 2655 "./src/main/io/osd.c" 3 4
                                            1
-# 2497 "./src/main/io/osd.c"
+# 2655 "./src/main/io/osd.c"
                                                , &elemAttr);
             break;
         }
@@ -30387,9 +30407,9 @@ static
 
         {
             
-# 2631 "./src/main/io/osd.c" 3 4
+# 2789 "./src/main/io/osd.c" 3 4
            _Bool 
-# 2631 "./src/main/io/osd.c"
+# 2789 "./src/main/io/osd.c"
                 valid = isEstimatedWindSpeedValid();
             float horizontalWindSpeed;
             if (valid) {
@@ -30415,9 +30435,9 @@ static
             buff[0] = 0x17;
             buff[1] = 0x20;
             
-# 2655 "./src/main/io/osd.c" 3 4
+# 2813 "./src/main/io/osd.c" 3 4
            _Bool 
-# 2655 "./src/main/io/osd.c"
+# 2813 "./src/main/io/osd.c"
                 valid = isEstimatedWindSpeedValid();
             float verticalWindSpeed;
             if (valid) {
@@ -30456,17 +30476,17 @@ static
 
     default:
         return 
-# 2692 "./src/main/io/osd.c" 3 4
+# 2850 "./src/main/io/osd.c" 3 4
               0
-# 2692 "./src/main/io/osd.c"
+# 2850 "./src/main/io/osd.c"
                    ;
     }
 
     displayWriteWithAttr(osdDisplayPort, elemPosX, elemPosY, buff, elemAttr);
     return 
-# 2696 "./src/main/io/osd.c" 3 4
+# 2854 "./src/main/io/osd.c" 3 4
           1
-# 2696 "./src/main/io/osd.c"
+# 2854 "./src/main/io/osd.c"
               ;
 }
 
@@ -30674,16 +30694,16 @@ void pgResetFn_osdConfig(osdConfig_t *osdConfig)
     osdConfig->main_voltage_decimals = 1;
 
     osdConfig->estimations_wind_compensation = 
-# 2902 "./src/main/io/osd.c" 3 4
+# 3060 "./src/main/io/osd.c" 3 4
                                               1
-# 2902 "./src/main/io/osd.c"
+# 3060 "./src/main/io/osd.c"
                                                   ;
     osdConfig->coordinate_digits = 9;
 
     osdConfig->osd_failsafe_switch_layout = 
-# 2905 "./src/main/io/osd.c" 3 4
+# 3063 "./src/main/io/osd.c" 3 4
                                            0
-# 2905 "./src/main/io/osd.c"
+# 3063 "./src/main/io/osd.c"
                                                 ;
 
     osdConfig->plus_code_digits = 11;
@@ -30692,9 +30712,9 @@ void pgResetFn_osdConfig(osdConfig_t *osdConfig)
 static void osdSetNextRefreshIn(uint32_t timeMs) {
     resumeRefreshAt = micros() + timeMs * 1000;
     refreshWaitForResumeCmdRelease = 
-# 2912 "./src/main/io/osd.c" 3 4
+# 3070 "./src/main/io/osd.c" 3 4
                                     1
-# 2912 "./src/main/io/osd.c"
+# 3070 "./src/main/io/osd.c"
                                         ;
 }
 
@@ -30718,16 +30738,16 @@ void osdInit(displayPort_t *osdDisplayPortToUse)
     uint8_t y = 1;
     displayFontMetadata_t metadata;
     
-# 2934 "./src/main/io/osd.c" 3 4
+# 3092 "./src/main/io/osd.c" 3 4
    _Bool 
-# 2934 "./src/main/io/osd.c"
+# 3092 "./src/main/io/osd.c"
         fontHasMetadata = displayGetFontMetadata(&metadata, osdDisplayPort);
 
     if (fontHasMetadata && metadata.charCount > 256) {
         hasExtendedFont = 
-# 2937 "./src/main/io/osd.c" 3 4
+# 3095 "./src/main/io/osd.c" 3 4
                          1
-# 2937 "./src/main/io/osd.c"
+# 3095 "./src/main/io/osd.c"
                              ;
         unsigned logo_c = 0x101;
         unsigned logo_x = ((osdDisplayPort->cols - 6) / 2);
@@ -30859,9 +30879,9 @@ static void osdShowStats(void)
     if ((stateFlags & (GPS_FIX))) {
         displayWrite(osdDisplayPort, statNameX, top, "MAX SPEED        :");
         osdFormatVelocityStr(buff, stats.max_speed, 
-# 3067 "./src/main/io/osd.c" 3 4
+# 3225 "./src/main/io/osd.c" 3 4
                                                    1
-# 3067 "./src/main/io/osd.c"
+# 3225 "./src/main/io/osd.c"
                                                        );
         displayWrite(osdDisplayPort, statValuesX, top++, buff);
 
@@ -31014,9 +31034,9 @@ static void osdRefresh(timeUs_t currentTimeUs)
 
         if (!(checkStickPosition(THR_HI) || checkStickPosition(PIT_HI)))
             refreshWaitForResumeCmdRelease = 
-# 3218 "./src/main/io/osd.c" 3 4
+# 3376 "./src/main/io/osd.c" 3 4
                                             0
-# 3218 "./src/main/io/osd.c"
+# 3376 "./src/main/io/osd.c"
                                                  ;
 
         if ((currentTimeUs > resumeRefreshAt) || ((!refreshWaitForResumeCmdRelease) && (checkStickPosition(THR_HI) || checkStickPosition(PIT_HI)))) {
@@ -31033,9 +31053,9 @@ static void osdRefresh(timeUs_t currentTimeUs)
         if (fullRedraw) {
             displayClearScreen(osdDisplayPort);
             fullRedraw = 
-# 3233 "./src/main/io/osd.c" 3 4
+# 3391 "./src/main/io/osd.c" 3 4
                         0
-# 3233 "./src/main/io/osd.c"
+# 3391 "./src/main/io/osd.c"
                              ;
         }
         osdDrawNextElement();
@@ -31125,9 +31145,9 @@ void osdUpdate(timeUs_t currentTimeUs)
 void osdStartFullRedraw(void)
 {
     fullRedraw = 
-# 3321 "./src/main/io/osd.c" 3 4
+# 3479 "./src/main/io/osd.c" 3 4
                 1
-# 3321 "./src/main/io/osd.c"
+# 3479 "./src/main/io/osd.c"
                     ;
 }
 
@@ -31142,9 +31162,9 @@ void osdOverrideLayout(int layout, timeMs_t duration)
 }
 
 int osdGetActiveLayout(
-# 3334 "./src/main/io/osd.c" 3 4
+# 3492 "./src/main/io/osd.c" 3 4
                       _Bool 
-# 3334 "./src/main/io/osd.c"
+# 3492 "./src/main/io/osd.c"
                            *overridden)
 {
     if (overridden) {
@@ -31154,9 +31174,9 @@ int osdGetActiveLayout(
 }
 
 
-# 3342 "./src/main/io/osd.c" 3 4
+# 3500 "./src/main/io/osd.c" 3 4
 _Bool 
-# 3342 "./src/main/io/osd.c"
+# 3500 "./src/main/io/osd.c"
     osdItemIsFixed(osd_items_e item)
 {
     return item == OSD_CROSSHAIRS ||
