@@ -1125,28 +1125,36 @@ static void osdDrawAdditionnalRadar(wp_planes_t nearPlane,int16_t poiDirection){
     uint8_t midY = osdDisplayPort->rows / 2;
 	char buf[16];
 	int scaleUnitDivisor = 1000;
-	int maxDecimals = 0;
 	uint8_t poiSymbolPlaneSight=SYM_ARROW_UP;
+    uint32_t initialScale;
+    float scaleToUnit;
+    char symUnscaled;
+    char symScaled;
+    int maxDecimals;
+    const unsigned scaleMultiplier = 2;
 
-	//Get Relative Altitude
-	int32_t myAlt = osdGetAltitude();
-	int relativAlt=myAlt-(nearPlane.planeWP.alt);
+ switch (osdConfig()->units) {
+        case OSD_UNIT_IMPERIAL:
+            initialScale = 16; // 16m ~= 0.01miles
+            scaleToUnit = 100 / 1609.3440f; // scale to 0.01mi for osdFormatCentiNumber()
+            scaleUnitDivisor = 0;
+            symUnscaled = SYM_MI;
+            symScaled = SYM_MI;
+            maxDecimals = 2;
+            break;
+        case OSD_UNIT_UK:
+            FALLTHROUGH;
+        case OSD_UNIT_METRIC:
+            initialScale = 10; // 10m as initial scale
+            scaleToUnit = 100; // scale to cm for osdFormatCentiNumber()
+            scaleUnitDivisor = 1000; // Convert to km when scale gets bigger than 999m
+            symUnscaled = SYM_M;
+            symScaled = SYM_KM;
+            maxDecimals = 0;
+            break;
+    }
 
-	//DRAW altitude of nearest plane EXPERIMENTAL
-	 if(relativAlt>0){
-		 buf[0]=SYM_LESS;
-		 buf[1] = '\0';
-	 }else{
-		 buf[0]=SYM_PLUS;
-		 buf[1] = '\0';
-	 }
-	 displayWrite(osdDisplayPort, minX, maxY-1, buf);
 
-     memset(buf, 0, sizeof(buf));
-	 osdFormatCentiNumber(buf, abs(relativAlt), scaleUnitDivisor, maxDecimals, 2, 3);
-	 buf[3]= SYM_ALT_M;
-	 buf[4] = '\0';
-	 displayWrite(osdDisplayPort, minX + 1, maxY-1, buf);
 
 	 //DRAW SPEED PLANE NEAREST PLANE
      memset(buf, 0, sizeof(buf));
@@ -1328,7 +1336,7 @@ int32_t myAlt = 0;
             myDrawn[plane_id]=OSD_POS(poiX, poiY) | OSD_VISIBLE_FLAG;
            // *drawn = OSD_POS(poiX, poiY) | OSD_VISIBLE_FLAG;
 */
-int ii;
+        int ii;
        for (ii = 0; ii < 50; ii++) {
            // Calculate location of the aircraft in map
            int points = poiDistance / ((float)scale / charHeight);
@@ -1456,7 +1464,44 @@ int ii;
 //      }
        //CHANGE SYMBOL IF HIGHER OR LOWER
         myAlt = CENTIMETERS_TO_METERS(osdGetAltitude());
-       int currentPlaneAlt=CENTIMETERS_TO_METERS(currentPlane.planeWP.alt);
+       int32_t currentPlaneAlt=CENTIMETERS_TO_METERS(currentPlane.planeWP.alt);
+       int32_t relativAlt=myAlt-currentPlaneAlt;
+
+
+    memset(buf, 0, sizeof(buf));
+    tfp_sprintf(buf, "%d", myAlt);
+    displayWrite(osdDisplayPort, minX+22, maxY-1, buf);
+
+    memset(buf, 0, sizeof(buf));
+    tfp_sprintf(buf, "%d", currentPlaneAlt);
+    displayWrite(osdDisplayPort, minX+22, maxY-1, buf);
+
+
+    memset(buf, 0, sizeof(buf));
+    tfp_sprintf(buf, "%d", relativAlt);
+    displayWrite(osdDisplayPort, minX+22, maxY-1, buf);
+
+
+    memset(buf, 0, sizeof(buf));
+	//DRAW altitude of nearest plane EXPERIMENTAL
+	 if(relativAlt>0){
+		 buf[0]=SYM_LESS;
+		 buf[1] = '\0';
+	 }else{
+		 buf[0]=SYM_PLUS;
+		 buf[1] = '\0';
+	 }
+
+	 displayWrite(osdDisplayPort, minX-4, maxY-1, buf);
+
+     memset(buf, 0, sizeof(buf));
+	 osdFormatCentiNumber(buf, abs(relativAlt), scaleUnitDivisor, maxDecimals, 2, 3);
+	 buf[3]= SYM_ALT_M;
+	 buf[4] = '\0';
+	 displayWrite(osdDisplayPort, minX -3, maxY-1, buf);
+
+
+
 
                     if (currentPlaneAlt>myAlt){
                         if(currentPlaneAlt-myAlt>10)
@@ -1491,7 +1536,7 @@ int ii;
     bool scaled = osdFormatCentiNumber(buf, scale * scaleToUnit, scaleUnitDivisor, maxDecimals, 2, 3);
     buf[3] = scaled ? symScaled : symUnscaled;
     buf[4] = '\0';
-    displayWrite(osdDisplayPort, minX, maxY-2, buf);
+    displayWrite(osdDisplayPort, maxX, maxY+2, buf);
 
     *usedScale = scale;
 }
