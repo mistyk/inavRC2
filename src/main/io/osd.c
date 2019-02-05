@@ -1177,7 +1177,7 @@ static void osdDrawAdditionnalRadar(wp_planes_t nearPlane,int16_t poiDirection){
     int homeArrowDir = osdGetHeadingAngle(homeDirection + 11);
     unsigned arrowOffset = homeArrowDir * 2 / 45;
     buf[0] = SYM_ARROW_UP + arrowOffset;
-    displayWrite(osdDisplayPort,minX,maxY-2, buf);
+    displayWrite(osdDisplayPort,midX,midY, buf);
 
     // distance to nearest plane
     memset(buf, 0, sizeof(buf));
@@ -1191,36 +1191,36 @@ static void osdDrawAdditionnalRadar(wp_planes_t nearPlane,int16_t poiDirection){
     int32_t relativAlt=myAlt-currentPlaneAlt;
 
 
-     memset(buf, 0, sizeof(buf));
-     tfp_sprintf(buf, "%d", myAlt);
-     displayWrite(osdDisplayPort, minX+22, maxY-1, buf);
+    //  memset(buf, 0, sizeof(buf));
+    //  tfp_sprintf(buf, "%d", myAlt);
+    //  displayWrite(osdDisplayPort, minX+22, maxY-1, buf);
 
-     memset(buf, 0, sizeof(buf));
-     tfp_sprintf(buf, "%d", currentPlaneAlt);
-     displayWrite(osdDisplayPort, minX+22, maxY-2, buf);
+    //  memset(buf, 0, sizeof(buf));
+    //  tfp_sprintf(buf, "%d", currentPlaneAlt);
+    //  displayWrite(osdDisplayPort, minX+22, maxY-2, buf);
 
-     memset(buf, 0, sizeof(buf));
-     tfp_sprintf(buf, "%d", relativAlt);
-     displayWrite(osdDisplayPort, minX+22, maxY-3, buf);
+    //  memset(buf, 0, sizeof(buf));
+    //  tfp_sprintf(buf, "%d", relativAlt);
+    //  displayWrite(osdDisplayPort, minX+22, maxY-3, buf);
 
-/*
+
      memset(buf, 0, sizeof(buf));
  	//DRAW altitude of nearest plane EXPERIMENTAL
  	 if(relativAlt>0){
- 		 buf[0]=SYM_LESS;
+ 		 buf[0]=SYM_PLANE_VERY_LOW;
  		 buf[1] = '\0';
  	 }else{
- 		 buf[0]=SYM_PLUS;
+ 		 buf[0]=SYM_PLANE_VERY_HIGH;
  		 buf[1] = '\0';
  	 }
-*/
+
  	 displayWrite(osdDisplayPort, minX+1, maxY-1, buf);
 
    memset(buf, 0, sizeof(buf));
  	 //osdFormatCentiNumber(buf, abs(relativAlt), scaleUnitDivisor, maxDecimals, 2, 3);
    tfp_sprintf(buf, "%d%c", abs(relativAlt), SYM_M);
   //osdFormatAltitudeSymbol(buf, abs(relativAlt));
- 	 displayWrite(osdDisplayPort, minX+4 , maxY-1, buf);
+ 	 displayWrite(osdDisplayPort, minX+2 , maxY-1, buf);
 
 
 }

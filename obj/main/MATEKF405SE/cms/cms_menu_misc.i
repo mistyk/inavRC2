@@ -468,7 +468,7 @@
 #define MATEKF405SE 1
 #define __FORKNAME__ "inav"
 #define __TARGET__ "MATEKF405SE"
-#define __REVISION__ "cdeb4f1"
+#define __REVISION__ "24d271f"
 # 1 "./src/main/cms/cms_menu_misc.c"
 # 18 "./src/main/cms/cms_menu_misc.c"
 # 1 "/usr/lib/gcc/arm-none-eabi/7.3.1/include/stdbool.h" 1 3 4
