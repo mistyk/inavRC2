@@ -1576,7 +1576,7 @@ int32_t myAlt = 0;
                     // }
 
 
-           displayWriteChar(osdDisplayPort, poiX, poiY, SYM_AH_CH_CENTER);
+           displayWriteChar(osdDisplayPort, poiX, poiY, SYM_PLANE_SIGHT);
 
 
            // Update saved location
