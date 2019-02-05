@@ -1156,23 +1156,72 @@ static void osdDrawAdditionnalRadar(wp_planes_t nearPlane,int16_t poiDirection){
 
 
 
-	 //DRAW SPEED PLANE NEAREST PLANE
-     memset(buf, 0, sizeof(buf));
-     osdFormatVelocityStr(buf,  nearPlane.planeWP.p1,true);
-	 displayWrite(osdDisplayPort, minX + 1, maxY-2, buf);
+	  //DRAW SPEED PLANE NEAREST PLANE
+    memset(buf, 0, sizeof(buf));
+    osdFormatVelocityStr(buf,  nearPlane.planeWP.p1,true);
+	  displayWrite(osdDisplayPort, minX + 1, maxY-2, buf);
 
-     memset(buf, 0, sizeof(buf));
-     int16_t directionToPlane=nearPlane.planePoiDirection/100;
-	 // Directin of the nearest plane
+    // direction of the nearest plane
+    /*
+    memset(buf, 0, sizeof(buf));
+    int16_t directionToPlane=nearPlane.planePoiDirection/100;
     int mapHeading = osdGetHeadingAngle(DECIDEGREES_TO_DEGREES(directionToPlane) - DECIDEGREES_TO_DEGREES(osdGetHeading()));
+	  poiSymbolPlaneSight += mapHeading * 2 / 45;
+	  buf[0] = poiSymbolPlaneSight;
+	  displayWrite(osdDisplayPort, minX , maxY-2, buf);
+    */
+    // new direction in the center
+    memset(buf, 0, sizeof(buf));
+    int homeDirection = GPS_directionToHome - DECIDEGREES_TO_DEGREES(osdGetHeading());
+    // Add 11 to the angle, so first character maps to [349, 11]
+    int homeArrowDir = osdGetHeadingAngle(homeDirection + 11);
+    unsigned arrowOffset = homeArrowDir * 2 / 45;
+    buf[0] = SYM_ARROW_UP + arrowOffset;
+    displayWrite(osdDisplayPort,minX,maxY-2, buf);
 
-	 poiSymbolPlaneSight += mapHeading * 2 / 45;
-	 buf[0] = poiSymbolPlaneSight;
-	 displayWrite(osdDisplayPort, minX , maxY-2, buf);
-
+    // distance to nearest plane
     memset(buf, 0, sizeof(buf));
     osdFormatDistanceSymbol(buf, nearPlane.GPS_distanceToMe);
     displayWrite(osdDisplayPort, minX , maxY, buf);
+
+
+    //CHANGE SYMBOL IF HIGHER OR LOWER
+    int16_t myAlt = CENTIMETERS_TO_METERS(osdGetAltitude());
+    int32_t currentPlaneAlt=CENTIMETERS_TO_METERS(nearPlane.planeWP.alt);
+    int32_t relativAlt=myAlt-currentPlaneAlt;
+
+
+     memset(buf, 0, sizeof(buf));
+     tfp_sprintf(buf, "%d", myAlt);
+     displayWrite(osdDisplayPort, minX+22, maxY-1, buf);
+
+     memset(buf, 0, sizeof(buf));
+     tfp_sprintf(buf, "%d", currentPlaneAlt);
+     displayWrite(osdDisplayPort, minX+22, maxY-2, buf);
+
+     memset(buf, 0, sizeof(buf));
+     tfp_sprintf(buf, "%d", relativAlt);
+     displayWrite(osdDisplayPort, minX+22, maxY-3, buf);
+
+/*
+     memset(buf, 0, sizeof(buf));
+ 	//DRAW altitude of nearest plane EXPERIMENTAL
+ 	 if(relativAlt>0){
+ 		 buf[0]=SYM_LESS;
+ 		 buf[1] = '\0';
+ 	 }else{
+ 		 buf[0]=SYM_PLUS;
+ 		 buf[1] = '\0';
+ 	 }
+*/
+ 	 displayWrite(osdDisplayPort, minX+1, maxY-1, buf);
+
+   memset(buf, 0, sizeof(buf));
+ 	 //osdFormatCentiNumber(buf, abs(relativAlt), scaleUnitDivisor, maxDecimals, 2, 3);
+   tfp_sprintf(buf, "%d%c", abs(relativAlt), SYM_M);
+  //osdFormatAltitudeSymbol(buf, abs(relativAlt));
+ 	 displayWrite(osdDisplayPort, minX+4 , maxY-1, buf);
+
 
 }
 
@@ -1388,99 +1437,98 @@ int32_t myAlt = 0;
      wp_planes_t currentPlane=planesInfos[plane_id];
 
 
-// if (frontview){
+    // if (frontview){
 
 
-//  float pitchAngle = constrain(attitude.values.pitch,  -AH_MAX_PITCH_FV, AH_MAX_PITCH_FV); //-45° to +45° FOV Lens
-//  pitchAngle=pitchAngle/10; //centidegree to degree
+    //  float pitchAngle = constrain(attitude.values.pitch,  -AH_MAX_PITCH_FV, AH_MAX_PITCH_FV); //-45° to +45° FOV Lens
+    //  pitchAngle=pitchAngle/10; //centidegree to degree
 
-//  float myAlt = (osdGetAltitude()/100);
-//  float relativAlt=(currentPlane.planeWP.alt/100)-myAlt;
-//  float distanceFromMe=currentPlane.GPS_distanceToMe/100;
-//  float anglePoiY=0;
+    //  float myAlt = (osdGetAltitude()/100);
+    //  float relativAlt=(currentPlane.planeWP.alt/100)-myAlt;
+    //  float distanceFromMe=currentPlane.GPS_distanceToMe/100;
+    //  float anglePoiY=0;
 
-//  //Calculate Height of waypoint angle=atan(h/d)
-//  if (distanceFromMe>relativAlt){
-//    anglePoiY=atan(relativAlt/distanceFromMe); // calculate angle base on floor original is asin_approx(relativAlt/distanceFromMe)
-//  }else{
-//    anglePoiY=atan(distanceFromMe/relativAlt); // calculate angle base on floor original is asin_approx(relativAlt/distanceFromMe)
-//  }
+    //  //Calculate Height of waypoint angle=atan(h/d)
+    //  if (distanceFromMe>relativAlt){
+    //    anglePoiY=atan(relativAlt/distanceFromMe); // calculate angle base on floor original is asin_approx(relativAlt/distanceFromMe)
+    //  }else{
+    //    anglePoiY=atan(distanceFromMe/relativAlt); // calculate angle base on floor original is asin_approx(relativAlt/distanceFromMe)
+    //  }
 
-//  float anglePoiYDeg=anglePoiY*180/M_PIf; //CONVERT RAD TO DEGREES
-
-
-//  float finalpoiY=anglePoiYDeg-pitchAngle;
-//    if( finalpoiY>0){
-//        finalpoiY=map(finalpoiY,0,45,midY,maxY-1); //map deg to 0 +45°
-//    }else{
-//             finalpoiY=map(finalpoiY,-45,0,minY+1,midY); // map deg to -45 to 0°
-//    }
-//  int poiYFV=(int)finalpoiY; //Difference angle between plane and you and convert angle to ° (not centidegree)
-//   // poiYFV=constrain(poiYFV,minY+2,maxY-2);
+    //  float anglePoiYDeg=anglePoiY*180/M_PIf; //CONVERT RAD TO DEGREES
 
 
-// if (near_plane_id==plane_id){
-//     memset(buf, 0, sizeof(buf));
-//     tfp_sprintf(buf, "%f", distanceFromMe);
-//   displayWrite(osdDisplayPort, minX+6, maxY-1, buf);
+    //  float finalpoiY=anglePoiYDeg-pitchAngle;
+    //    if( finalpoiY>0){
+    //        finalpoiY=map(finalpoiY,0,45,midY,maxY-1); //map deg to 0 +45°
+    //    }else{
+    //             finalpoiY=map(finalpoiY,-45,0,minY+1,midY); // map deg to -45 to 0°
+    //    }
+    //  int poiYFV=(int)finalpoiY; //Difference angle between plane and you and convert angle to ° (not centidegree)
+    //   // poiYFV=constrain(poiYFV,minY+2,maxY-2);
 
 
-//     memset(buf, 0, sizeof(buf));
-//     tfp_sprintf(buf, "%f", anglePoiY);
-//     displayWrite(osdDisplayPort, minX+10, maxY-1, buf);
-
-//     memset(buf, 0, sizeof(buf));
-//     tfp_sprintf(buf, "%f", getPointFromHa(0));
-//     displayWrite(osdDisplayPort, minX+10, maxY-2, buf);
+    // if (near_plane_id==plane_id){
+    //     memset(buf, 0, sizeof(buf));
+    //     tfp_sprintf(buf, "%f", distanceFromMe);
+    //   displayWrite(osdDisplayPort, minX+6, maxY-1, buf);
 
 
-//     memset(buf, 0, sizeof(buf));
-//     tfp_sprintf(buf, "%f", getPointFromHa(poiY));
-//     displayWrite(osdDisplayPort, minX+10, maxY-3, buf);
+    //     memset(buf, 0, sizeof(buf));
+    //     tfp_sprintf(buf, "%f", anglePoiY);
+    //     displayWrite(osdDisplayPort, minX+10, maxY-1, buf);
+
+    //     memset(buf, 0, sizeof(buf));
+    //     tfp_sprintf(buf, "%f", getPointFromHa(0));
+    //     displayWrite(osdDisplayPort, minX+10, maxY-2, buf);
 
 
-//     memset(buf, 0, sizeof(buf));
-//     tfp_sprintf(buf, "%f", relativAlt);
-//     displayWrite(osdDisplayPort, minX+18, maxY-1, buf);
-
-//     memset(buf, 0, sizeof(buf));
-//     tfp_sprintf(buf, "%d", poiYFV);
-//     displayWrite(osdDisplayPort, minX+22, maxY-1, buf);
+    //     memset(buf, 0, sizeof(buf));
+    //     tfp_sprintf(buf, "%f", getPointFromHa(poiY));
+    //     displayWrite(osdDisplayPort, minX+10, maxY-3, buf);
 
 
-// }
+    //     memset(buf, 0, sizeof(buf));
+    //     tfp_sprintf(buf, "%f", relativAlt);
+    //     displayWrite(osdDisplayPort, minX+18, maxY-1, buf);
 
-//                //if plane is behind you draw it on the middle right or left edge
-
-//                if (poiY<midY){
-//                    poiYFV=midY;
-//                    if (poiX>midX){
-//                        poiX=maxX-1;
-//                    }else{
-//                        poiX=minX+1;
-//                    }
-//                }
-//                poiY=poiYFV;
-//      }
-       //CHANGE SYMBOL IF HIGHER OR LOWER
-        myAlt = CENTIMETERS_TO_METERS(osdGetAltitude());
-       int32_t currentPlaneAlt=CENTIMETERS_TO_METERS(currentPlane.planeWP.alt);
-       int32_t relativAlt=myAlt-currentPlaneAlt;
+    //     memset(buf, 0, sizeof(buf));
+    //     tfp_sprintf(buf, "%d", poiYFV);
+    //     displayWrite(osdDisplayPort, minX+22, maxY-1, buf);
 
 
+    // }
+
+    //                //if plane is behind you draw it on the middle right or left edge
+
+    //                if (poiY<midY){
+    //                    poiYFV=midY;
+    //                    if (poiX>midX){
+    //                        poiX=maxX-1;
+    //                    }else{
+    //                        poiX=minX+1;
+    //                    }
+    //                }
+    //                poiY=poiYFV;
+    //      }
+   //CHANGE SYMBOL IF HIGHER OR LOWER
+    myAlt = CENTIMETERS_TO_METERS(osdGetAltitude());
+   int32_t currentPlaneAlt=CENTIMETERS_TO_METERS(currentPlane.planeWP.alt);
+   int32_t relativAlt=myAlt-currentPlaneAlt;
+
+/*
     memset(buf, 0, sizeof(buf));
     tfp_sprintf(buf, "%d", myAlt);
     displayWrite(osdDisplayPort, minX+22, maxY-1, buf);
 
     memset(buf, 0, sizeof(buf));
     tfp_sprintf(buf, "%d", currentPlaneAlt);
-    displayWrite(osdDisplayPort, minX+22, maxY-1, buf);
-
+    displayWrite(osdDisplayPort, minX+22, maxY-2, buf);
 
     memset(buf, 0, sizeof(buf));
     tfp_sprintf(buf, "%d", relativAlt);
-    displayWrite(osdDisplayPort, minX+22, maxY-1, buf);
-
+    displayWrite(osdDisplayPort, minX+22, maxY-3, buf);
+*/
 
     memset(buf, 0, sizeof(buf));
 	//DRAW altitude of nearest plane EXPERIMENTAL
@@ -1492,13 +1540,13 @@ int32_t myAlt = 0;
 		 buf[1] = '\0';
 	 }
 
-	 displayWrite(osdDisplayPort, minX-4, maxY-1, buf);
+	 //displayWrite(osdDisplayPort, minX-4, maxY-1, buf);
 
-     memset(buf, 0, sizeof(buf));
+   memset(buf, 0, sizeof(buf));
 	 osdFormatCentiNumber(buf, abs(relativAlt), scaleUnitDivisor, maxDecimals, 2, 3);
 	 buf[3]= SYM_ALT_M;
 	 buf[4] = '\0';
-	 displayWrite(osdDisplayPort, minX -3, maxY-1, buf);
+	 //displayWrite(osdDisplayPort, minX -3, maxY-1, buf);
 
 
 
@@ -1518,7 +1566,7 @@ int32_t myAlt = 0;
                             poiSymbol=SYM_PLANE_LOW;
                         }
                     }
-                
+
 
            displayWriteChar(osdDisplayPort, poiX, poiY, poiSymbol);
 
