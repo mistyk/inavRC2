@@ -1206,15 +1206,23 @@ static void osdDrawAdditionnalRadar(wp_planes_t nearPlane,int16_t poiDirection){
 
      memset(buf, 0, sizeof(buf));
  	//DRAW altitude of nearest plane EXPERIMENTAL
- 	 if(relativAlt>0){
- 		 buf[0]=SYM_PLANE_VERY_LOW;
- 		 buf[1] = '\0';
- 	 }else{
- 		 buf[0]=SYM_PLANE_VERY_HIGH;
- 		 buf[1] = '\0';
- 	 }
+ 	 
+      if (relativAlt==0){
+            buf[0]=SYM_PLANE_SIGHT;
+            buf[1] = '\0';
+      }
+      else
+      {
+        if(relativAlt>0){
+            buf[0]=SYM_PLANE_VERY_LOW;
+            buf[1] = '\0';
+        }else{
+            buf[0]=SYM_PLANE_VERY_HIGH;
+            buf[1] = '\0';
+        }
+      }
 
- 	 displayWrite(osdDisplayPort, minX+1, maxY-1, buf);
+ 	 displayWrite(osdDisplayPort, minX, maxY-1, buf);
 
    memset(buf, 0, sizeof(buf));
  	 //osdFormatCentiNumber(buf, abs(relativAlt), scaleUnitDivisor, maxDecimals, 2, 3);
@@ -1530,45 +1538,45 @@ int32_t myAlt = 0;
     displayWrite(osdDisplayPort, minX+22, maxY-3, buf);
 */
 
-    memset(buf, 0, sizeof(buf));
-	//DRAW altitude of nearest plane EXPERIMENTAL
-	 if(relativAlt>0){
-		 buf[0]=SYM_LESS;
-		 buf[1] = '\0';
-	 }else{
-		 buf[0]=SYM_PLUS;
-		 buf[1] = '\0';
-	 }
+//     memset(buf, 0, sizeof(buf));
+// 	//DRAW altitude of nearest plane EXPERIMENTAL
+// 	 if(relativAlt>0){
+// 		 buf[0]=SYM_LESS;
+// 		 buf[1] = '\0';
+// 	 }else{
+// 		 buf[0]=SYM_PLUS;
+// 		 buf[1] = '\0';
+// 	 }
 
-	 //displayWrite(osdDisplayPort, minX-4, maxY-1, buf);
+// 	 //displayWrite(osdDisplayPort, minX-4, maxY-1, buf);
 
-   memset(buf, 0, sizeof(buf));
-	 osdFormatCentiNumber(buf, abs(relativAlt), scaleUnitDivisor, maxDecimals, 2, 3);
-	 buf[3]= SYM_ALT_M;
-	 buf[4] = '\0';
-	 //displayWrite(osdDisplayPort, minX -3, maxY-1, buf);
-
-
+//    memset(buf, 0, sizeof(buf));
+// 	 osdFormatCentiNumber(buf, abs(relativAlt), scaleUnitDivisor, maxDecimals, 2, 3);
+// 	 buf[3]= SYM_ALT_M;
+// 	 buf[4] = '\0';
+// 	 //displayWrite(osdDisplayPort, minX -3, maxY-1, buf);
 
 
-                    if (currentPlaneAlt>myAlt){
-                        if(currentPlaneAlt-myAlt>10)
-                        {
-                            poiSymbol=SYM_PLANE_VERY_HIGH;
-                        }else{
-                            poiSymbol=SYM_PLANE_HIGH;
-                        }
-                    }else{
-                        if(myAlt-currentPlaneAlt>10)
-                        {
-                            poiSymbol=SYM_PLANE_VERY_LOW;
-                        }else{
-                            poiSymbol=SYM_PLANE_LOW;
-                        }
-                    }
 
 
-           displayWriteChar(osdDisplayPort, poiX, poiY, poiSymbol);
+                    // if (currentPlaneAlt>myAlt){
+                    //     if(currentPlaneAlt-myAlt>10)
+                    //     {
+                    //         poiSymbol=SYM_PLANE_VERY_HIGH;
+                    //     }else{
+                    //         poiSymbol=SYM_PLANE_HIGH;
+                    //     }
+                    // }else{
+                    //     if(myAlt-currentPlaneAlt>10)
+                    //     {
+                    //         poiSymbol=SYM_PLANE_VERY_LOW;
+                    //     }else{
+                    //         poiSymbol=SYM_PLANE_LOW;
+                    //     }
+                    // }
+
+
+           displayWriteChar(osdDisplayPort, poiX, poiY, SYM_AH_CH_CENTER);
 
 
            // Update saved location
