@@ -468,7 +468,7 @@
 #define MATEKF405SE 1
 #define __FORKNAME__ "inav"
 #define __TARGET__ "MATEKF405SE"
-#define __REVISION__ "5ae5377"
+#define __REVISION__ "f50a5da"
 # 1 "./src/main/build/version.c"
 # 18 "./src/main/build/version.c"
 # 1 "./src/main/build/version.h" 1
@@ -499,6 +499,6 @@ extern const char* const buildTime;
 
 const char * const targetName = "MATEKF405SE";
 const char * const compilerVersion = "7.3.1 20180622 (release) [ARM/embedded-7-branch revision 261907]";
-const char * const shortGitRevision = "5ae5377";
+const char * const shortGitRevision = "f50a5da";
 const char * const buildDate = "Feb  5 2019";
-const char * const buildTime = "15:57:22";
+const char * const buildTime = "16:58:44";

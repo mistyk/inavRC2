@@ -468,7 +468,7 @@
 #define MATEKF405SE 1
 #define __FORKNAME__ "inav"
 #define __TARGET__ "MATEKF405SE"
-#define __REVISION__ "5ae5377"
+#define __REVISION__ "f50a5da"
 # 1 "./src/main/io/osd.c"
 # 24 "./src/main/io/osd.c"
 # 1 "/usr/lib/gcc/arm-none-eabi/7.3.1/include/stdbool.h" 1 3 4
@@ -28880,7 +28880,7 @@ int32_t myAlt = 0;
    int32_t currentPlaneAlt=(currentPlane.planeWP.alt / 100);
    int32_t relativAlt=myAlt-currentPlaneAlt;
 # 1579 "./src/main/io/osd.c"
-           displayWriteChar(osdDisplayPort, poiX, poiY, 0x7E);
+           displayWriteChar(osdDisplayPort, poiX, poiY, 0x98);
 
 
 
