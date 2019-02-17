@@ -1132,7 +1132,7 @@ static void osdDrawAdditionnalRadar(wp_planes_t nearPlane,int16_t poiDirection){
     char symScaled;
     int maxDecimals;
     const unsigned scaleMultiplier = 2;
-
+/*
  switch (osdConfig()->units) {
         case OSD_UNIT_IMPERIAL:
             initialScale = 16; // 16m ~= 0.01miles
@@ -1152,7 +1152,7 @@ static void osdDrawAdditionnalRadar(wp_planes_t nearPlane,int16_t poiDirection){
             symScaled = SYM_KM;
             maxDecimals = 0;
             break;
-    }
+    }*/
 
 
 
