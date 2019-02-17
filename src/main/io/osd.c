@@ -1174,7 +1174,7 @@ static void osdDrawAdditionnalRadar(wp_planes_t nearPlane,int16_t poiDirection){
     memset(buf, 0, sizeof(buf));
     int homeDirection = GPS_directionToHome - DECIDEGREES_TO_DEGREES(osdGetHeading());
     // Add 11 to the angle, so first character maps to [349, 11]
-    int homeArrowDir = osdGetHeadingAngle(homeDirection + 11);
+    int homeArrowDir = osdGetHeadingAngle(homeDirection);
     unsigned arrowOffset = homeArrowDir * 2 / 45;
     buf[0] = SYM_ARROW_UP + arrowOffset;
     displayWrite(osdDisplayPort,midX,midY, buf);
@@ -1578,8 +1578,15 @@ int32_t myAlt = 0;
 
            displayWriteChar(osdDisplayPort, poiX, poiY, SYM_PLANE_SIGHT);
 
-
+            if (poiY<midY){
+                poiY=midY+poiY;
+            }else{
+                if (poiY>midY){
+                    poiY=poiY-midY;
+                }
+            }
            // Update saved location
+           poiY=
            myDrawn[plane_id]=OSD_POS(poiX, poiY) | OSD_VISIBLE_FLAG;
           // *drawn = OSD_POS(poiX, poiY) | OSD_VISIBLE_FLAG;
            break;

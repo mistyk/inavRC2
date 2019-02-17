@@ -468,7 +468,7 @@
 #define MATEKF405SE 1
 #define __FORKNAME__ "inav"
 #define __TARGET__ "MATEKF405SE"
-#define __REVISION__ "f50a5da"
+#define __REVISION__ "c4773db"
 # 1 "./src/main/fc/settings.c"
 # 1 "/usr/arm-none-eabi/include/string.h" 1 3
 

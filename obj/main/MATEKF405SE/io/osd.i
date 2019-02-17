@@ -468,7 +468,7 @@
 #define MATEKF405SE 1
 #define __FORKNAME__ "inav"
 #define __TARGET__ "MATEKF405SE"
-#define __REVISION__ "f50a5da"
+#define __REVISION__ "c4773db"
 # 1 "./src/main/io/osd.c"
 # 24 "./src/main/io/osd.c"
 # 1 "/usr/lib/gcc/arm-none-eabi/7.3.1/include/stdbool.h" 1 3 4
@@ -21249,13 +21249,6 @@ uint32_t featureMask(void);
 #define SYM_PLANE_LOW 0xA4
 #define SYM_PLUS 0x2B
 #define SYM_LESS 0x2D
-#define SYM_RAD_V 0x8B
-#define SYM_RAD_H 0x7F
-#define SYM_RAD_BLC 0x8C
-#define SYM_RAD_BRC 0x8D
-#define SYM_RAD_TRC 0x8F
-#define SYM_RAD_TLC 0x8E
-
 
 
 
@@ -28670,7 +28663,7 @@ static void osdDrawAdditionnalRadar(wp_planes_t nearPlane,int16_t poiDirection){
     memset(buf, 0, sizeof(buf));
     int homeDirection = GPS_directionToHome - ((osdGetHeading()) / 10);
 
-    int homeArrowDir = osdGetHeadingAngle(homeDirection + 11);
+    int homeArrowDir = osdGetHeadingAngle(homeDirection +180);
     unsigned arrowOffset = homeArrowDir * 2 / 45;
     buf[0] = 0x60 + arrowOffset;
     displayWrite(osdDisplayPort,midX,midY, buf);
