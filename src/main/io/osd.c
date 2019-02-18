@@ -1576,7 +1576,7 @@ int32_t myAlt = 0;
                     // }
 
 
-           displayWriteChar(osdDisplayPort, poiX, poiY, SYM_PLANE_SIGHT);
+
 
             if (poiY<midY){
                 poiY=midY+poiY;
@@ -1585,6 +1585,8 @@ int32_t myAlt = 0;
                     poiY=poiY-midY;
                 }
             }
+            displayWriteChar(osdDisplayPort, poiX, poiY, SYM_PLANE_SIGHT);
+
            // Update saved location
            //poiY=
            myDrawn[plane_id]=OSD_POS(poiX, poiY) | OSD_VISIBLE_FLAG;
