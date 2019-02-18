@@ -1585,6 +1585,13 @@ int32_t myAlt = 0;
                     poiY=poiY-midY;
                 }
             }
+            if (poiX<midX){
+                poiX=midX+poiX;
+            }else{
+                if (poiX>midX){
+                    poiX=poiX-midX;
+                }
+            }
             displayWriteChar(osdDisplayPort, poiX, poiY, SYM_PLANE_SIGHT);
 
            // Update saved location
