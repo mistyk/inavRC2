@@ -1206,7 +1206,7 @@ static void osdDrawAdditionnalRadar(wp_planes_t nearPlane,int16_t poiDirection){
 
      memset(buf, 0, sizeof(buf));
  	//DRAW altitude of nearest plane EXPERIMENTAL
- 	 
+
       if (relativAlt==0){
             buf[0]=SYM_PLANE_SIGHT;
             buf[1] = '\0';
@@ -1586,7 +1586,7 @@ int32_t myAlt = 0;
                 }
             }
            // Update saved location
-           poiY=
+           //poiY=
            myDrawn[plane_id]=OSD_POS(poiX, poiY) | OSD_VISIBLE_FLAG;
           // *drawn = OSD_POS(poiX, poiY) | OSD_VISIBLE_FLAG;
            break;
