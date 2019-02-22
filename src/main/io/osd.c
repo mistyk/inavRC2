@@ -1157,19 +1157,21 @@ static void osdDrawAdditionnalRadar(wp_planes_t nearPlane,int16_t poiDirection) 
     // direction of the nearest plane
     memset(buf, 0, sizeof(buf));
     int16_t directionToPlane=nearPlane.planePoiDirection/100;
-    int mapHeading = osdGetHeadingAngle(DECIDEGREES_TO_DEGREES(directionToPlane) - DECIDEGREES_TO_DEGREES(osdGetHeading()));
+    int mapHeading = osdGetHeadingAngle(DECIDEGREES_TO_DEGREES(directionToPlane-180) - DECIDEGREES_TO_DEGREES(osdGetHeading()));
 	  poiSymbolPlaneSight += mapHeading * 2 / 45;
 	  buf[0] = poiSymbolPlaneSight;
-	  displayWrite(osdDisplayPort, minX , maxY-2, buf);
+	  displayWrite(osdDisplayPort, midX , midY, buf);
 
     // new direction in the center
-    memset(buf, 0, sizeof(buf));
+    
+    /*memset(buf, 0, sizeof(buf));
     int homeDirection = GPS_directionToHome - DECIDEGREES_TO_DEGREES(osdGetHeading());
     // Add 11 to the angle, so first character maps to [349, 11]
     int homeArrowDir = osdGetHeadingAngle(homeDirection);
     unsigned arrowOffset = homeArrowDir * 2 / 45;
     buf[0] = SYM_ARROW_UP + arrowOffset;
     displayWrite(osdDisplayPort,midX,midY, buf);
+    */
 
     // distance to nearest plane
     memset(buf, 0, sizeof(buf));
