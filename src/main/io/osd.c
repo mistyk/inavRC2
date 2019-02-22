@@ -1175,7 +1175,7 @@ static void osdDrawAdditionnalRadar(wp_planes_t nearPlane,int16_t poiDirection) 
     memset(buf, 0, sizeof(buf));
     osdFormatDistanceSymbol(buf, nearPlane.GPS_distanceToMe);
     displayWrite(osdDisplayPort, minX , maxY, buf);
-
+ 
     //  memset(buf, 0, sizeof(buf));
     //  tfp_sprintf(buf, "%d", myAlt);
     //  displayWrite(osdDisplayPort, minX+22, maxY-1, buf);
