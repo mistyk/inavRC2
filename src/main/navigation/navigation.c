@@ -2185,50 +2185,32 @@ void updateHomePosition(void)
 ***********************************/
 
 static void navRadarUpdatePlane(void){
-   //START CAMILLE
-
-    gpsLocation_t planeLocation;
-    fpVector3_t posPlane;
-
-
-  //if (STATE(GPS_FIX_HOME)) {
+  //START CAMILLE
+  gpsLocation_t planeLocation;
+  fpVector3_t posPlane;
+// if (STATE(GPS_FIX_HOME)) {
     //INITIALISE 5 PLANES (waypoint 100 to 105)
-    for (int i = 0; i < 4; i++) {
-        planesInfos[i].planeWP.lat=0;
-        planesInfos[i].drawn=0;
-        planesInfos[i].planeWP.lon=0;
-        planesInfos[i].planeWP.alt=0;
+    for (int i = 0; i < MAX_PLANES; i++) {
+      planesInfos[i].planeWP.lat=0;
+      planesInfos[i].drawn=0;
+      planesInfos[i].planeWP.lon=0;
+      planesInfos[i].planeWP.alt=0;
     }
-
-
-    int y=0; // plane array init
-    //store waypoint 1 to 5a
-      for (int i = 1; i < MAX_PLANES+1; i++) { //store waypoint 1 to 5
-
-            getWaypoint(i,&planesInfos[y].planeWP); //load waypoint informations
-            planesInfos[y].wp_nb=i; //store wp number
-            //Create gpsLocation_t in order to Convert to POS vector with  geoConvertGeodeticToLocal
-            planeLocation.lat=planesInfos[y].planeWP.lat;
-            planeLocation.lon=planesInfos[y].planeWP.lon;
-            planeLocation.alt=planesInfos[y].planeWP.alt;
-
-
-            geoConvertGeodeticToLocal( &posPlane, &posControl.gpsOrigin, &planeLocation, GEO_ALT_RELATIVE);
-
-
-
-            planesInfos[y].GPS_distanceToMe= calculateDistanceToDestination(&posPlane);
-            planesInfos[y].planePoiDirection=calculateBearingToDestination(&posPlane);
-            planesInfos[y].GPS_altitudeToMe=calculateAltitudeToMe(&posPlane);
-
-
-            y++;
-        }
-
- // }
+    //store waypoint 1 to 5
+    for (int i = 0; i < MAX_PLANES; i++) { //store waypoint 1 to 5
+      getWaypoint(i+1,&planesInfos[i].planeWP); //load waypoint informations
+      planesInfos[i].wp_nb=i+1; //store wp number
+      //Create gpsLocation_t in order to Convert to POS vector with  geoConvertGeodeticToLocal
+      planeLocation.lat=planesInfos[i].planeWP.lat;
+      planeLocation.lon=planesInfos[i].planeWP.lon;
+      planeLocation.alt=planesInfos[i].planeWP.alt;
+      geoConvertGeodeticToLocal( &posPlane, &posControl.gpsOrigin, &planeLocation, GEO_ALT_RELATIVE);
+      planesInfos[i].GPS_distanceToMe = calculateDistanceToDestination(&posPlane);
+      planesInfos[i].planePoiDirection = calculateBearingToDestination(&posPlane);
+      planesInfos[i].GPS_altitudeToMe = calculateAltitudeToMe(&posPlane);
+    }
+// }
 }
-
-
 /*-----------------------------------------------------------
  * Update flight statistics
  *-----------------------------------------------------------*/
